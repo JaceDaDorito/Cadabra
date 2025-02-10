@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 5602972947880649511}
   - component: {fileID: 7985933788411942203}
   - component: {fileID: 7667028157191224140}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -166,6 +166,8 @@ MonoBehaviour:
   _stableMovementSharpness: 15
   _orientationSharpness: 10
   _jumpSpeed: 10
+  maxJumps: 1
+  currentJumpCount: 0
 --- !u!1 &4697414498708796403
 GameObject:
   m_ObjectHideFlags: 0

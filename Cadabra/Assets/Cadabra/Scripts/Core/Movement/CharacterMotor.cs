@@ -31,14 +31,16 @@ namespace Cadabra.Core
         [SerializeField]
         private int maxJumps = 1;
 
-        private Vector3 _moveInputVector, _lookInputVector;
+        private Vector3 _moveInputVector, _lookInputVector, _impulseForceRequested;
         private bool _jumpRequested;
+        private bool _forceUngroundRequested;
         [SerializeField]
         private int currentJumpCount;
 
 
         private void Start()
         {
+            _impulseForceRequested = new Vector3(0, 0, 0);
             _motor.CharacterController = this;
             currentJumpCount = maxJumps;
         }
@@ -142,13 +144,34 @@ namespace Cadabra.Core
                 currentVelocity += _gravity * deltaTime;
             }
 
-            if (_jumpRequested && currentJumpCount > 0)
+            if (_jumpRequested && currentJumpCount > 0 && _motor.GroundingStatus.IsStableOnGround)
             {
-                currentVelocity += (_motor.CharacterUp * _jumpSpeed) - Vector3.Project(currentVelocity, _motor.CharacterUp);
+                RequestImpulseForce(new Vector3(0, 1, 0), _jumpSpeed);
                 _jumpRequested = false;
                 currentJumpCount--;
-                _motor.ForceUnground();
             }
+
+            if(_impulseForceRequested.sqrMagnitude != 0)
+            {
+                HandleImpulseForce(ref currentVelocity);
+            }
+        }
+
+        private void HandleImpulseForce(ref Vector3 currentVelocity)
+        {
+            currentVelocity += (_impulseForceRequested) - Vector3.Project(currentVelocity, _impulseForceRequested.normalized);
+            if (_forceUngroundRequested) _motor.ForceUnground();
+            _impulseForceRequested = new Vector3(0, 0, 0);
+            _forceUngroundRequested = false;
+        }
+
+        public void RequestImpulseForce(Vector3 dir, float magnitude)
+        {
+            if (dir.sqrMagnitude == 0) return;
+
+            dir = dir.normalized;
+            if (dir.y > 0) _forceUngroundRequested = true;
+            _impulseForceRequested += dir * magnitude;
         }
     }
 }

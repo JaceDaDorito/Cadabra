@@ -112,9 +112,9 @@ MonoBehaviour:
   _distanceMovementSharpness: 10
   _rotationSpeed: 10
   _rotationSharpness: 10000
-  _rollSharpness: 15
+  _rollSharpness: 11
   _followSharpness: 10000
-  _minVerticalAngle: -90
-  _maxVerticalAngle: 90
-  _defaultVerticalAngle: 20
-  _maxRollAngle: 5
+  _minVerticalAngle: -89.99
+  _maxVerticalAngle: 89.99
+  _defaultVerticalAngle: 8
+  _maxRollAngle: 2
