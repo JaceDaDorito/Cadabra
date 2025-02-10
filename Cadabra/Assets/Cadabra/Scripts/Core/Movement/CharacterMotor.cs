@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 using KinematicCharacterController;
+using System.Collections;
 
 public struct PlayerInputs
 {
@@ -27,12 +28,19 @@ namespace Cadabra.Core
         [SerializeField]
         private float _maxStableMoveSpeed = 10f, _stableMovementSharpness = 15f, _orientationSharpness = 10f, _jumpSpeed = 10f;
 
+        [SerializeField]
+        private int maxJumps = 1;
+
         private Vector3 _moveInputVector, _lookInputVector;
         private bool _jumpRequested;
+        [SerializeField]
+        private int currentJumpCount;
+
 
         private void Start()
         {
             _motor.CharacterController = this;
+            currentJumpCount = maxJumps;
         }
 
         public void SetInputs(ref PlayerInputs inputs)
@@ -52,8 +60,14 @@ namespace Cadabra.Core
 
             if (inputs.JumpPressed)
             {
-                _jumpRequested = true;
+                StartCoroutine(RequestJump());
             }
+        }
+
+        IEnumerator RequestJump() {
+            _jumpRequested = true;
+            yield return new WaitForSeconds(.1f);
+            _jumpRequested = false;
         }
 
         public void AfterCharacterUpdate(float deltaTime)
@@ -75,6 +89,7 @@ namespace Cadabra.Core
 
         public void OnGroundHit(Collider hitCollider, Vector3 hitNormal, Vector3 hitPoint, ref HitStabilityReport hitStabilityReport)
         {
+            currentJumpCount = maxJumps; //reset jumps
         }
 
         public void OnMovementHit(Collider hitCollider, Vector3 hitNormal, Vector3 hitPoint, ref HitStabilityReport hitStabilityReport)
@@ -101,28 +116,37 @@ namespace Cadabra.Core
 
         public void UpdateVelocity(ref Vector3 currentVelocity, float deltaTime)
         {
+            float currentVelocityMagnitude = currentVelocity.magnitude;
+            Vector3 effectiveGroundNormal = _motor.GroundingStatus.GroundNormal;
+            Vector3 inputRight = Vector3.Cross(_moveInputVector, _motor.CharacterUp);
+            Vector3 reorientInput;
             if (_motor.GroundingStatus.IsStableOnGround)
             {
-                float currentVelocityMagnitude = currentVelocity.magnitude;
-                Vector3 effectiveGroundNormal = _motor.GroundingStatus.GroundNormal;
-
                 currentVelocity = _motor.GetDirectionTangentToSurface(currentVelocity, effectiveGroundNormal) * currentVelocityMagnitude;
-
-                Vector3 inputRight = Vector3.Cross(_moveInputVector, _motor.CharacterUp);
-                Vector3 reorientInput = Vector3.Cross(effectiveGroundNormal, inputRight).normalized * _moveInputVector.magnitude;
-
-                Vector3 targetMovementVelocity = reorientInput * _maxStableMoveSpeed;
-                currentVelocity = Vector3.Lerp(currentVelocity, targetMovementVelocity, 1f - Mathf.Exp(-_stableMovementSharpness * deltaTime));
+                reorientInput = Vector3.Cross(effectiveGroundNormal, inputRight).normalized * _moveInputVector.magnitude;
             }
             else
+            {
+                reorientInput = _moveInputVector.normalized;
+            }
+
+            Vector3 targetMovementVelocity = reorientInput * _maxStableMoveSpeed;
+            Vector2 currentVelocityXZ = new Vector2(currentVelocity.x, currentVelocity.z);
+            Vector2 targetMovementVelocityXZ = new Vector2(targetMovementVelocity.x, targetMovementVelocity.z);
+            currentVelocityXZ = Vector2.Lerp(currentVelocityXZ, targetMovementVelocityXZ, 1f - Mathf.Exp(-_stableMovementSharpness * deltaTime));
+            currentVelocity.x = currentVelocityXZ.x;
+            currentVelocity.z = currentVelocityXZ.y; //this is z
+
+            if (!_motor.GroundingStatus.IsStableOnGround)
             {
                 currentVelocity += _gravity * deltaTime;
             }
 
-            if (_jumpRequested)
+            if (_jumpRequested && currentJumpCount > 0)
             {
                 currentVelocity += (_motor.CharacterUp * _jumpSpeed) - Vector3.Project(currentVelocity, _motor.CharacterUp);
                 _jumpRequested = false;
+                currentJumpCount--;
                 _motor.ForceUnground();
             }
         }

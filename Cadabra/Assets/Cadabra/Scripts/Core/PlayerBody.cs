@@ -20,7 +20,7 @@ namespace Cadabra.Core
         {
             _cameraController.SetFollowTransform(_cameraFollowPoint);
         }
-        private void HandleCameraInput()
+        private void HandleMouseInput()
         {
             float mouseY = Input.GetAxisRaw("Mouse Y");
             float mouseX = Input.GetAxisRaw("Mouse X");
@@ -40,6 +40,7 @@ namespace Cadabra.Core
             inputs.CameraRotation = _cameraController.transform.rotation;
 
             _characterMotor.SetInputs(ref inputs);
+            _cameraController.SetRollRotation(Mathf.Clamp(inputs.MoveAxisRight, -1, 1));
         }
 
         private void Update()
@@ -49,7 +50,7 @@ namespace Cadabra.Core
 
         private void LateUpdate()
         {
-            HandleCameraInput();
+            HandleMouseInput();
         }
     }
 }

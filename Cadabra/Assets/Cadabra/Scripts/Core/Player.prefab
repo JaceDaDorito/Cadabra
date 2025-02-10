@@ -147,6 +147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _cameraController: {fileID: 0}
   _characterMotor: {fileID: 7667028157191224140}
+  _cameraFollowPoint: {fileID: 1878534204087951840}
 --- !u!114 &7667028157191224140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,9 +161,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _motor: {fileID: 5602972947880649511}
+  _gravity: {x: 0, y: -30, z: 0}
   _maxStableMoveSpeed: 10
   _stableMovementSharpness: 15
   _orientationSharpness: 10
+  _jumpSpeed: 10
 --- !u!1 &4697414498708796403
 GameObject:
   m_ObjectHideFlags: 0

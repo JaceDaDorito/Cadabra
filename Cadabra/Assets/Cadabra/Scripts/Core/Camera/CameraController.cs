@@ -15,25 +15,27 @@ namespace Cadabra.Core
             _distanceMovementSharpness = 0f,
             _rotationSpeed = 10f,
             _rotationSharpness = 10000f,
+            _rollSharpness = 15f,
             _followSharpness = 10000f,
             _minVerticalAngle = -90f,
             _maxVerticalAngle = 90f,
-            _defaultVerticalAngle = 20f;
+            _defaultVerticalAngle = 20f,
+            _maxRollAngle = 15f;
 
         private Transform _followTransform;
         private Vector3 _currentFollowPosition, _planarDirection;
-        private float _targetVerticalAngle;
 
-        private float _currentDistance, _targetDistance;
+        private float _targetVerticalAngle, _targetRollAngle, _currentDistance, _targetDistance, _rollRotationInput;
 
         private void Awake()
         {
             _currentDistance = _defaultDistance;
             _targetDistance = _currentDistance;
             _targetVerticalAngle = 0f;
+            _targetRollAngle = 0f;
+            _rollRotationInput = 0f;
             _planarDirection = Vector3.forward;
         }
-
         public void SetFollowTransform(Transform t)
         {
             _followTransform = t;
@@ -41,6 +43,10 @@ namespace Cadabra.Core
             _planarDirection = t.forward;
         }
 
+        public void SetRollRotation(float rollRotationInput)
+        {
+            _rollRotationInput = rollRotationInput;
+        }
         private void OnValidate()
         {
             _defaultDistance = Mathf.Clamp(_defaultDistance, _minDistance, _maxDistance);
@@ -58,7 +64,10 @@ namespace Cadabra.Core
             _targetVerticalAngle = Mathf.Clamp(_targetVerticalAngle, _minVerticalAngle, _maxVerticalAngle);
             Quaternion verticalRot = Quaternion.Euler(_targetVerticalAngle, 0, 0);
 
-            targetRotation = Quaternion.Slerp(transform.rotation, planarRot * verticalRot, _rotationSharpness * deltaTime);
+            _targetRollAngle = Mathf.Lerp(_targetRollAngle, (_rollRotationInput * _maxRollAngle), _rollSharpness * deltaTime);
+            Quaternion rollRot = Quaternion.Euler(0, 0, _targetRollAngle);
+
+            targetRotation = Quaternion.Slerp(transform.rotation, planarRot * verticalRot * rollRot, _rotationSharpness * deltaTime);
             transform.rotation = targetRotation;
         }
 
