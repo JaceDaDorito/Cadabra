@@ -11,6 +11,8 @@ namespace Cadabra.Core
         [SerializeField]
         private CharacterMotor _characterMotor;
         [SerializeField]
+        private HealthController _healthController;
+        [SerializeField]
         private Transform _cameraFollowPoint;
 
         private Vector3 _lookInputVector;
@@ -46,6 +48,12 @@ namespace Cadabra.Core
         private void Update()
         {
             HandleCharacterInputs();
+
+            // Temp Damage Trigger
+            if (Input.GetKeyDown(KeyCode.J)) _healthController.TakeDamage(25f);
+
+            // Temp Health Trigger
+            if (Input.GetKeyDown(KeyCode.K)) _healthController.Heal(50f);
         }
 
         private void LateUpdate()
