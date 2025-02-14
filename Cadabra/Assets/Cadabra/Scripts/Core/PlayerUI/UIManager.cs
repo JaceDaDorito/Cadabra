@@ -11,11 +11,13 @@ namespace Cadabra.Core
         [SerializeField]
         private UIHealthController _uiHealthController;
 
+        // Inherited
         private void Start()
         {
             _uiHealthController.UpdateHealth(_healthController.maxHealth, _healthController.maxHealth);
         }
 
+        // Inherited
         private void Update()
         {
             _uiHealthController.UpdateHealth(_healthController.currentHealth, _healthController.maxHealth);
