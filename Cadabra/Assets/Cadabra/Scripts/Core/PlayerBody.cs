@@ -13,6 +13,8 @@ namespace Cadabra.Core
         [SerializeField]
         private HealthController _healthController;
         [SerializeField]
+        private ManaController _manaController;
+        [SerializeField]
         private Transform _cameraFollowPoint;
 
         private Vector3 _lookInputVector;
@@ -54,6 +56,12 @@ namespace Cadabra.Core
 
             // Temp Health Trigger
             if (Input.GetKeyDown(KeyCode.K)) _healthController.Heal(50f);
+
+            // Temp Mana Loss Trigger
+            if (Input.GetKeyDown(KeyCode.Mouse0)) _manaController.UseMana(25f);
+
+            // Temp Mana Gain Trigger
+            if (Input.GetKeyDown(KeyCode.E)) _manaController.Syphon(50f);
         }
 
         private void LateUpdate()
