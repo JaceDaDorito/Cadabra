@@ -6,6 +6,8 @@ namespace Cadabra.Core
 {
     public class PlayerBody : MonoBehaviour
     {
+        public Animator animator;
+        
         [SerializeField]
         private CameraController _cameraController;
         [SerializeField]
@@ -46,6 +48,8 @@ namespace Cadabra.Core
         private void Update()
         {
             HandleCharacterInputs();
+            // For Running Animation
+            animator.SetFloat("RunningSpeed", Mathf.Abs(Input.GetAxisRaw("Horizontal")) + Mathf.Abs(Input.GetAxisRaw("Vertical")));
         }
 
         private void LateUpdate()

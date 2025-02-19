@@ -19,6 +19,9 @@ namespace Cadabra.Core
 {
     public class CharacterMotor : MonoBehaviour, ICharacterController
     {
+        // For Jumping Animation (See Line 74, 77)
+        public Animator animator;
+
         [SerializeField]
         private KinematicCharacterMotor _motor;
 
@@ -68,8 +71,10 @@ namespace Cadabra.Core
 
         IEnumerator RequestJump() {
             _jumpRequested = true;
+            animator.SetBool("IsJumping", true);
             yield return new WaitForSeconds(.1f);
             _jumpRequested = false;
+            animator.SetBool("IsJumping", false);
         }
 
         public void AfterCharacterUpdate(float deltaTime)
