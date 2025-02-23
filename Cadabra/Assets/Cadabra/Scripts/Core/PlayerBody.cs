@@ -9,13 +9,18 @@ namespace Cadabra.Core
         [SerializeField]
         private CameraController _cameraController;
         [SerializeField]
+        private GameObject _uiCamera;
+        [SerializeField]
         private CharacterMotor _characterMotor;
         [SerializeField]
-        private HealthController _healthController;
+        public HealthController _healthController;
         [SerializeField]
-        private ManaController _manaController;
+        public ManaController _manaController;
+        [SerializeField]
+        private WeaponStateMachine _weaponStateMachine;
         [SerializeField]
         private Transform _cameraFollowPoint;
+        
 
         private Vector3 _lookInputVector;
 
@@ -23,6 +28,7 @@ namespace Cadabra.Core
         private void Start()
         {
             _cameraController.SetFollowTransform(_cameraFollowPoint);
+            
         }
         private void HandleMouseInput()
         {
@@ -45,6 +51,12 @@ namespace Cadabra.Core
 
             _characterMotor.SetInputs(ref inputs);
             _cameraController.SetRollRotation(Mathf.Clamp(inputs.MoveAxisRight, -1, 1));
+
+            WeaponStateMachine.WeaponInputs wInputs = new WeaponStateMachine.WeaponInputs();
+            wInputs.PrimaryPressed = Input.GetKeyDown(KeyCode.Mouse0);
+            _weaponStateMachine.SetInputs(ref wInputs);
+
+
         }
 
         private void Update()
@@ -52,16 +64,16 @@ namespace Cadabra.Core
             HandleCharacterInputs();
 
             // Temp Damage Trigger
-            if (Input.GetKeyDown(KeyCode.J)) _healthController.TakeDamage(25f);
+            if (Input.GetKeyDown(KeyCode.Keypad1)) _healthController.TakeDamage(25f);
 
             // Temp Health Trigger
-            if (Input.GetKeyDown(KeyCode.K)) _healthController.Heal(50f);
+            if (Input.GetKeyDown(KeyCode.Keypad2)) _healthController.Heal(50f);
 
             // Temp Mana Loss Trigger
-            if (Input.GetKeyDown(KeyCode.Mouse0)) _manaController.UseMana(25f);
+            if (Input.GetKeyDown(KeyCode.Keypad3)) _manaController.UseMana(25f);
 
             // Temp Mana Gain Trigger
-            if (Input.GetKeyDown(KeyCode.E)) _manaController.Syphon(50f);
+            if (Input.GetKeyDown(KeyCode.Keypad4)) _manaController.Syphon(50f);
         }
 
         private void LateUpdate()
