@@ -10,6 +10,8 @@ namespace Cadabra.Core
         [HideInInspector]
         public float currentHealth;
 
+        public bool isMaxHealth => currentHealth == maxHealth;
+
         // Inherited
         private void Start()
         {

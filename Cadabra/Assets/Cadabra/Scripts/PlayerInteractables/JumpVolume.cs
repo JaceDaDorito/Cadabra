@@ -10,7 +10,7 @@ namespace Cadabra.PlayerInteractables
         [SerializeField]
         public Vector3 _direction;
         [SerializeField]
-        public float _magnitude;
+        public float _magnitude, _noInputDuration;
 
         //need to look into unity logs
         private void OnValidate()
@@ -22,7 +22,8 @@ namespace Cadabra.PlayerInteractables
         private void OnTriggerEnter(Collider other)
         {
             CharacterMotor comp = other.gameObject.GetComponent<CharacterMotor>();
-            Debug.Log("gaming");
+
+            if (comp._dontTriggerJumpVolumes) return;
 
             if (comp)
             {
