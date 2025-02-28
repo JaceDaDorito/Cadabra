@@ -11,7 +11,7 @@ namespace Cadabra.Core
         [SerializeField]
         private GameObject _uiCamera;
         [SerializeField]
-        private CharacterMotor _characterMotor;
+        public CharacterMotor _characterMotor;
         [SerializeField]
         public HealthController _healthController;
         [SerializeField]
@@ -52,9 +52,9 @@ namespace Cadabra.Core
             _characterMotor.SetInputs(ref inputs);
             _cameraController.SetRollRotation(Mathf.Clamp(inputs.MoveAxisRight, -1, 1));
 
-            WeaponStateMachine.WeaponInputs wInputs = new WeaponStateMachine.WeaponInputs();
-            wInputs.PrimaryPressed = Input.GetKeyDown(KeyCode.Mouse0);
-            _weaponStateMachine.SetInputs(ref wInputs);
+            // WeaponStateMachine.WeaponInputs wInputs = new WeaponStateMachine.WeaponInputs();
+            // wInputs.PrimaryPressed = Input.GetKeyDown(KeyCode.Mouse0);
+            // _weaponStateMachine.SetInputs(ref wInputs);
 
 
         }
