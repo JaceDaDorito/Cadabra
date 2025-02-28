@@ -1,5 +1,5 @@
 using Codice.Client.Common.GameUI;
-using GDL_Tutorial;
+using EnemyRef;
 using PlasticPipe.PlasticProtocol.Messages;
 using System.Collections;
 using System.Collections.Generic;
@@ -44,7 +44,7 @@ public class EnemySimple : MonoBehaviour
 
             //enemyRefrences.animator.SetBool("shooting", inRange);
         }
-        enemyRefrences.animator.SetFloat("speed", enemyRefrences.navMeshagent.desiredVelocity.sqrMagnitude);
+        enemyRefrences.animator.SetFloat("speed", enemyRefrences.navMeshagent.velocity.sqrMagnitude);
     }
 
     private void LookAtTarget()
