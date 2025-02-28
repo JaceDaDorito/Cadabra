@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace GDL_Tutorial
+namespace EnemyRef
 {
     [DisallowMultipleComponent]
     public class EnemyRefrences : MonoBehaviour
