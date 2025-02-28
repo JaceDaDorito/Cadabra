@@ -4,8 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
-using UnityEngine.Events;
-using Cadabra.Core;
 
 namespace Cadabra.ScriptableObjects
 {
@@ -16,9 +14,6 @@ namespace Cadabra.ScriptableObjects
         public int inventorySlot;
         public float fireRate;
         public GameObject weaponPrefab;
-
-        public UnityEvent<PlayerBody, WeaponStateMachine> primaryFire;
-        public UnityEvent<PlayerBody, WeaponStateMachine> secondaryFire;
 
         public void OnAfterDeserialize()
         {
