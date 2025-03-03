@@ -47,6 +47,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41473cebafef7884887196910d1ec497, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transformArray:
+  - {fileID: 1962566437059259090}
+  - {fileID: 3022406672019452204}
+  - {fileID: 8227392734499098173}
 --- !u!1001 &5684067209600392043
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -195,7 +199,7 @@ PrefabInstance:
     - target: {fileID: 7985933788411942203, guid: e4c6365cdcbe08c45aaa6b2b662848ab, type: 3}
       propertyPath: _uiCamera
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 7789172055460451959}
     - target: {fileID: 7985933788411942203, guid: e4c6365cdcbe08c45aaa6b2b662848ab, type: 3}
       propertyPath: _manaController
       value: 
@@ -331,6 +335,11 @@ PrefabInstance:
 --- !u!4 &3022406672019452204 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5419820036638221641, guid: cb53a1893fe9eb7499e86a0a75527a34, type: 3}
+  m_PrefabInstance: {fileID: 7117568956057048165}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7789172055460451959 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1071326705877926418, guid: cb53a1893fe9eb7499e86a0a75527a34, type: 3}
   m_PrefabInstance: {fileID: 7117568956057048165}
   m_PrefabAsset: {fileID: 0}
 --- !u!20 &8974972770136425987 stripped

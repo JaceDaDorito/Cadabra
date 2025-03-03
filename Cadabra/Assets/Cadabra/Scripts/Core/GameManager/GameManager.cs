@@ -1,14 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cadabra.Util;
 
 namespace Cadabra.Core
 {
     public class GameManager : MonoBehaviour
     {
         public static GameManager instance;
-        public static GameObject playerHolder;
-        public PlayerBody playerbody;
+        public GameObject playerHolder;
+        [HideInInspector]
+        public PlayerBody playerBody;
+        [HideInInspector]
         public GameObject instancedPlayerHolder;
 
 
@@ -29,7 +32,22 @@ namespace Cadabra.Core
         {
             if (playerHolder == null) return;
 
-            instancedPlayerHolder = GameObject.Instantiate(playerHolder, PlayerSpawnPoint.instance.transform);
+            if (playerBody)
+            {
+                playerBody.transform.position = PlayerSpawnPoint.instance.transform.position;
+                playerBody.transform.rotation = PlayerSpawnPoint.instance.transform.rotation;
+            }
+            else
+            {
+                instancedPlayerHolder = GameObject.Instantiate(playerHolder, PlayerSpawnPoint.instance.transform);
+                playerBody = instancedPlayerHolder.GetComponent<ChildLocator>().FindTransform(0).GetComponent<PlayerBody>();
+                playerBody._healthController.bodyDeathBehavior.AddListener(PlayerDeathSequence);
+            }
+        }
+
+        private void PlayerDeathSequence(CharacterBody body)
+        {
+            Debug.Log("oooo you died");
         }
 
         private void OnEnable()

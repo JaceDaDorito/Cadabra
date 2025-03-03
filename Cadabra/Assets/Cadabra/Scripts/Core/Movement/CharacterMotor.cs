@@ -183,6 +183,13 @@ namespace Cadabra.Core
             _forceUngroundRequested = false;
         }
 
+        public void RequestImpulseForce(Vector3 force)
+        {
+            if (force.sqrMagnitude == 0) return;
+
+            if (force.y > 0) _forceUngroundRequested = true;
+            _impulseForceRequested += force;
+        }
         public void RequestImpulseForce(Vector3 dir, float magnitude)
         {
             if (dir.sqrMagnitude == 0) return;

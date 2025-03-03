@@ -14,8 +14,8 @@ TagManager:
   - Player
   - World
   - Pickup
-  - 
-  - 
+  - HurtBox
+  - Projectile
   - 
   - 
   - 
