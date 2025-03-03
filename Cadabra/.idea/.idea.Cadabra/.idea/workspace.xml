@@ -5,17 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b7edaa1-3b01-4906-a551-de9d9b623e0a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Cadabra/.idea/discord.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Cadabra/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Cadabra/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Cadabra/Scripts/Core/DemoHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Cadabra/Scripts/Core/DemoHandler.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Cadabra/Scripts/PlayerInteractables/Pickups/JumpSphere.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Cadabra/Scripts/PlayerInteractables/Pickups/PickupTest.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Cadabra/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Cadabra/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Cadabra/Materials/DebugJumppad.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cadabra/Materials/DebugJumppad.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Cadabra/Scripts/Core/PlayerBody.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cadabra/Scripts/Core/PlayerBody.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PBR Ground Materials #1 [Dirt&amp; Grass]/Materials/Grass/Grass_06.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PBR Ground Materials #1 [Dirt&amp; Grass]/Materials/Grass/Grass_06.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Cadabra/Materials/DebugJumppad 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cadabra/Materials/DebugJumppad 1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Cadabra/Materials/UIRed.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cadabra/Materials/UIRed.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Cadabra/Materials/UISilver.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cadabra/Materials/UISilver.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Cadabra/Scripts/Core/DemoHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cadabra/Scripts/Core/DemoHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Cadabra/Scripts/PlayerInteractables/Pickups/JumpSphere.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Cadabra/Scripts/PlayerInteractables/Pickups/PickupTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cadabra/Scripts/PlayerInteractables/Pickups/TimerPickup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +20,26 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="kit/enemy-ai" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "NickAwrist"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/JaceDaDorito/Cadabra",
+    "accountId": "870d0a42-0337-4112-9f65-c1d3eec56983"
+  }
+}]]></component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -36,23 +51,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "kit/enemy-ai",
-    "last_opened_file_path": "C:/Users/idari/Documents/Unity Projects/Cadabra",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.sourceCode.C#",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;nick/demo&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/idari/Documents/Unity Projects/Cadabra&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C#&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity 2022.3.55f1\Editor\Unity.exe" />
@@ -107,13 +122,24 @@
       <updated>1737754198472</updated>
       <workItem from="1737754199590" duration="51000" />
       <workItem from="1737756547603" duration="27000" />
-      <workItem from="1740778801390" duration="4010000" />
+      <workItem from="1740778801390" duration="4304000" />
+      <workItem from="1740985965224" duration="1421000" />
     </task>
+    <task id="LOCAL-00001" summary="Started demo stage work">
+      <option name="closed" value="true" />
+      <created>1740783429675</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1740783429675</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityProjectDiscoverer">
     <option name="hasUnityReference" value="true" />
@@ -123,5 +149,7 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Started demo stage work" />
+    <option name="LAST_COMMIT_MESSAGE" value="Started demo stage work" />
   </component>
 </project>
