@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 using KinematicCharacterController;
 using System.Collections;
+using Cadabra.Scripts.Core.Demo;
 
 public struct PlayerInputs
 {
@@ -74,6 +75,7 @@ namespace Cadabra.Core
             if (inputs.JumpPressed)
             {
                 StartCoroutine(RequestJump());
+                DemoHandler.DemoIncrementJumps();
             }
         }
 

@@ -5,14 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b7edaa1-3b01-4906-a551-de9d9b623e0a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Cadabra/Scripts/Core/Demo.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Cadabra/Scripts/Core/Demo/ParkourRound.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Cadabra/Scripts/Core/Demo/ParkourRound.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Cadabra/Scripts/PlayerInteractables/Pickups/EndDemoPickup.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Cadabra/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Cadabra/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Cadabra/Materials/DebugJumppad 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cadabra/Materials/DebugJumppad 1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Cadabra/Materials/UIRed.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cadabra/Materials/UIRed.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Cadabra/Materials/UISilver.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cadabra/Materials/UISilver.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Cadabra/Scripts/Core/DemoHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cadabra/Scripts/Core/DemoHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Cadabra/Scripts/PlayerInteractables/Pickups/JumpSphere.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Cadabra/Scripts/PlayerInteractables/Pickups/PickupTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cadabra/Scripts/PlayerInteractables/Pickups/TimerPickup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Cadabra/Scripts/Core/DemoHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cadabra/Scripts/Core/Demo/DemoHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Cadabra/Scripts/Core/DemoHandler.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cadabra/Scripts/Core/Demo/DemoHandler.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Cadabra/Scripts/Core/Movement/CharacterMotor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cadabra/Scripts/Core/Movement/CharacterMotor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Cadabra/Scripts/PlayerInteractables/Pickups/TimerPickup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cadabra/Scripts/PlayerInteractables/Pickups/TimerPickup.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,18 +28,18 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "NickAwrist"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;NickAwrist&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/JaceDaDorito/Cadabra",
-    "accountId": "870d0a42-0337-4112-9f65-c1d3eec56983"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/JaceDaDorito/Cadabra&quot;,
+    &quot;accountId&quot;: &quot;870d0a42-0337-4112-9f65-c1d3eec56983&quot;
   }
-}]]></component>
+}</component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
@@ -123,7 +124,8 @@
       <workItem from="1737754199590" duration="51000" />
       <workItem from="1737756547603" duration="27000" />
       <workItem from="1740778801390" duration="4304000" />
-      <workItem from="1740985965224" duration="1421000" />
+      <workItem from="1740985965224" duration="1627000" />
+      <workItem from="1741117884732" duration="2315000" />
     </task>
     <task id="LOCAL-00001" summary="Started demo stage work">
       <option name="closed" value="true" />
@@ -133,7 +135,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740783429675</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added more to the parkour area. Not complete whatsoever, need more ideas on testing movement. Also added timer pickups that can start, end, and print times">
+      <option name="closed" value="true" />
+      <created>1740987596566</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1740987596566</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,6 +160,7 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Started demo stage work" />
-    <option name="LAST_COMMIT_MESSAGE" value="Started demo stage work" />
+    <MESSAGE value="Added more to the parkour area. Not complete whatsoever, need more ideas on testing movement. Also added timer pickups that can start, end, and print times" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added more to the parkour area. Not complete whatsoever, need more ideas on testing movement. Also added timer pickups that can start, end, and print times" />
   </component>
 </project>

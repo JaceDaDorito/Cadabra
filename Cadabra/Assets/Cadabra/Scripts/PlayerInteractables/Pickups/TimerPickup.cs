@@ -1,7 +1,6 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using Cadabra.Core;
+using Cadabra.Scripts.Core.Demo;
 using UnityEngine;
 
 namespace Cadabra.PlayerInteractables
@@ -16,15 +15,21 @@ namespace Cadabra.PlayerInteractables
             switch (type)
             {
                 case "start":
-                    DemoHandler.StartTimer();
-                    Debug.Log("Timer started");
+                    DemoHandler.StartParkourRun();
                     break;
                 case "end":
-                    DemoHandler.EndTimer();
-                    Debug.Log("It took: " + DemoHandler.GetTime() + " seconds");
+                    ParkourRound round = DemoHandler.EndParkourRun();
+                    if (round != null)
+                    {
+                        Debug.Log("Timer ended: " + round.GetTime());
+                    }
+                    else
+                    {
+                        Debug.Log("No timer running");
+                    }
                     break;
                 case "print":
-                    DemoHandler.PrintAllTimes();
+                    DemoHandler.PrintParkourRunTimes();
                     break;
                 default:
                     Debug.Log("Invalid type: " + type);
