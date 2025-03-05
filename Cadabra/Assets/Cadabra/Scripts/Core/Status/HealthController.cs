@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Cadabra.Core
 {
@@ -22,6 +23,11 @@ namespace Cadabra.Core
         {
             currentHealth -= damageAmount;
             currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+
+            if (currentHealth == 0) { 
+                SceneManager.LoadScene("DeathScene");
+                currentHealth = maxHealth;
+            }
         }
 
         public void Heal(float healAmount)
