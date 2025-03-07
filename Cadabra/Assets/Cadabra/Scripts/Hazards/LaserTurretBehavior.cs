@@ -15,6 +15,8 @@ namespace Cadabra.Hazards
         public bool ignoreTeam = false;
         public float maxDistance = 500f;
         public float tickRate = 5;
+        public float offset = 0;
+        public GameObject tracer;
 
         private BulletAttack bulletAttack;
 
@@ -29,13 +31,14 @@ namespace Cadabra.Hazards
             bulletAttack.ignoreTeam = ignoreTeam;
             bulletAttack.maxDistance = maxDistance;
             bulletAttack.critsOnWeakPoints = false;
+            bulletAttack.tracerPrefab = tracer;
 
             Transform muzzleTransform = cd.FindTransform(0).transform;
             bulletAttack.origin = muzzleTransform.position;
             bulletAttack.aimVec = muzzleTransform.forward;
             bulletAttack.muzzle = muzzleTransform;
 
-            time = tickRate;
+            time = tickRate + offset;
         }
 
         private void FixedUpdate()
