@@ -5,15 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b7edaa1-3b01-4906-a551-de9d9b623e0a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Cadabra/Scripts/Core/Demo.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Cadabra/Scripts/Core/Demo/ParkourRound.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Cadabra/Scripts/Core/Demo/ParkourRound.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Cadabra/Scripts/PlayerInteractables/Pickups/EndDemoPickup.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Cadabra/Scripts/Core/Demo/CheckPoint.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Cadabra/Scripts/Core/Demo/CheckPoint.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Cadabra/Scripts/PlayerInteractables/Pickups/LastCheckpointPickup.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Cadabra/Scripts/PlayerInteractables/Pickups/LastCheckpointPickup.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Cadabra/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Cadabra/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Cadabra/Scripts/Core/DemoHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cadabra/Scripts/Core/Demo/DemoHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Cadabra/Scripts/Core/DemoHandler.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cadabra/Scripts/Core/Demo/DemoHandler.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Advance Studios/Medieval Castle/Art/Model/Materials/CasaBTextura.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Advance Studios/Medieval Castle/Art/Model/Materials/CasaBTextura.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Cadabra/Materials/UIBlack.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cadabra/Materials/UIBlack.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Cadabra/Materials/UIRed.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cadabra/Materials/UIRed.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Cadabra/Scripts/Core/Demo/DemoHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cadabra/Scripts/Core/Demo/DemoHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Cadabra/Scripts/Core/Movement/CharacterMotor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cadabra/Scripts/Core/Movement/CharacterMotor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Cadabra/Scripts/PlayerInteractables/Pickups/TimerPickup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cadabra/Scripts/PlayerInteractables/Pickups/TimerPickup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Cadabra/Scripts/PlayerInteractables/Pickups/EndDemoPickup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cadabra/Scripts/PlayerInteractables/Pickups/EndDemoPickup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Demo.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Demo.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +44,10 @@
     &quot;accountId&quot;: &quot;870d0a42-0337-4112-9f65-c1d3eec56983&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/Users/idari/Documents/Unity Projects/Cadabra/Cadabra/Assets/Cadabra/Scripts/Core/Movement/CharacterMotor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/idari/Documents/Unity Projects/Cadabra/Cadabra/Assets/Scenes/Demo.unity" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
@@ -125,7 +133,9 @@
       <workItem from="1737756547603" duration="27000" />
       <workItem from="1740778801390" duration="4304000" />
       <workItem from="1740985965224" duration="1627000" />
-      <workItem from="1741117884732" duration="2315000" />
+      <workItem from="1741117884732" duration="2382000" />
+      <workItem from="1741383868814" duration="1000" />
+      <workItem from="1741383926181" duration="6581000" />
     </task>
     <task id="LOCAL-00001" summary="Started demo stage work">
       <option name="closed" value="true" />
@@ -143,7 +153,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740987596566</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Made a separate class for Parkour Round. Added more variables to DemoHandler. Made method to write to a text file in DemoHandler">
+      <option name="closed" value="true" />
+      <created>1741120280735</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1741120280735</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,6 +179,7 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Started demo stage work" />
     <MESSAGE value="Added more to the parkour area. Not complete whatsoever, need more ideas on testing movement. Also added timer pickups that can start, end, and print times" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added more to the parkour area. Not complete whatsoever, need more ideas on testing movement. Also added timer pickups that can start, end, and print times" />
+    <MESSAGE value="Made a separate class for Parkour Round. Added more variables to DemoHandler. Made method to write to a text file in DemoHandler" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made a separate class for Parkour Round. Added more variables to DemoHandler. Made method to write to a text file in DemoHandler" />
   </component>
 </project>

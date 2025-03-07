@@ -40,8 +40,6 @@ namespace Cadabra.Core
         private bool _forceUngroundRequested;
         public bool _forceNoInput;
         private int currentJumpCount;
-        
-
 
         private void Start()
         {

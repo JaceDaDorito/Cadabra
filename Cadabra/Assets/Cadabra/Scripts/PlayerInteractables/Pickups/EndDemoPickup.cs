@@ -10,6 +10,7 @@ public class EndDemoPickup : MonoBehaviour
     {
         Debug.Log("Ending demo session");
         DemoHandler.EndDemo();
+        DemoHandler.SetCurrentCheckpoint(null);
     }
     
 }

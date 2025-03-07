@@ -51,6 +51,22 @@ namespace Cadabra.Scripts.Core.Demo
             Debug.Log(sb.ToString());
         }
         
+        // Checkpoint-related variables and methods
+        private static CheckPoint _currentCheckpoint;
+        
+        public static void ReturnToLastCheckpoint(PlayerBody player)
+        {
+            if (_currentCheckpoint == null) return;
+            
+            _currentCheckpoint.TeleportToCheckpoint(player);
+        }
+        
+        public static void SetCurrentCheckpoint(CheckPoint checkpoint)
+        {
+            _currentCheckpoint = checkpoint;
+        }
+        
+        
         // Movement-related variables and methods
         private static int _numJumps;
         private static int _numWallClimbs;
