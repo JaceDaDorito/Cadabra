@@ -6995,6 +6995,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1832639665537337624, guid: 3e18f579aeb8e6f4aab982257c490d5b, type: 3}
+      propertyPath: pairArray.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1832639665537337624, guid: 3e18f579aeb8e6f4aab982257c490d5b, type: 3}
+      propertyPath: pairArray.Array.data[0].name
+      value: Muzzle
+      objectReference: {fileID: 0}
     - target: {fileID: 5833086039193434837, guid: 3e18f579aeb8e6f4aab982257c490d5b, type: 3}
       propertyPath: force
       value: 100

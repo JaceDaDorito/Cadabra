@@ -28,6 +28,7 @@ namespace Cadabra.VFX
         public UnityEvent onTracerHit;
 
         private float distanceTraveled;
+        private bool headHit;
 
 
         public void Start()
@@ -38,6 +39,7 @@ namespace Cadabra.VFX
 
             head.position = startPosition;
             tail.position = startPosition;
+            headHit = false;
         }
 
         public void Update()
