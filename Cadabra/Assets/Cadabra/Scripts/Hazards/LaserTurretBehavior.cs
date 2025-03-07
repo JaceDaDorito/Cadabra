@@ -33,7 +33,7 @@ namespace Cadabra.Hazards
             bulletAttack.critsOnWeakPoints = false;
             bulletAttack.tracerPrefab = tracer;
 
-            Transform muzzleTransform = cd.FindTransform(0).transform;
+            Transform muzzleTransform = cd.FindTransform("Muzzle").transform;
             bulletAttack.origin = muzzleTransform.position;
             bulletAttack.aimVec = muzzleTransform.forward;
             bulletAttack.muzzle = muzzleTransform;

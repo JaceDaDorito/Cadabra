@@ -204,8 +204,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41473cebafef7884887196910d1ec497, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transformArray:
-  - {fileID: 1871922316193021251}
+  pairArray:
+  - name: Muzzle
+    transform: {fileID: 1871922316193021251}
 --- !u!114 &5833086039193434837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -223,6 +224,7 @@ MonoBehaviour:
   ignoreTeam: 0
   maxDistance: 500
   tickRate: 5
+  offset: 0
   tracer: {fileID: 7102819314444647363, guid: 37c5e421e104fa64a87c13e10c532fee, type: 3}
 --- !u!1 &7387961992633887727
 GameObject:

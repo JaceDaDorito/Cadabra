@@ -47,10 +47,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41473cebafef7884887196910d1ec497, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transformArray:
-  - {fileID: 1962566437059259090}
-  - {fileID: 3022406672019452204}
-  - {fileID: 8227392734499098173}
+  pairArray:
+  - name: Player
+    transform: {fileID: 1962566437059259090}
+  - name: PlayerUI
+    transform: {fileID: 3022406672019452204}
+  - name: Player Camera
+    transform: {fileID: 8227392734499098173}
 --- !u!1001 &5684067209600392043
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -9,18 +9,34 @@ namespace Cadabra.Util
 	public class ChildLocator : MonoBehaviour
 	{
 		[SerializeField]
-		private Transform[] transformArray = Array.Empty<Transform>();
+		private NameTransformPair[] pairArray = Array.Empty<NameTransformPair>();
+
+		[Serializable]
+		private struct NameTransformPair
+        {
+			public string name;
+			public Transform transform; 
+        }
 		public int Count
 		{
 			get
 			{
-				return transformArray.Length;
+				return pairArray.Length;
 			}
 		}
 
 		public Transform FindTransform(int index)
         {
-			return transformArray[index].transform;
+			return pairArray[index].transform;
+        }
+
+		public Transform FindTransform(string name)
+        {
+			foreach(NameTransformPair ntp in pairArray)
+            {
+				if (ntp.name.Equals(name)) return ntp.transform;
+            }
+			return null;
         }
     }
 }
