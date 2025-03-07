@@ -4,20 +4,12 @@ using UnityEngine;
 
 namespace Cadabra.Core
 {
-    public class PlayerBody : MonoBehaviour
+    public class PlayerBody : CharacterBody
     {
         [SerializeField]
         private CameraController _cameraController;
         [SerializeField]
         private GameObject _uiCamera;
-        [SerializeField]
-        private CharacterMotor _characterMotor;
-        [SerializeField]
-        public HealthController _healthController;
-        [SerializeField]
-        public ManaController _manaController;
-        [SerializeField]
-        private WeaponStateMachine _weaponStateMachine;
         [SerializeField]
         private Transform _cameraFollowPoint;
         
@@ -30,7 +22,7 @@ namespace Cadabra.Core
             _cameraController.SetFollowTransform(_cameraFollowPoint);
             
         }
-        private void HandleMouseInput()
+        protected virtual void HandleMouseInput()
         {
             float mouseY = Input.GetAxisRaw("Mouse Y");
             float mouseX = Input.GetAxisRaw("Mouse X");
@@ -41,7 +33,7 @@ namespace Cadabra.Core
             _cameraController.UpdateWithInput(Time.deltaTime, scrollInput, _lookInputVector);
         }
 
-        private void HandleCharacterInputs()
+        protected virtual void HandleCharacterInputs()
         {
             PlayerInputs inputs = new PlayerInputs();
             inputs.MoveAxisForward = Input.GetAxisRaw("Vertical");
@@ -62,7 +54,7 @@ namespace Cadabra.Core
         private void Update()
         {
             HandleCharacterInputs();
-
+/*
             // Temp Damage Trigger
             if (Input.GetKeyDown(KeyCode.Keypad1)) _healthController.TakeDamage(25f);
 
@@ -73,7 +65,7 @@ namespace Cadabra.Core
             if (Input.GetKeyDown(KeyCode.Keypad3)) _manaController.UseMana(25f);
 
             // Temp Mana Gain Trigger
-            if (Input.GetKeyDown(KeyCode.Keypad4)) _manaController.Syphon(50f);
+            if (Input.GetKeyDown(KeyCode.Keypad4)) _manaController.Syphon(50f);*/
         }
 
         private void LateUpdate()
