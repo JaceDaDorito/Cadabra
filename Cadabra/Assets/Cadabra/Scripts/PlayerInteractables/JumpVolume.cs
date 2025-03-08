@@ -23,7 +23,7 @@ namespace Cadabra.PlayerInteractables
         {
             CharacterMotor comp = other.gameObject.GetComponent<CharacterMotor>();
 
-            if (comp._dontTriggerJumpVolumes) return;
+            if (!comp || comp._dontTriggerJumpVolumes) return;
 
             if (comp)
             {

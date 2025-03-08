@@ -1,33 +1,60 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 namespace Cadabra.Core
 {
+    [DisallowMultipleComponent]
+    [RequireComponent(typeof(CharacterBody))]
     public class HealthController : MonoBehaviour
     {
         public float maxHealth;
+        public UnityEvent<CharacterBody> bodyDeathBehavior;
         [HideInInspector]
         public float currentHealth;
+        [HideInInspector]
+        public CharacterBody body;
+        [HideInInspector]
+        public bool invincible = false;
 
         public bool isMaxHealth => currentHealth == maxHealth;
 
-        // Inherited
+
         private void Start()
         {
             currentHealth = maxHealth;
         }
 
-        public void TakeDamage(float damageAmount)
+        private void Awake()
         {
-            currentHealth -= damageAmount;
-            currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+            body = this.GetComponent<CharacterBody>();
+        }
 
-            if (currentHealth == 0) { 
-                SceneManager.LoadScene("DeathScene");
-                currentHealth = maxHealth;
+        public void RequestDamage(DamageInfo damageInfo)
+        {
+            if (invincible) return;
+
+            //If the damage doesn't ignore team and the team of the attacker and victim are the same, discard damage
+            if(damageInfo.attacker != null)
+            {
+                if (!damageInfo.ignoreTeam && (damageInfo.attacker._team == body._team)) return;
             }
+
+            if (damageInfo.force.sqrMagnitude > 0)
+                gameObject.GetComponent<CharacterBody>()._characterMotor.RequestImpulseForce(damageInfo.force);
+
+            
+            currentHealth -= (damageInfo.damage * (damageInfo.crit ? damageInfo.critDamageMultiplier : 1));
+            currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+            if (currentHealth == 0) RequestDeath();
+        }
+        //this is fine for now
+
+        public void RequestDeath()
+        {
+            if(bodyDeathBehavior != null)
+                bodyDeathBehavior.Invoke(body);
         }
 
         public void Heal(float healAmount)

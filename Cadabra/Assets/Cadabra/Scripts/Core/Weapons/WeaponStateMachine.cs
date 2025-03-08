@@ -9,7 +9,8 @@ namespace Cadabra.Core
         [SerializeField]
         private CameraController _cameraController;
 
-        LayerMask layerMask = LayerMask.GetMask("World");
+        [SerializeField]
+        public LayerMask layerMask;
         public struct WeaponInputs
         {
             public bool PrimaryPressed;
@@ -34,7 +35,8 @@ namespace Cadabra.Core
         {
             RaycastHit hit;
             Physics.Raycast(_cameraController.transform.position, _cameraController.transform.forward, out hit, 100);
-            Debug.Log($"{hit.collider.gameObject.layer}");
+            if(hit.collider)Debug.Log($"{hit.collider.gameObject.layer}");
+
         }
     }
 
