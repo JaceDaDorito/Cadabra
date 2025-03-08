@@ -86,7 +86,7 @@ MonoBehaviour:
   head: {fileID: 2009656705639578073}
   tail: {fileID: 2750549231336931997}
   speed: 200
-  headToTailOffset: 50
+  headToTailOffset: 10
   lineRenderers:
   - {fileID: 0}
   onTracerHit:
