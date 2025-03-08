@@ -31,7 +31,6 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://C:/Users/idari/Documents/Unity Projects/Cadabra/Cadabra/Assets/Cadabra/Scripts/Core/Movement/CharacterMotor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/idari/Documents/Unity Projects/Cadabra/Cadabra/Assets/Scenes/Demo.unity" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -122,6 +121,7 @@
       <workItem from="1741117884732" duration="2382000" />
       <workItem from="1741383868814" duration="1000" />
       <workItem from="1741383926181" duration="6711000" />
+      <workItem from="1741463734792" duration="137000" />
     </task>
     <task id="LOCAL-00001" summary="Started demo stage work">
       <option name="closed" value="true" />
@@ -155,7 +155,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741390637809</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added a small forest and castle section to demo scene">
+      <option name="closed" value="true" />
+      <created>1741463863239</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1741463863239</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,6 +183,7 @@
     <MESSAGE value="Added more to the parkour area. Not complete whatsoever, need more ideas on testing movement. Also added timer pickups that can start, end, and print times" />
     <MESSAGE value="Made a separate class for Parkour Round. Added more variables to DemoHandler. Made method to write to a text file in DemoHandler" />
     <MESSAGE value="Added pickups and CheckPoint class for player checkpoint implementation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added pickups and CheckPoint class for player checkpoint implementation" />
+    <MESSAGE value="Added a small forest and castle section to demo scene" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a small forest and castle section to demo scene" />
   </component>
 </project>
