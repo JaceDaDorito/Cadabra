@@ -4,21 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b7edaa1-3b01-4906-a551-de9d9b623e0a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Cadabra/Scripts/Core/Demo/CheckPoint.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Cadabra/Scripts/Core/Demo/CheckPoint.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Cadabra/Scripts/PlayerInteractables/Pickups/LastCheckpointPickup.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Cadabra/Scripts/PlayerInteractables/Pickups/LastCheckpointPickup.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Cadabra/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Cadabra/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Advance Studios/Medieval Castle/Art/Model/Materials/CasaBTextura.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Advance Studios/Medieval Castle/Art/Model/Materials/CasaBTextura.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Cadabra/Materials/UIBlack.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cadabra/Materials/UIBlack.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Cadabra/Materials/UIRed.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cadabra/Materials/UIRed.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Cadabra/Scripts/Core/Demo/DemoHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cadabra/Scripts/Core/Demo/DemoHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Cadabra/Scripts/Core/Movement/CharacterMotor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cadabra/Scripts/Core/Movement/CharacterMotor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Cadabra/Scripts/PlayerInteractables/Pickups/EndDemoPickup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cadabra/Scripts/PlayerInteractables/Pickups/EndDemoPickup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Demo.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Demo.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
-    </list>
+    <list default="true" id="5b7edaa1-3b01-4906-a551-de9d9b623e0a" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -135,7 +121,7 @@
       <workItem from="1740985965224" duration="1627000" />
       <workItem from="1741117884732" duration="2382000" />
       <workItem from="1741383868814" duration="1000" />
-      <workItem from="1741383926181" duration="6581000" />
+      <workItem from="1741383926181" duration="6711000" />
     </task>
     <task id="LOCAL-00001" summary="Started demo stage work">
       <option name="closed" value="true" />
@@ -161,7 +147,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741120280735</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added pickups and CheckPoint class for player checkpoint implementation">
+      <option name="closed" value="true" />
+      <created>1741390637809</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1741390637809</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,6 +174,7 @@
     <MESSAGE value="Started demo stage work" />
     <MESSAGE value="Added more to the parkour area. Not complete whatsoever, need more ideas on testing movement. Also added timer pickups that can start, end, and print times" />
     <MESSAGE value="Made a separate class for Parkour Round. Added more variables to DemoHandler. Made method to write to a text file in DemoHandler" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made a separate class for Parkour Round. Added more variables to DemoHandler. Made method to write to a text file in DemoHandler" />
+    <MESSAGE value="Added pickups and CheckPoint class for player checkpoint implementation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added pickups and CheckPoint class for player checkpoint implementation" />
   </component>
 </project>
