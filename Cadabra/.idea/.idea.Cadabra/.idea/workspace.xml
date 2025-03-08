@@ -122,6 +122,7 @@
       <workItem from="1741383868814" duration="1000" />
       <workItem from="1741383926181" duration="6711000" />
       <workItem from="1741463734792" duration="137000" />
+      <workItem from="1741466975059" duration="206000" />
     </task>
     <task id="LOCAL-00001" summary="Started demo stage work">
       <option name="closed" value="true" />
@@ -163,7 +164,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741463863239</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added enemies and navmesh to demo">
+      <option name="closed" value="true" />
+      <created>1741467010732</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1741467010732</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,6 +193,7 @@
     <MESSAGE value="Made a separate class for Parkour Round. Added more variables to DemoHandler. Made method to write to a text file in DemoHandler" />
     <MESSAGE value="Added pickups and CheckPoint class for player checkpoint implementation" />
     <MESSAGE value="Added a small forest and castle section to demo scene" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a small forest and castle section to demo scene" />
+    <MESSAGE value="Added enemies and navmesh to demo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added enemies and navmesh to demo" />
   </component>
 </project>
