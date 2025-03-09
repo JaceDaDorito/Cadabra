@@ -22,6 +22,8 @@ public class EnemySimple : MonoBehaviour
 
     private float shootingDistance;
 
+    private bool isLost = true;
+
     private void Awake()
     {
         enemyRefrences = GetComponent<EnemyRefrences>();
@@ -31,7 +33,7 @@ public class EnemySimple : MonoBehaviour
     void Start()
     {
         shootingDistance = enemyRefrences.navMeshagent.stoppingDistance;
-        Patrolling();
+        isLost = true;
     }
 
     // Update is called once per frame
@@ -44,21 +46,28 @@ public class EnemySimple : MonoBehaviour
 
             bool inRange = Vector3.Distance(transform.position, target.position) <= shootingDistance;
 
-            if (distance > spotRange)
+            if (distance > spotRange && isLost == true)
             {
                 if (Time.time >= pathUpdateDeadline)
                     Patrolling();
             }
-            else
+            if (distance > spotRange && isLost == false)
+            {
+                if (Time.time >= pathUpdateDeadline)
+                    Searching();
+            }
+            if (distance < spotRange)
             {
                 // Chasing
                 if (inRange)
                 {
                     LookAtTarget();
+                    isLost = false;
                 }
                 else
                 {
                     UpdatePath();
+                    isLost = false;
                 }
             }
             //enemyRefrences.animator.SetBool("shooting", inRange);
@@ -85,7 +94,19 @@ public class EnemySimple : MonoBehaviour
         }
     }
 
-    void Patrolling()
+    private void Searching()
+    {
+        float distanceToTarget = Vector3.Distance(enemyRefrences.navMeshagent.pathEndPosition, transform.position);
+        if (distanceToTarget > enemyRefrences.navMeshagent.stoppingDistance)
+        {
+            enemyRefrences.navMeshagent.SetDestination(enemyRefrences.navMeshagent.pathEndPosition);
+            isLost = false;
+        }
+        else
+            isLost = true;
+    }
+
+    private void Patrolling()
     {
         if(wayPoint.Count == 0)
         {
