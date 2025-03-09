@@ -24,7 +24,9 @@ namespace Cadabra.Attacks
         public bool ignoreTeam = false;
         public Vector3 origin;
         public Vector3 aimVec;
+        public bool overrideMuzzle = false; //Remove this later
         public Transform muzzle; //The bullet comes from the camera, the visual comes from the muzzle
+        public Vector3 muzzleOverride = Vector3.zero;
         public float maxDistance = 500f;
         public GameObject tracerPrefab;
         public GameObject impactVfxPrefab;
@@ -51,6 +53,7 @@ namespace Cadabra.Attacks
                     {
                         hit.collider.gameObject
                     });
+                    return;
                 }
 
                 if(force != 0)
@@ -77,7 +80,7 @@ namespace Cadabra.Attacks
 
             GameObject instance = GameObject.Instantiate(tracerPrefab);
             TracerComponent tracerComponent = instance.GetComponent<TracerComponent>();
-            tracerComponent.startPosition = muzzle.position;
+            tracerComponent.startPosition = overrideMuzzle? muzzleOverride : muzzle.position;
             tracerComponent.target = target;
             tracerComponent.totalDistance = distance;
 

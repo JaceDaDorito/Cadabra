@@ -45,7 +45,8 @@ namespace Cadabra.Core
             _cameraController.SetRollRotation(Mathf.Clamp(inputs.MoveAxisRight, -1, 1));
 
             WeaponStateMachine.WeaponInputs wInputs = new WeaponStateMachine.WeaponInputs();
-            wInputs.PrimaryPressed = Input.GetKeyDown(KeyCode.Mouse0);
+            wInputs.PrimaryPressed = Input.GetKey(KeyCode.Mouse0);
+            wInputs.SecondaryPressed = Input.GetKeyDown(KeyCode.Mouse1);
             _weaponStateMachine.SetInputs(ref wInputs);
 
 

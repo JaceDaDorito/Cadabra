@@ -9,16 +9,23 @@ using Cadabra.Core;
 
 namespace Cadabra.Projectile
 {
+    //I can abstract this further but this will do for now
+
     [RequireComponent(typeof(Collider))]
     [RequireComponent(typeof(Rigidbody))]
     public class GenericProjectile : MonoBehaviour
     {
         public GameObject projectileGhost;
         public Transform projectileGhostNest;
-        public float acceleration;
-        public float initialSpeed;
-        public float lifetime;
-        public bool triggerOnImpact;
+        [Min (0.01f)]
+        public float speedCoefficient = 1f;
+        public bool enabledSpeedOverTime;
+        public AnimationCurve speedOverTime;
+        [Min(0f)]
+        public float lifetime = 7f;
+        public bool triggerOnImpact = true;
+
+        public UnityEvent<ImpactInfo> onTrigger;
 
         [HideInInspector]
         public CharacterBody owner;
@@ -28,13 +35,24 @@ namespace Cadabra.Projectile
         public float time;
         [HideInInspector]
         public GameObject projectileGhostInstance;
+        [HideInInspector]
+        public Collider collider;
+        [HideInInspector]
+        public Rigidbody rigidbody;
 
         public virtual void Start()
         {
-            time = Math.Abs(lifetime);
+            collider = gameObject.GetComponent<Collider>();
+            rigidbody = gameObject.GetComponent<Rigidbody>();
+            time = 0;
             if (projectileGhost)
             {
                 projectileGhostInstance = Instantiate(projectileGhost, projectileGhostNest ? projectileGhostNest : transform);
+            }
+            if (aimDir.sqrMagnitude != 0) {
+                aimDir.Normalize();
+                transform.LookAt(aimDir);
+                SetVelocity(speedCoefficient, aimDir);
             }
         }
 
@@ -60,18 +78,38 @@ namespace Cadabra.Projectile
 
         public virtual void OnCollisionEnter(Collision collision)
         {
-            Trigger(collision);
+            if (triggerOnImpact) Trigger(collision);
         }
 
         public virtual void FixedUpdate()
         {
-            time -= Time.fixedDeltaTime;
-            if (time >= 0) Trigger(null);
+            time += Time.deltaTime;
+            if (time > lifetime) Trigger(null);
+
+            if (enabledSpeedOverTime) SetVelocity(speedCoefficient, aimDir);
         }
 
-        public virtual void Trigger(Collision collision)
+        protected void SetVelocity(float speed, Vector3 dir)
         {
+            
+            if (!rigidbody) return;
+
+            if (enabledSpeedOverTime)
+                rigidbody.velocity = speed * speedOverTime.Evaluate(time / lifetime) * dir;
+            else
+                rigidbody.velocity = speed * dir;
+        }
+
+        protected virtual void Trigger(Collision collision)
+        {
+            
             ImpactInfo impactInfo = ConstructImpactInfo(collision);
+            onTrigger.Invoke(impactInfo);
+            Destroy(this.gameObject);
+        }
+        public virtual void Destroy(ImpactInfo impactInfo)
+        {
+            Destroy(gameObject);
         }
     }
 }
