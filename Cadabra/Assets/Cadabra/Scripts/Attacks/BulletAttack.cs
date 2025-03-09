@@ -50,7 +50,9 @@ namespace Cadabra.Attacks
                     Debug.LogErrorFormat("GameObject {0} is on HurtBox layer but has no HurtBox component", new object[]
                     {
                         hit.collider.gameObject
+
                     });
+                    return;
                 }
 
                 if(force != 0)

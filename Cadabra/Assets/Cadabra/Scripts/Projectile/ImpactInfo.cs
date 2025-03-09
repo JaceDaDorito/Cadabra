@@ -8,9 +8,7 @@ using UnityEngine;
 
 namespace Cadabra.Projectile
 {
-
-
-    //Object created by damager to send to the victim's HealthController via Request Damage
+    //Object created by a projectile on impact.
     public class ImpactInfo
     {
         public CharacterBody owner;
