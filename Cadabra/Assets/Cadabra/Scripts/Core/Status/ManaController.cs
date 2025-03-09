@@ -9,11 +9,29 @@ namespace Cadabra.Core
         public float maxMana;
         [HideInInspector]
         public float currentMana;
+        public float manaRegen;
+        [Min(0.1f)]
+        public float tickRate;
+
+        private float timer = 0;
+
+        public bool isMaxMana => currentMana == maxMana;
 
         // Inherited
         void Start()
         {
             currentMana = maxMana;
+            timer = tickRate;
+        }
+
+        public void Update()
+        {
+            timer -= Time.deltaTime;
+            if(timer <= 0)
+            {
+                timer = tickRate;
+                Syphon(manaRegen);
+            }
         }
 
         public void UseMana(float usedAmount)

@@ -42,7 +42,6 @@ namespace Cadabra.Projectile
 
         public virtual void Start()
         {
-            Debug.Log(aimDir);
             collider = gameObject.GetComponent<Collider>();
             rigidbody = gameObject.GetComponent<Rigidbody>();
             time = 0;

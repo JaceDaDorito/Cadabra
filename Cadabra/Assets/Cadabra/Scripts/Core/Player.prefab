@@ -213,6 +213,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxMana: 250
   currentMana: 0
+  manaRegen: 2
+  tickRate: 1
 --- !u!114 &7869486189208595057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -226,9 +228,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _cameraController: {fileID: 0}
+  body: {fileID: 7985933788411942203}
   layerMask:
     serializedVersion: 2
     m_Bits: 128
+  tracer: {fileID: 7102819314444647363, guid: 19dbf9cc23064a845b0ba773d51ca853, type: 3}
+  projectile: {fileID: 7386214173081834882, guid: c36aa71210309f741bca0501939baf4e, type: 3}
 --- !u!114 &3799974382546872088
 MonoBehaviour:
   m_ObjectHideFlags: 0

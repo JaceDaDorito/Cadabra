@@ -42,6 +42,7 @@ namespace Cadabra.Core
                 instancedPlayerHolder = GameObject.Instantiate(playerHolder, PlayerSpawnPoint.instance.transform);
                 playerBody = instancedPlayerHolder.GetComponent<ChildLocator>().FindTransform("Player").GetComponent<PlayerBody>();
                 playerBody._healthController.bodyDeathBehavior.AddListener(PlayerDeathSequence);
+                playerBody._team = Team.Player;
             }
         }
 
