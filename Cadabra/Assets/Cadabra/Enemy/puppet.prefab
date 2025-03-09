@@ -541,7 +541,7 @@ GameObject:
   - component: {fileID: 4389646306573931095}
   - component: {fileID: 1692729076732275963}
   - component: {fileID: 1356939593240398393}
-  - component: {fileID: 2090833827078285542}
+  - component: {fileID: 5389334353538877966}
   m_Layer: 0
   m_Name: Puppet
   m_TagString: Untagged
@@ -640,7 +640,7 @@ MonoBehaviour:
   navMeshagent: {fileID: 0}
   animator: {fileID: 0}
   pathUpdateDelay: 0.2
---- !u!114 &2090833827078285542
+--- !u!114 &5389334353538877966
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -649,7 +649,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3172096400385400725}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03bc8063c9e95401f9a8a38bc716750d, type: 3}
+  m_Script: {fileID: 11500000, guid: 4d6ca37966fcb4143b490f14727c565b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Method: 2
