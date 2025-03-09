@@ -8,11 +8,13 @@ public class DeathMenuManager : MonoBehaviour
     public void Respawn()
     {
         SceneManager.LoadScene("SampleScene");
+        Cursor.visible = false;
     }
 
     public void MainMenu()
     {
         SceneManager.LoadScene("BootScene");
+        Cursor.visible = true;
     }
 
     public void QuitGame()

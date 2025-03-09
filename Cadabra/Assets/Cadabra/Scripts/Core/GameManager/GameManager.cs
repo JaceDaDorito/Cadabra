@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cadabra.Util;
+using UnityEngine.SceneManagement;
 
 namespace Cadabra.Core
 {
@@ -48,7 +49,8 @@ namespace Cadabra.Core
 
         private void PlayerDeathSequence(CharacterBody body)
         {
-            Debug.Log("oooo you died");
+            SceneManager.LoadScene("DeathScene");
+            Cursor.visible = true;
         }
 
         private void OnEnable()
