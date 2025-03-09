@@ -49,6 +49,7 @@ namespace Cadabra.Core
         private void PlayerDeathSequence(CharacterBody body)
         {
             SceneManager.LoadScene("DeathScene");
+            Cursor.visible = true;
         }
 
         private void OnEnable()
