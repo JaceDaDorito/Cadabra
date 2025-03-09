@@ -48,8 +48,6 @@ namespace Cadabra.Core
             wInputs.PrimaryPressed = Input.GetKey(KeyCode.Mouse0);
             wInputs.SecondaryPressed = Input.GetKeyDown(KeyCode.Mouse1);
             _weaponStateMachine.SetInputs(ref wInputs);
-
-
         }
 
         private void Update()
