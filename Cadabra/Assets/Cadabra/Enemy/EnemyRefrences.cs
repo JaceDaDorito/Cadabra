@@ -8,8 +8,8 @@ namespace EnemyRef
     [DisallowMultipleComponent]
     public class EnemyRefrences : MonoBehaviour
     {
-        [HideInInspector] public NavMeshAgent navMeshagent;
-        [HideInInspector] public Animator animator;
+        public NavMeshAgent navMeshagent;
+        public Animator animator;
 
         [Header("Stats")]
 
