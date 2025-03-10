@@ -13,14 +13,14 @@ namespace Cadabra.Scripts.Core.Demo
         [SerializeField]
         public Transform checkpointTransform;
         
+        
         public CheckPoint(int id)
         {
             checkpointID = id;
         }
-
+        
         public void SetDemoCheckpoint()
-        {
-            Debug.Log("Setting checkpoint: " + checkpointID);
+        { Debug.Log("CheckPoint: Setting checkpoint: " + checkpointID);
             DemoHandler.SetCurrentCheckpoint(this);
         }
         
@@ -33,8 +33,6 @@ namespace Cadabra.Scripts.Core.Demo
             }
 
             player.GetComponent<KinematicCharacterMotor>().SetPosition(checkpointTransform.position);
-
-            //Debug.Log($"Teleporting {player} to checkpoint: {checkpointID}");
         }
 
 

@@ -73,7 +73,7 @@ namespace Cadabra.Core
             if (inputs.JumpPressed)
             {
                 StartCoroutine(RequestJump());
-                DemoHandler.DemoIncrementJumps();
+                DemoHandler.GetCurrentDemoRound().IncrementJumps();
             }
         }
 

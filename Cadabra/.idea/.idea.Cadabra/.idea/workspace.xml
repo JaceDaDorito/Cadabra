@@ -4,7 +4,494 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b7edaa1-3b01-4906-a551-de9d9b623e0a" name="Changes" comment="" />
+    <list default="true" id="5b7edaa1-3b01-4906-a551-de9d9b623e0a" name="Changes" comment="Removed most unused assets">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Cadabra/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Cadabra/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Animals.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Animals/horse black.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Animals/horse black.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Animals/horse brown.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Animals/horse brown.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Animals/horse silver.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Animals/horse silver.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Animals/horse white.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Animals/horse white.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Environment/Benchs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Environment/Benchs/bench 2.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Environment/Benchs/bench 2.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Environment/Benchs/bench.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Environment/Benchs/bench.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Environment/Winter environment.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Environment/Winter environment/Christmas balls.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Environment/Winter environment/Christmas balls/ball blue.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Environment/Winter environment/Christmas balls/ball blue.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Environment/Winter environment/Christmas balls/ball gray.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Environment/Winter environment/Christmas balls/ball gray.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Environment/Winter environment/Christmas balls/ball pink.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Environment/Winter environment/Christmas balls/ball pink.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Environment/Winter environment/Christmas balls/ball purple.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Environment/Winter environment/Christmas balls/ball purple.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Environment/Winter environment/Christmas balls/ball red.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Environment/Winter environment/Christmas balls/ball red.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Environment/Winter environment/Christmas balls/ball yellow.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Environment/Winter environment/Christmas balls/ball yellow.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Environment/Winter environment/Garlands.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Environment/Winter environment/Garlands/garland 2.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Environment/Winter environment/Garlands/garland 2.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Environment/Winter environment/Garlands/garland.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Environment/Winter environment/Garlands/garland.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Environment/Winter environment/christmas wreath.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Environment/Winter environment/christmas wreath.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Environment/Winter environment/snowman.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Environment/Winter environment/snowman.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Environment/Winter environment/star bethlehem.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Environment/Winter environment/star bethlehem.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Environment/Winter environment/winter well.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Environment/Winter environment/winter well.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Houses.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Houses/Buildings.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Houses/Buildings/building 2.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Houses/Buildings/building 2.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Houses/Buildings/building 3.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Houses/Buildings/building 3.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Houses/Buildings/building 4.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Houses/Buildings/building 4.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Houses/Buildings/building.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Houses/Buildings/building.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Houses/Wooden winter houses.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Houses/Wooden winter houses/wooden winter house 2.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Houses/Wooden winter houses/wooden winter house 2.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Houses/Wooden winter houses/wooden winter house 3.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Houses/Wooden winter houses/wooden winter house 3.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Houses/Wooden winter houses/wooden winter house.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Houses/Wooden winter houses/wooden winter house.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Islands/japanes island.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Islands/japanes island.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Lands.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Lands/land autumn atmosphere forest.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Lands/land autumn atmosphere forest.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Lands/land camping forest.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Lands/land camping forest.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Lands/land christmas village.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Lands/land christmas village.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Lands/land desert pyramids.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Lands/land desert pyramids.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Lands/land downtown.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Lands/land downtown.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Lands/land soccer field.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Lands/land soccer field.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Lands/land space shuttle launch.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Lands/land space shuttle launch.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Lands/land wild west railway station.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Lands/land wild west railway station.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants/Autumn bush plants.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants/Autumn bush plants/autumn bush plant 2.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants/Autumn bush plants/autumn bush plant 2.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants/Autumn bush plants/autumn bush plant 3.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants/Autumn bush plants/autumn bush plant 3.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants/Autumn bush plants/autumn bush plant.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants/Autumn bush plants/autumn bush plant.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants/Autumn shrubs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants/Autumn shrubs/autumn shrub 2.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants/Autumn shrubs/autumn shrub 2.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants/Autumn shrubs/autumn shrub.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants/Autumn shrubs/autumn shrub.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants/Cacti.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants/Cacti/cactus 2.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants/Cacti/cactus 2.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants/Cacti/cactus 3.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants/Cacti/cactus 3.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants/Cacti/cactus 4.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants/Cacti/cactus 4.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants/Cacti/cactus 5.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants/Cacti/cactus 5.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants/Cacti/cactus 6.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants/Cacti/cactus 6.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants/Cacti/cactus.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants/Cacti/cactus.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants/Grass brown.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants/Grass brown/grass brown 2.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants/Grass brown/grass brown 2.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants/Grass brown/grass brown 3.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants/Grass brown/grass brown 3.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants/Grass brown/grass brown.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants/Grass brown/grass brown.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants/Grass yellow.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants/Grass yellow/grass yellow 2.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants/Grass yellow/grass yellow 2.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants/Grass yellow/grass yellow 3.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants/Grass yellow/grass yellow 3.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants/Grass yellow/grass yellow.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants/Grass yellow/grass yellow.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants/Grass.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants/Grass/grass 2.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants/Grass/grass 2.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants/Grass/grass 3.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants/Grass/grass 3.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants/Grass/grass.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants/Grass/grass.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants/Mushrooms brown.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants/Mushrooms brown/mushroom brown 2.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants/Mushrooms brown/mushroom brown 2.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants/Mushrooms brown/mushroom brown 3.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants/Mushrooms brown/mushroom brown 3.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants/Mushrooms brown/mushroom brown.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants/Mushrooms brown/mushroom brown.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants/bush plant.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants/bush plant.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants/plants yellow.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants/plants yellow.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants/shrub.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Plants/shrub.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Trees/Autumn fir trees.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Trees/Autumn fir trees/autumn pine tree medium.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Trees/Autumn fir trees/autumn pine tree medium.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Trees/Autumn fir trees/autumn pine tree small.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Trees/Autumn fir trees/autumn pine tree small.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Trees/Autumn trees.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Trees/Autumn trees/autumn tree 2.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Trees/Autumn trees/autumn tree 2.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Trees/Autumn trees/autumn tree 3.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Trees/Autumn trees/autumn tree 3.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Trees/Autumn trees/autumn tree 4.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Trees/Autumn trees/autumn tree 4.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Trees/Autumn trees/autumn tree 5.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Trees/Autumn trees/autumn tree 5.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Trees/Autumn trees/autumn tree.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Trees/Autumn trees/autumn tree.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Trees/Dry trees.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Trees/Dry trees/dry tree 2.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Trees/Dry trees/dry tree 2.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Trees/Dry trees/dry tree.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Trees/Dry trees/dry tree.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Trees/Fir trees winter.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Trees/Fir trees winter/fir tree winter bent.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Trees/Fir trees winter/fir tree winter bent.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Trees/Fir trees winter/fir tree winter large.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Trees/Fir trees winter/fir tree winter large.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Trees/Fir trees winter/fir tree winter medium.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Trees/Fir trees winter/fir tree winter medium.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Trees/Fir trees winter/fir tree winter small.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Trees/Fir trees winter/fir tree winter small.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Trees/Fir trees winter/fir tree winter tilted.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Trees/Fir trees winter/fir tree winter tilted.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Trees/Fir trees.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Trees/Fir trees/fir tree bent.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Trees/Fir trees/fir tree bent.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Trees/Fir trees/fir tree large.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Trees/Fir trees/fir tree large.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Trees/Fir trees/fir tree medium.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Trees/Fir trees/fir tree medium.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Trees/Fir trees/fir tree small.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Trees/Fir trees/fir tree small.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Trees/Fir trees/fir tree tilted.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Trees/Fir trees/fir tree tilted.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Trees/Fir trees/pine tree large.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Trees/Fir trees/pine tree large.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Trees/Tree trunks.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Trees/Tree trunks/tree trunk 2.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Trees/Tree trunks/tree trunk 2.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Trees/Tree trunks/tree trunk.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Trees/Tree trunks/tree trunk.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Trees/christmas tree.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Trees/christmas tree.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Trees/tree 2.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Trees/tree 2.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Trees/tree.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Trees/tree.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Vehicles/cart.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Vehicles/cart.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Vehicles/japanese boat.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Vehicles/japanese boat.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Vehicles/passenger wagon.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Vehicles/passenger wagon.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Waters/water location autumn atmosphere forest.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Models/Waters/water location autumn atmosphere forest.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Animals.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Animals/horse black.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Animals/horse black.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Animals/horse brown.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Animals/horse brown.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Animals/horse silver.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Animals/horse silver.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Animals/horse white.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Animals/horse white.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Environment/Benchs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Environment/Benchs/bench 2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Environment/Benchs/bench 2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Environment/Benchs/bench.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Environment/Benchs/bench.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Environment/Winter environment.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Environment/Winter environment/Christmas balls.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Environment/Winter environment/Christmas balls/ball blue.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Environment/Winter environment/Christmas balls/ball blue.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Environment/Winter environment/Christmas balls/ball gray.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Environment/Winter environment/Christmas balls/ball gray.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Environment/Winter environment/Christmas balls/ball pink.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Environment/Winter environment/Christmas balls/ball pink.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Environment/Winter environment/Christmas balls/ball purple.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Environment/Winter environment/Christmas balls/ball purple.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Environment/Winter environment/Christmas balls/ball red.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Environment/Winter environment/Christmas balls/ball red.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Environment/Winter environment/Christmas balls/ball yellow.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Environment/Winter environment/Christmas balls/ball yellow.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Environment/Winter environment/Garlands.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Environment/Winter environment/Garlands/garland 2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Environment/Winter environment/Garlands/garland 2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Environment/Winter environment/Garlands/garland.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Environment/Winter environment/Garlands/garland.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Environment/Winter environment/christmas wreath.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Environment/Winter environment/christmas wreath.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Environment/Winter environment/snowman.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Environment/Winter environment/snowman.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Environment/Winter environment/star bethlehem.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Environment/Winter environment/star bethlehem.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Environment/Winter environment/winter well.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Environment/Winter environment/winter well.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Houses.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Houses/Buildings.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Houses/Buildings/building 2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Houses/Buildings/building 2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Houses/Buildings/building 3.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Houses/Buildings/building 3.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Houses/Buildings/building 4.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Houses/Buildings/building 4.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Houses/Buildings/building.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Houses/Buildings/building.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Houses/Wooden winter houses.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Houses/Wooden winter houses/wooden winter house 2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Houses/Wooden winter houses/wooden winter house 2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Houses/Wooden winter houses/wooden winter house 3.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Houses/Wooden winter houses/wooden winter house 3.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Houses/Wooden winter houses/wooden winter house.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Houses/Wooden winter houses/wooden winter house.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Islands/japanes island.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Islands/japanes island.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Lands.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Lands/land autumn atmosphere forest.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Lands/land autumn atmosphere forest.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Lands/land camping forest.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Lands/land camping forest.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Lands/land christmas village.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Lands/land christmas village.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Lands/land desert pyramids.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Lands/land desert pyramids.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Lands/land downtown.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Lands/land downtown.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Lands/land soccer field.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Lands/land soccer field.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Lands/land space shuttle launch.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Lands/land space shuttle launch.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Lands/land wild west railway station.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Lands/land wild west railway station.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Location with environment/autumn atmosphere forest with environment.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Location with environment/autumn atmosphere forest with environment.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Location with environment/camping forest with environment.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Location with environment/camping forest with environment.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Location with environment/christmas village with environment.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Location with environment/christmas village with environment.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Location with environment/desert pyramids with environment.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Location with environment/desert pyramids with environment.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Location with environment/downtown with environment.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Location with environment/downtown with environment.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Location with environment/japanes island.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Location with environment/japanes island.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Location with environment/soccer field with environment.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Location with environment/soccer field with environment.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Location with environment/space shuttle launch with environment.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Location with environment/space shuttle launch with environment.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Location with environment/wild west railway station with environment.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Location with environment/wild west railway station with environment.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/Autumn bush plants.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/Autumn bush plants/autumn bush plant 2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/Autumn bush plants/autumn bush plant 2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/Autumn bush plants/autumn bush plant 3.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/Autumn bush plants/autumn bush plant 3.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/Autumn bush plants/autumn bush plant.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/Autumn bush plants/autumn bush plant.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/Autumn shrubs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/Autumn shrubs/autumn shrub 2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/Autumn shrubs/autumn shrub 2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/Autumn shrubs/autumn shrub.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/Autumn shrubs/autumn shrub.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/Cacti.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/Cacti/cactus 2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/Cacti/cactus 2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/Cacti/cactus 3.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/Cacti/cactus 3.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/Cacti/cactus 4.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/Cacti/cactus 4.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/Cacti/cactus 5.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/Cacti/cactus 5.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/Cacti/cactus 6.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/Cacti/cactus 6.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/Cacti/cactus.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/Cacti/cactus.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/Grass brown.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/Grass brown/grass brown 2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/Grass brown/grass brown 2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/Grass brown/grass brown 3.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/Grass brown/grass brown 3.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/Grass brown/grass brown.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/Grass brown/grass brown.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/Grass yellow.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/Grass yellow/grass yellow 2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/Grass yellow/grass yellow 2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/Grass yellow/grass yellow 3.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/Grass yellow/grass yellow 3.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/Grass yellow/grass yellow.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/Grass yellow/grass yellow.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/Grass.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/Grass/grass 2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/Grass/grass 2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/Grass/grass 3.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/Grass/grass 3.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/Grass/grass.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/Grass/grass.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/Mushrooms brown.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/Mushrooms brown/mushroom brown 2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/Mushrooms brown/mushroom brown 2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/Mushrooms brown/mushroom brown 3.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/Mushrooms brown/mushroom brown 3.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/Mushrooms brown/mushroom brown.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/Mushrooms brown/mushroom brown.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/bush plant.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/bush plant.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/plants yellow.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/plants yellow.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/shrub.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants/shrub.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Trees/Autumn fir trees.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Trees/Autumn fir trees/autumn pine tree medium.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Trees/Autumn fir trees/autumn pine tree medium.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Trees/Autumn fir trees/autumn pine tree small.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Trees/Autumn fir trees/autumn pine tree small.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Trees/Autumn trees.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Trees/Autumn trees/autumn tree 2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Trees/Autumn trees/autumn tree 2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Trees/Autumn trees/autumn tree 3.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Trees/Autumn trees/autumn tree 3.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Trees/Autumn trees/autumn tree 4.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Trees/Autumn trees/autumn tree 4.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Trees/Autumn trees/autumn tree 5.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Trees/Autumn trees/autumn tree 5.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Trees/Autumn trees/autumn tree.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Trees/Autumn trees/autumn tree.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Trees/Dry trees.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Trees/Dry trees/dry tree 2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Trees/Dry trees/dry tree 2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Trees/Dry trees/dry tree.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Trees/Dry trees/dry tree.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Trees/Fir trees winter.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Trees/Fir trees winter/fir tree winter bent.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Trees/Fir trees winter/fir tree winter bent.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Trees/Fir trees winter/fir tree winter large.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Trees/Fir trees winter/fir tree winter large.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Trees/Fir trees winter/fir tree winter medium.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Trees/Fir trees winter/fir tree winter medium.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Trees/Fir trees winter/fir tree winter small.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Trees/Fir trees winter/fir tree winter small.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Trees/Fir trees winter/fir tree winter tilted.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Trees/Fir trees winter/fir tree winter tilted.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Trees/Fir trees.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Trees/Fir trees/fir tree bent.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Trees/Fir trees/fir tree bent.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Trees/Fir trees/fir tree large.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Trees/Fir trees/fir tree large.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Trees/Fir trees/fir tree medium.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Trees/Fir trees/fir tree medium.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Trees/Fir trees/fir tree small.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Trees/Fir trees/fir tree small.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Trees/Fir trees/fir tree tilted.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Trees/Fir trees/fir tree tilted.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Trees/Fir trees/pine tree large.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Trees/Fir trees/pine tree large.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Trees/Tree trunks.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Trees/Tree trunks/tree trunk 2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Trees/Tree trunks/tree trunk 2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Trees/Tree trunks/tree trunk.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Trees/Tree trunks/tree trunk.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Vehicles/japanese boat.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Vehicles/japanese boat.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Vehicles/passenger wagon.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Vehicles/passenger wagon.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Waters/water location autumn atmosphere forest.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Waters/water location autumn atmosphere forest.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DemoPlaytest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DemoPlaytest.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Models/Ivy1.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Models/Ivy1.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Models/Ivy2.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Models/Ivy2.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Models/LightingPlant1.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Models/LightingPlant1.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Models/LightingPlant2.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Models/LightingPlant2.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Models/Paddle.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Models/Paddle.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Models/Plant1.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Models/Plant1.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Models/Plant2.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Models/Plant2.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Models/Plant4.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Models/Plant4.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Models/Tree1.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Models/Tree1.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Models/Tree2.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Models/Tree2.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Models/Tree3.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Models/Tree3.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Models/TreeDead1.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Models/TreeDead1.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Models/TreeDead2.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Models/TreeDead2.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Models/WoodBoat.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Models/WoodBoat.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Models/WoodFence1.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Models/WoodFence1.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Models/WoodFence2.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Models/WoodFence2.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Prefabs/Ivy1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Prefabs/Ivy1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Prefabs/Ivy2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Prefabs/Ivy2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Prefabs/LightingPlant1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Prefabs/LightingPlant1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Prefabs/LightingPlant2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Prefabs/LightingPlant2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Prefabs/Paddle.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Prefabs/Paddle.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Prefabs/PlantEx1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Prefabs/PlantEx1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Prefabs/PlantEx2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Prefabs/PlantEx2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Prefabs/PlantEx4.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Prefabs/PlantEx4.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Prefabs/Tree1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Prefabs/Tree1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Prefabs/Tree2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Prefabs/Tree2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Prefabs/Tree3.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Prefabs/Tree3.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Prefabs/TreeDead1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Prefabs/TreeDead1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Prefabs/TreeDead2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Prefabs/TreeDead2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Prefabs/TreePink1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Prefabs/TreePink1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Prefabs/TreePink3.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Prefabs/TreePink3.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Prefabs/TreeYellow1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Prefabs/TreeYellow1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Prefabs/TreeYellow3.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Prefabs/TreeYellow3.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Prefabs/WoodBoat.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Prefabs/WoodBoat.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Prefabs/WoodFence1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Prefabs/WoodFence1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Prefabs/WoodFence2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleLowPolyNature/Prefabs/WoodFence2.prefab.meta" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,23 +532,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;nick/demo&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/idari/Documents/Unity Projects/Cadabra&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C#&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "nick/demo2",
+    "last_opened_file_path": "C:/Users/idari/Documents/Unity Projects/Cadabra",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.sourceCode.C#",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity 2022.3.55f1\Editor\Unity.exe" />
@@ -124,6 +611,7 @@
       <workItem from="1741463734792" duration="137000" />
       <workItem from="1741466975059" duration="206000" />
       <workItem from="1741468426399" duration="165000" />
+      <workItem from="1741580288522" duration="7183000" />
     </task>
     <task id="LOCAL-00001" summary="Started demo stage work">
       <option name="closed" value="true" />
@@ -181,7 +669,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741468445458</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Enhanced Demo level">
+      <option name="closed" value="true" />
+      <created>1741586912461</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1741586912461</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,6 +700,8 @@
     <MESSAGE value="Added a small forest and castle section to demo scene" />
     <MESSAGE value="Added enemies and navmesh to demo" />
     <MESSAGE value="Added some parkour platforms at the end of the castle area" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added some parkour platforms at the end of the castle area" />
+    <MESSAGE value="Enhanced Demo level" />
+    <MESSAGE value="Removed most unused assets" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed most unused assets" />
   </component>
 </project>
