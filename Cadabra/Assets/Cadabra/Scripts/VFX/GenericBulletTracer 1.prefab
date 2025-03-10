@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 4314967374943616416}
   - component: {fileID: 508377751280862956}
   m_Layer: 0
-  m_Name: GenericBulletTracer
+  m_Name: GenericBulletTracer 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -113,7 +113,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 550551c428efdfd4a835432aef694633, type: 2}
+  - {fileID: 2100000, guid: 0bf04e77090fa754b81b344244cd8a5a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
