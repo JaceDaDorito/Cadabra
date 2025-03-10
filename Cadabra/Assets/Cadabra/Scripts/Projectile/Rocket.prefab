@@ -190,7 +190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01a711b33e8cd594d80c0b64810cd2ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 25
   radius: 10
   force: 35
   additiveUpwardForce: 0
