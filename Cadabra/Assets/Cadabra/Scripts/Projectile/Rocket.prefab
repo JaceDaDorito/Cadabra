@@ -127,9 +127,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ed47ea6c8c5dea419af3b4d81d495eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileGhost: {fileID: 5584997345027304850, guid: f8ce4b55c310ccd4cadac8c0bddfada6, type: 3}
+  projectileGhost: {fileID: 5584997345027304850, guid: d0dbe12f0f89bc745ac675ec4ab6d3a4, type: 3}
   projectileGhostNest: {fileID: 7969947127778545269}
-  speedCoefficient: 20
+  speedCoefficient: 60
   enabledSpeedOverTime: 0
   speedOverTime:
     serializedVersion: 2
@@ -191,9 +191,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  radius: 7
-  force: 25
-  additiveUpwardForce: 10
+  radius: 10
+  force: 35
+  additiveUpwardForce: 0
   ignoreTeam: 1
   crit: 0
   checkLOS: 1

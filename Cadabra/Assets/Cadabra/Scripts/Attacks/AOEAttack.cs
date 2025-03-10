@@ -7,6 +7,7 @@ using UnityEngine;
 using Cadabra.Core;
 using Cadabra.Util;
 using Cadabra.VFX;
+using KinematicCharacterController;
 
 namespace Cadabra.Attacks
 {
@@ -17,7 +18,7 @@ namespace Cadabra.Attacks
     }
     public class AOEAttack
     {
-        private static LayerMask hurtBoxMask = LayerMask.GetMask("HurtBox");
+        private static LayerMask hitboxMask = LayerMask.GetMask("EntityCollision");
         private static LayerMask worldMask = LayerMask.GetMask("World");
 
         public CharacterBody owner;
@@ -41,7 +42,7 @@ namespace Cadabra.Attacks
         {
             InstantiateVfx();
 
-            collisions = Physics.OverlapSphere(origin, radius, hurtBoxMask);
+            collisions = Physics.OverlapSphere(origin, radius, hitboxMask);
             if (!hitSomething) return;
 
             collisions = collisions.OrderBy(c => (origin - c.transform.position).sqrMagnitude).ToArray();
@@ -59,12 +60,12 @@ namespace Cadabra.Attacks
         {
             foreach(Collider c in collisions)
             {
-                if (!BitwiseUtils.Contains(hurtBoxMask, c.gameObject.layer)) return;
+                if (!BitwiseUtils.Contains(hitboxMask, c.gameObject.layer)) return;
 
-                HurtBox hb = c.gameObject.GetComponent<HurtBox>();
-                if (!hb)
+                CharacterBody cb = c.gameObject.GetComponent<CharacterBody>();
+                if (!cb)
                 {
-                    Debug.LogErrorFormat("GameObject {0} is on HurtBox layer but has no HurtBox component", new object[]
+                    Debug.LogErrorFormat("GameObject {0} is on Player layer but has no CharacterBody component", new object[]
                     {
                         c.gameObject
                     });
@@ -84,8 +85,8 @@ namespace Cadabra.Attacks
                     return; //Fail LOS
                 }
 
-                if (hitHealthControllers.Contains(hb.healthController)) continue; //This attack already hit this particular body.
-                hitHealthControllers.Add(hb.healthController);
+                if (hitHealthControllers.Contains(cb._healthController)) continue; //This attack already hit this particular body.
+                hitHealthControllers.Add(cb._healthController);
 
                 if (force != 0)
                 {
@@ -100,15 +101,18 @@ namespace Cadabra.Attacks
                 damageInfo.force = forceVector + (instancedUpwardForceMagnitude * Vector3.up);
                 damageInfo.ignoreTeam = ignoreTeam;
 
-                hb.healthController.RequestDamage(damageInfo);
+                cb._healthController.RequestDamage(damageInfo);
             }
         }
 
-        private Vector3 EvaluateAOEFalloff(Collider collider, ref Vector3 displacement, ref float coeff)
+        private Vector3 EvaluateAOEFalloff(Collider hb, ref Vector3 displacement, ref float coeff)
         {
-            displacement = collider.transform.position - origin;
+            displacement = hb.bounds.center - origin;
             Vector3 direction = displacement.normalized;
             float t = displacement.magnitude / radius;
+
+            Debug.Log("Displacement: " + displacement + " Magnitude: " + displacement.magnitude + " Value: " + t);
+
 
             switch(falloffModel){
                 case AOEFalloff.Linear:
