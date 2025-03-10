@@ -18,6 +18,7 @@ namespace Cadabra.Core
             CheckPoint instance = gameObject.AddComponent<CheckPoint>();
             instance.checkpointID = 0;
             instance.checkpointTransform = this.transform;
+            DemoHandler.StartDemoRound();
             DemoHandler.SetCurrentCheckpoint(instance);
         }
         private void OnEnable()

@@ -11,103 +11,107 @@ namespace Cadabra.Scripts.Core.Demo
     public class DemoHandler
     {
         // Parkour-related variables and methods
-        private static ArrayList _parkourTimes = new ArrayList();
-        private static ParkourRound _currentParkourRound;
+        private static ArrayList _demoRuns = new ArrayList();
+        private static DemoRound _currentDemoRound;
         
-        public static void StartParkourRun()
+        public static void StartDemoRound()
         {
-            if (_currentParkourRound != null) return;
+            if (_currentDemoRound != null) return;
             
-            Debug.Log("Starting parkour run");
+            Debug.Log("DemoHandler: Starting Demo run");
             
-            _currentParkourRound = new ParkourRound();
-            _currentParkourRound.StartTimer();
+            _currentDemoRound = new DemoRound();
         }
-        public static ParkourRound EndParkourRun()
+        public static void EndDemoRound()
         {
-            if (_currentParkourRound == null) return null;
+            if (_currentDemoRound == null) return;
             
-            Debug.Log("Ending parkour run");
+            Debug.Log("DemoHandler: Ending Demo run");
             
-            _currentParkourRound.EndTimer();
-            _parkourTimes.Add(_currentParkourRound.GetTime());
+            _currentDemoRound.AddTime(Time.time);
             
-            var temp = _currentParkourRound;
-            _currentParkourRound = null;
-            
-            return temp;
+            _demoRuns.Add(_currentDemoRound);
+            WriteAllMetricsToFile();
+
+            _currentDemoRound = null;
         }
-        public static void PrintParkourRunTimes()
+
+        public static void FailDemo()
         {
-            // Sort times in ascending order
-            _parkourTimes.Sort();
-            // Print all times
-            StringBuilder sb = new StringBuilder();
-            sb.AppendLine("All times:");
-            foreach (var time in _parkourTimes)
-            {
-                sb.AppendLine(time+"s");
-            }
-            Debug.Log(sb.ToString());
+            _currentDemoRound = null;
+        }
+        
+        public static DemoRound GetCurrentDemoRound()
+        {
+            return _currentDemoRound;
         }
         
         public static void ReturnToLastCheckpoint(PlayerBody player)
         {
             if (GameManager.instance.currentCheckpoint == null) return;
 
+            DamageInfo damageInfo = new DamageInfo();
+            damageInfo.damage = 50f;
+            
+            player._healthController.RequestDamage(damageInfo);
             GameManager.instance.currentCheckpoint.TeleportToCheckpoint(player);
         }
         
         public static void SetCurrentCheckpoint(CheckPoint checkpoint)
         {
+            if (GameManager.instance.currentCheckpoint == checkpoint && checkpoint != null)
+            {
+                return;
+            }
+            
+            Debug.Log("DemoHandler: Setting checkpoint: " + checkpoint.checkpointID);
+            _currentDemoRound.AddTime(Time.time);
             GameManager.instance.currentCheckpoint = checkpoint;
         }
         
         
         // Movement-related variables and methods
-        private static int _numJumps;
         private static int _numWallClimbs;
-        
-        public static void DemoIncrementJumps()
-        {
-            _numJumps++;
-        }
-
-        // Demo-related methods
-        public static void EndDemo()
-        {
-            WriteAllMetricsToFile();
-        }
         
         public static void WriteAllMetricsToFile()
         {
+            int demoRunNum = 1;
             // Build the metrics information
             StringBuilder sb = new StringBuilder();
             sb.AppendLine("----- Cadabra Metrics -----");
-            sb.AppendLine();
-            sb.AppendLine("Parkour Metrics:");
             sb.AppendLine("---------------");
-            sb.AppendLine("Parkour Run Times:");
+            sb.AppendLine("Demo Run " + demoRunNum++ + ":");
+            sb.AppendLine("---------------");
             
             // List all recorded parkour times
-            if (_parkourTimes.Count > 0)
+            if (_demoRuns.Count > 0)
             {
-                foreach (var time in _parkourTimes)
+                int runNumber = 1;
+                foreach (DemoRound round in _demoRuns)
                 {
-                    sb.AppendLine($"{time} s");
+                    sb.AppendLine("Run " + runNumber++);
+                    int checkpointNumber = 0;
+                    foreach (var time in round.GetTimes())
+                    {
+                        sb.AppendLine($"Checkpoint {checkpointNumber++}: {time} seconds");
+                    }
+                    float timeTaken = (float)round.GetTimes()[round.GetTimes().Count - 1] - (float)round.GetTimes()[0];
+                    sb.AppendLine($"Total Time: {timeTaken} seconds");
+                    
+                    sb.AppendLine($"Number of Jumps: {round.GetNumJumps()}");
+                    sb.AppendLine($"Number of Primary Shots Fired: {round.GetPrimaryShotsFired()}");
+                    sb.AppendLine($"Number of Secondary Shots Fired: {round.GetSecondaryShotsFired()}");
+                    sb.AppendLine($"Damage Taken: {round.GetDamageTaken()}");
+                    sb.AppendLine($"Health Gained: {round.GetHealthGained()}");
+                    sb.AppendLine($"Mana Lost: {round.GetManaLost()}");
                 }
             }
             else
             {
-                sb.AppendLine("No parkour times recorded.");
+                sb.AppendLine("No demo runs recorded.");
             }
-            
-            sb.AppendLine();
-            
-            sb.AppendLine("Movement Metrics:");
-            sb.AppendLine("---------------");
-            sb.AppendLine($"Number of Jumps: {_numJumps}");
-            sb.AppendLine($"Number of Wall Climbs: {_numWallClimbs}");
+
+            sb.AppendLine().AppendLine();
             
             // Get the path to the user's desktop
             string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);

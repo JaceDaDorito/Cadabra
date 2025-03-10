@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cadabra.Attacks;
 using Cadabra.Projectile;
+using Cadabra.Scripts.Core.Demo;
 
 namespace Cadabra.Core
 {
@@ -63,6 +64,8 @@ namespace Cadabra.Core
             bulletAttack.Fire();
 
             body._manaController.UseMana(5f);
+            DemoHandler.GetCurrentDemoRound().IncrementPrimaryShotsFired();
+            DemoHandler.GetCurrentDemoRound().IncrementManaLost(5f);
         }
 
         private void ShootSecondary()
@@ -76,6 +79,10 @@ namespace Cadabra.Core
             instance.GetComponent<GenericProjectile>().aimDir = hitSomething ? Vector3.Normalize(hit.point - muzzle) : _cameraController.transform.forward;
 
             body._manaController.UseMana(10f);
+            DemoHandler.GetCurrentDemoRound().IncrementSecondaryShotsFired();
+            DemoHandler.GetCurrentDemoRound().IncrementManaLost(10f);
+
+            
         }
     }
 

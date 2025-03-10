@@ -10,8 +10,7 @@ public class EndDemoPickup : MonoBehaviour
     public static void EndDemoSession()
     {
         Debug.Log("Ending demo session");
-        DemoHandler.EndDemo();
-        DemoHandler.SetCurrentCheckpoint(null);
+        DemoHandler.EndDemoRound();
         SceneManager.LoadScene("BootScene");
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
