@@ -7,7 +7,7 @@ public class BootMenuManager : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("DemoPlaytest");
         Cursor.visible = false;
     }
 

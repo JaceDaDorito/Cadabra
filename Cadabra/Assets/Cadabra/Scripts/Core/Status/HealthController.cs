@@ -49,6 +49,12 @@ namespace Cadabra.Core
             currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
             if (currentHealth == 0) RequestDeath();
         }
+
+        public void Suicide()
+        {
+            currentHealth = 0;
+            RequestDeath();
+        }
         //this is fine for now
 
         public void RequestDeath()

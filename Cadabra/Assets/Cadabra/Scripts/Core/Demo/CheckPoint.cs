@@ -2,16 +2,16 @@ using System.Linq;
 using Cadabra.Core;
 using UnityEngine;
 using UnityEngine.UIElements;
-
+using KinematicCharacterController;
 namespace Cadabra.Scripts.Core.Demo
 {
     public class CheckPoint : MonoBehaviour
     {
         [SerializeField]
-        private int checkpointID;
+        public int checkpointID;
         
         [SerializeField]
-        private Transform checkpointTransform;
+        public Transform checkpointTransform;
         
         public CheckPoint(int id)
         {
@@ -32,9 +32,9 @@ namespace Cadabra.Scripts.Core.Demo
                 return;
             }
 
-            // Use KinematicCharacterController to teleport the player
+            player.GetComponent<KinematicCharacterMotor>().SetPosition(checkpointTransform.position);
 
-            Debug.Log($"Teleporting to checkpoint: {checkpointID}");
+            //Debug.Log($"Teleporting {player} to checkpoint: {checkpointID}");
         }
 
 

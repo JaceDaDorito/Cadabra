@@ -48,6 +48,9 @@ namespace Cadabra.Core
             wInputs.PrimaryPressed = Input.GetKey(KeyCode.Mouse0);
             wInputs.SecondaryPressed = Input.GetKeyDown(KeyCode.Mouse1);
             _weaponStateMachine.SetInputs(ref wInputs);
+
+            bool kill = Input.GetKey(KeyCode.K);
+            if (kill) _healthController.Suicide();
         }
 
         private void Update()

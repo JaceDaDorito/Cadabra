@@ -59,7 +59,7 @@ namespace Cadabra.Core
             bulletAttack.origin = _cameraController.transform.position;
             bulletAttack.aimVec = _cameraController.transform.forward;
             bulletAttack.overrideMuzzle = true;
-            bulletAttack.muzzleOverride = new Vector3(_cameraController.transform.position.x, _cameraController.transform.position.y - 2f, _cameraController.transform.position.z);
+            bulletAttack.muzzleOverride = new Vector3(_cameraController.transform.position.x, _cameraController.transform.position.y - 0.8f, _cameraController.transform.position.z);
             bulletAttack.Fire();
 
             body._manaController.UseMana(5f);
