@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cadabra.Attacks;
 using Cadabra.Projectile;
+using Cadabra.Scripts.Core.Demo;
 
 namespace Cadabra.Core
 {
@@ -59,23 +60,27 @@ namespace Cadabra.Core
             bulletAttack.origin = _cameraController.transform.position;
             bulletAttack.aimVec = _cameraController.transform.forward;
             bulletAttack.overrideMuzzle = true;
-            bulletAttack.muzzleOverride = new Vector3(_cameraController.transform.position.x, _cameraController.transform.position.y - 2f, _cameraController.transform.position.z);
+            bulletAttack.muzzleOverride = new Vector3(_cameraController.transform.position.x, _cameraController.transform.position.y - 0.8f, _cameraController.transform.position.z);
             bulletAttack.Fire();
 
             body._manaController.UseMana(5f);
+            DemoHandler.GetCurrentDemoRound().IncrementPrimaryShotsFired();
+            DemoHandler.GetCurrentDemoRound().IncrementManaLost(5f);
         }
 
         private void ShootSecondary()
         {
             secondaryStopwatch = secondaryCooldown;
 
-            Vector3 muzzle = new Vector3(_cameraController.transform.position.x, _cameraController.transform.position.y - 0.2f, _cameraController.transform.position.z) + _cameraController.transform.forward * 3;
+            Vector3 muzzle = new Vector3(_cameraController.transform.position.x, _cameraController.transform.position.y - 0.2f, _cameraController.transform.position.z) + (_cameraController.transform.forward * 1.3f);
             GameObject instance = GameObject.Instantiate(projectile, muzzle, _cameraController.transform.rotation);
-            RaycastHit hit;
-            bool hitSomething = Physics.Raycast(_cameraController.transform.position, _cameraController.transform.forward, out hit, 20f, hitMask);
-            instance.GetComponent<GenericProjectile>().aimDir = hitSomething ? Vector3.Normalize(hit.point - muzzle) : _cameraController.transform.forward;
+            instance.GetComponent<GenericProjectile>().aimDir = _cameraController.transform.forward;
 
             body._manaController.UseMana(10f);
+            DemoHandler.GetCurrentDemoRound().IncrementSecondaryShotsFired();
+            DemoHandler.GetCurrentDemoRound().IncrementManaLost(10f);
+
+            
         }
     }
 

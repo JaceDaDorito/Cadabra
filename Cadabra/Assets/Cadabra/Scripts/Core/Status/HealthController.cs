@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Cadabra.Scripts.Core.Demo;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -47,7 +48,14 @@ namespace Cadabra.Core
             
             currentHealth -= (damageInfo.damage * (damageInfo.crit ? damageInfo.critDamageMultiplier : 1));
             currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+            DemoHandler.GetCurrentDemoRound().IncrementDamageTaken(damageInfo.damage);
             if (currentHealth == 0) RequestDeath();
+        }
+
+        public void Suicide()
+        {
+            currentHealth = 0;
+            RequestDeath();
         }
         //this is fine for now
 
@@ -59,8 +67,15 @@ namespace Cadabra.Core
 
         public void Heal(float healAmount)
         {
+            float metricHealAmount = healAmount;
+            if (currentHealth + healAmount > maxHealth)
+            {
+                metricHealAmount = maxHealth - currentHealth;
+            }
+            
             currentHealth += healAmount;
             currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+            DemoHandler.GetCurrentDemoRound().IncrementHealthGained(metricHealAmount);
         }
     }
 }
