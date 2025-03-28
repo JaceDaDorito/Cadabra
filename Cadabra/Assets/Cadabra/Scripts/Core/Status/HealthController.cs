@@ -49,7 +49,6 @@ namespace Cadabra.Core
             
             currentHealth -= (damageInfo.damage * (damageInfo.crit ? damageInfo.critDamageMultiplier : 1));
             currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
-            //DemoHandler.GetCurrentDemoRound().IncrementDamageTaken(damageInfo.damage);
             if (currentHealth == 0) RequestDeath();
         }
 
