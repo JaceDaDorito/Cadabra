@@ -42,14 +42,16 @@ namespace Cadabra.Core
             {
                 if (!damageInfo.ignoreTeam && (damageInfo.attacker._team == body._team)) return;
             }
-
-            if (damageInfo.force.sqrMagnitude > 0)
-                gameObject.GetComponent<CharacterBody>()._characterMotor.RequestImpulseForce(damageInfo.force);
-
             
             currentHealth -= (damageInfo.damage * (damageInfo.crit ? damageInfo.critDamageMultiplier : 1));
             currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
             if (currentHealth == 0) RequestDeath();
+
+            CharacterMotor cm = gameObject.GetComponent<CharacterBody>()._characterMotor;
+            if (!cm) return;
+
+            if (damageInfo.force.sqrMagnitude > 0)
+                cm.RequestImpulseForce(damageInfo.force);
         }
 
         public void Suicide()

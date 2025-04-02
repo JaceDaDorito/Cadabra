@@ -34,7 +34,7 @@ public class EnemySimple : MonoBehaviour
     private void Awake()
     {
         // Used to get target and waypoints
-        target = GameObject.FindWithTag("Player").transform;
+        target = GameManager.instance.playerBody.transform;
         GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("Waypoints");
         wayPoint = new Transform[gameObjects.Length];
         for(int i = 0; i < gameObjects.Length; i++)

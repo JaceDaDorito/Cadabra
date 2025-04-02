@@ -111,9 +111,6 @@ namespace Cadabra.Projectile
             onTrigger.Invoke(impactInfo);
             Destroy(this.gameObject);
         }
-        public virtual void Destroy(ImpactInfo impactInfo)
-        {
-            Destroy(gameObject);
-        }
+
     }
 }
