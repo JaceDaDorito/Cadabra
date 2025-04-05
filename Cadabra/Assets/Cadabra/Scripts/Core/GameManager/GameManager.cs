@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cadabra.Util;
+using UnityEngine.SceneManagement;
+using Cadabra.Scripts.Core.Demo;
 
 namespace Cadabra.Core
 {
@@ -13,6 +15,8 @@ namespace Cadabra.Core
         public PlayerBody playerBody;
         [HideInInspector]
         public GameObject instancedPlayerHolder;
+        [HideInInspector]
+        public CheckPoint currentCheckpoint;
 
 
         public delegate void ManagerStart();
@@ -34,12 +38,12 @@ namespace Cadabra.Core
 
             if (playerBody)
             {
-                playerBody.transform.position = PlayerSpawnPoint.instance.transform.position;
-                playerBody.transform.rotation = PlayerSpawnPoint.instance.transform.rotation;
+                playerBody.transform.position = currentCheckpoint.checkpointTransform.position;
+                playerBody.transform.rotation = currentCheckpoint.checkpointTransform.rotation;
             }
             else
             {
-                instancedPlayerHolder = GameObject.Instantiate(playerHolder, PlayerSpawnPoint.instance.transform);
+                instancedPlayerHolder = GameObject.Instantiate(playerHolder, currentCheckpoint.checkpointTransform);
                 playerBody = instancedPlayerHolder.GetComponent<ChildLocator>().FindTransform("Player").GetComponent<PlayerBody>();
                 playerBody._healthController.bodyDeathBehavior.AddListener(PlayerDeathSequence);
                 playerBody._team = Team.Player;
@@ -48,7 +52,9 @@ namespace Cadabra.Core
 
         private void PlayerDeathSequence(CharacterBody body)
         {
-            Debug.Log("oooo you died");
+            SceneManager.LoadScene("DeathScene");
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         }
 
         private void OnEnable()

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Cadabra.Scripts.Core.Demo;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -24,6 +25,7 @@ namespace Cadabra.Core
         private void Start()
         {
             currentHealth = maxHealth;
+
         }
 
         private void Awake()
@@ -40,15 +42,22 @@ namespace Cadabra.Core
             {
                 if (!damageInfo.ignoreTeam && (damageInfo.attacker._team == body._team)) return;
             }
-
-            if (damageInfo.force.sqrMagnitude > 0)
-                gameObject.GetComponent<CharacterBody>()._characterMotor.RequestImpulseForce(damageInfo.force);
-
             
             currentHealth -= (damageInfo.damage * (damageInfo.crit ? damageInfo.critDamageMultiplier : 1));
             currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
-
             if (currentHealth == 0) RequestDeath();
+
+            CharacterMotor cm = gameObject.GetComponent<CharacterBody>()._characterMotor;
+            if (!cm) return;
+
+            if (damageInfo.force.sqrMagnitude > 0)
+                cm.RequestImpulseForce(damageInfo.force);
+        }
+
+        public void Suicide()
+        {
+            currentHealth = 0;
+            RequestDeath();
         }
         //this is fine for now
 
@@ -60,8 +69,15 @@ namespace Cadabra.Core
 
         public void Heal(float healAmount)
         {
+            float metricHealAmount = healAmount;
+            if (currentHealth + healAmount > maxHealth)
+            {
+                metricHealAmount = maxHealth - currentHealth;
+            }
+            
             currentHealth += healAmount;
             currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+            DemoHandler.GetCurrentDemoRound().IncrementHealthGained(metricHealAmount);
         }
     }
 }

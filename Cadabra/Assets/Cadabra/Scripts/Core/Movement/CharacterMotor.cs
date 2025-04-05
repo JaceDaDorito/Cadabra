@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 using KinematicCharacterController;
 using System.Collections;
+using Cadabra.Scripts.Core.Demo;
 
 public struct PlayerInputs
 {
@@ -39,8 +40,6 @@ namespace Cadabra.Core
         private bool _forceUngroundRequested;
         public bool _forceNoInput;
         private int currentJumpCount;
-        
-
 
         private void Start()
         {

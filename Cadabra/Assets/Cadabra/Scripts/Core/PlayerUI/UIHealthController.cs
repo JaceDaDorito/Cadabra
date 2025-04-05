@@ -17,19 +17,19 @@ namespace Cadabra.Core
         // Inherited
         private void Start()
         {
-            maxPosX = _healthForeground.localPosition.x;
-            maxPosY = _healthForeground.localPosition.y;
-            maxPosZ = _healthForeground.localPosition.z;
-            maxScaleX = _healthForeground.localScale.x;
-            maxScaleY = _healthForeground.localScale.y;
-            maxScaleZ = _healthForeground.localScale.z;
+            maxPosX = 50;
+            maxPosY = -150;
+            maxPosZ = 0;
+            maxScaleX = 70;
+            maxScaleY = 70;
+            maxScaleZ = 1;
         }
 
         public void UpdateHealth(float currentHealth, float maxHealth)
         {
             _healthText.text = "Health: " + currentHealth + "/" + maxHealth;
             _healthForeground.localScale = new Vector3(maxScaleX, maxScaleY*(currentHealth/maxHealth), maxScaleZ);
-            _healthForeground.localPosition = new Vector3(maxPosX, maxPosY - (0.5f*(maxScaleY*((maxHealth-currentHealth)/maxHealth))), maxScaleZ);
+            _healthForeground.localPosition = new Vector3(maxPosX, maxPosY - (0.5f*(maxScaleY*((maxHealth-currentHealth)/maxHealth))), maxPosZ);
         }
     }
 }

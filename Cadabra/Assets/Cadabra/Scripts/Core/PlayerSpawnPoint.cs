@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
+using Cadabra.Scripts.Core.Demo;
 
 
 namespace Cadabra.Core
@@ -12,6 +13,14 @@ namespace Cadabra.Core
     {
         public static PlayerSpawnPoint instance;
 
+        private void Start()
+        {
+            CheckPoint instance = gameObject.AddComponent<CheckPoint>();
+            instance.checkpointID = 0;
+            instance.checkpointTransform = this.transform;
+            DemoHandler.StartDemoRound();
+            DemoHandler.SetCurrentCheckpoint(instance);
+        }
         private void OnEnable()
         {
             if (instance)
