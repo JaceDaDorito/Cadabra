@@ -40,6 +40,8 @@ namespace Cadabra.Projectile
         [HideInInspector]
         public Rigidbody rigidbody;
 
+        private bool triggered = false;
+
         public virtual void Start()
         {
             collider = gameObject.GetComponent<Collider>();
@@ -102,7 +104,9 @@ namespace Cadabra.Projectile
 
         protected virtual void Trigger(Collision collision)
         {
-            
+            if (triggered) return;
+
+            triggered = true;
             ImpactInfo impactInfo = ConstructImpactInfo(collision);
             onTrigger.Invoke(impactInfo);
             Destroy(this.gameObject);
