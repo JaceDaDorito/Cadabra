@@ -1,3 +1,4 @@
+using Cadabra.Core;
 using Codice.Client.Common.GameUI;
 using EnemyRef;
 using PlasticPipe.PlasticProtocol.Messages;
@@ -8,9 +9,9 @@ using UnityEngine.AI;
 
 public class EnemySimple : MonoBehaviour
 {
-    public Transform target;
+    private Transform target;
 
-    public List<Transform> wayPoint;
+    private Transform[] wayPoint;
 
     public int currentWayPointIndex = 0;
 
@@ -22,11 +23,25 @@ public class EnemySimple : MonoBehaviour
 
     private float shootingDistance;
 
-    private bool isLost = true;
+    public bool isLost = true;
+
+    //public EnemyDeath enemyDeath;
+
+    // For EnemyManager
+    public delegate void EnemyKilled();
+    public static event EnemyKilled OnEnemyKilled;
 
     private void Awake()
     {
-        enemyRefrences = GetComponent<EnemyRefrences>();
+        // Used to get target and waypoints
+        target = GameManager.instance.playerBody.transform;
+        GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("Waypoints");
+        wayPoint = new Transform[gameObjects.Length];
+        for(int i = 0; i < gameObjects.Length; i++)
+        {
+            wayPoint[i] = gameObjects[i].transform;
+        }
+        enemyRefrences = this.GetComponent<EnemyRefrences>();
     }
 
     // Start is called before the first frame update
@@ -88,7 +103,7 @@ public class EnemySimple : MonoBehaviour
     {
         if(Time.time >= pathUpdateDeadline) // Delay for updating path
         {
-            // Debug.Log("Updating Path");
+            Debug.Log("Updating Path");
             pathUpdateDeadline = Time.time + enemyRefrences.pathUpdateDelay;
             enemyRefrences.navMeshagent.SetDestination(target.position);
         }
@@ -108,7 +123,7 @@ public class EnemySimple : MonoBehaviour
 
     private void Patrolling()
     {
-        if(wayPoint.Count == 0)
+        if(wayPoint.Length == 0)
         {
             return;
         }
@@ -119,9 +134,22 @@ public class EnemySimple : MonoBehaviour
         {
             if (distanceToWayPoint <= enemyRefrences.navMeshagent.stoppingDistance)
             {
-                currentWayPointIndex = (currentWayPointIndex + 1) % wayPoint.Count;
+                currentWayPointIndex = (currentWayPointIndex + 1) % wayPoint.Length;
             }
             enemyRefrences.navMeshagent.SetDestination(wayPoint[currentWayPointIndex].position);
         }
+    }
+    public void Die()
+    {
+        Debug.Log("SimpleDeath");
+        if (gameObject != null)
+        {
+            Destroy(this.gameObject, 0.1f);
+        }
+        if (OnEnemyKilled != null)
+        {
+            OnEnemyKilled();
+        }
+
     }
 }

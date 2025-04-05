@@ -1,3 +1,4 @@
+using Cadabra.Core;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,7 @@ namespace EnemyRef
     {
         [HideInInspector] public NavMeshAgent navMeshagent;
         [HideInInspector] public Animator animator;
+        public CharacterBody characterBody;
 
         [Header("Stats")]
 
@@ -17,8 +19,9 @@ namespace EnemyRef
 
         private void Awake()
         {
-            navMeshagent = GetComponent<NavMeshAgent>();
-            animator = GetComponent<Animator>();
+            navMeshagent = this.GetComponent<NavMeshAgent>();
+            animator = this.GetComponent<Animator>();
+            characterBody = this.GetComponent<CharacterBody>();
         }
     }
 }

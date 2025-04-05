@@ -64,8 +64,6 @@ namespace Cadabra.Core
             bulletAttack.Fire();
 
             body._manaController.UseMana(5f);
-            DemoHandler.GetCurrentDemoRound().IncrementPrimaryShotsFired();
-            DemoHandler.GetCurrentDemoRound().IncrementManaLost(5f);
         }
 
         private void ShootSecondary()
@@ -77,8 +75,6 @@ namespace Cadabra.Core
             instance.GetComponent<GenericProjectile>().aimDir = _cameraController.transform.forward;
 
             body._manaController.UseMana(10f);
-            DemoHandler.GetCurrentDemoRound().IncrementSecondaryShotsFired();
-            DemoHandler.GetCurrentDemoRound().IncrementManaLost(10f);
 
             
         }

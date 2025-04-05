@@ -18,7 +18,7 @@ namespace Cadabra.Attacks
     }
     public class AOEAttack
     {
-        private static LayerMask hitboxMask = LayerMask.GetMask("EntityCollision");
+        private static LayerMask hitboxMask = LayerMask.GetMask("HurtBox");
         private static LayerMask worldMask = LayerMask.GetMask("World");
 
         public CharacterBody owner;
@@ -62,7 +62,7 @@ namespace Cadabra.Attacks
             {
                 if (!BitwiseUtils.Contains(hitboxMask, c.gameObject.layer)) return;
 
-                CharacterBody cb = c.gameObject.GetComponent<CharacterBody>();
+                CharacterBody cb = c.gameObject.GetComponent<HurtBox>().healthController.body;
                 if (!cb)
                 {
                     Debug.LogErrorFormat("GameObject {0} is on Player layer but has no CharacterBody component", new object[]
