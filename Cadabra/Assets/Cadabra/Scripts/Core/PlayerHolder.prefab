@@ -258,6 +258,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37b82bb8b19a7dd428e99e368ebe1130, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6018013243926899336 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 67187650197750859, guid: e4c6365cdcbe08c45aaa6b2b662848ab, type: 3}
+  m_PrefabInstance: {fileID: 6010887024336137923}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5258d128a35d254389e3de0f02165c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7117568956057048165
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -274,13 +285,25 @@ PrefabInstance:
       propertyPath: _healthController
       value: 
       objectReference: {fileID: 3811166672528381892}
+    - target: {fileID: 370725854056557069, guid: cb53a1893fe9eb7499e86a0a75527a34, type: 3}
+      propertyPath: _syphonController
+      value: 
+      objectReference: {fileID: 6018013243926899336}
     - target: {fileID: 426756167883133542, guid: cb53a1893fe9eb7499e86a0a75527a34, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2844937255041107751, guid: cb53a1893fe9eb7499e86a0a75527a34, type: 3}
+      propertyPath: m_VersionIndex
+      value: 6391
+      objectReference: {fileID: 0}
     - target: {fileID: 4204844276227015563, guid: cb53a1893fe9eb7499e86a0a75527a34, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4768817461478368892, guid: cb53a1893fe9eb7499e86a0a75527a34, type: 3}
+      propertyPath: m_VersionIndex
+      value: 6391
       objectReference: {fileID: 0}
     - target: {fileID: 5288073038333896440, guid: cb53a1893fe9eb7499e86a0a75527a34, type: 3}
       propertyPath: m_Name
@@ -289,6 +312,10 @@ PrefabInstance:
     - target: {fileID: 5288073038333896440, guid: cb53a1893fe9eb7499e86a0a75527a34, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5321124914248586546, guid: cb53a1893fe9eb7499e86a0a75527a34, type: 3}
+      propertyPath: m_VersionIndex
+      value: 6256
       objectReference: {fileID: 0}
     - target: {fileID: 5419820036638221641, guid: cb53a1893fe9eb7499e86a0a75527a34, type: 3}
       propertyPath: m_LocalPosition.x

@@ -20,15 +20,19 @@ namespace Cadabra.Core
         public LayerMask layerMask;
         public GameObject tracer;
         public GameObject projectile;
+        public GameObject syphonTracer;
         
         private float primaryCooldown = .25f;
         private float secondaryCooldown = 1f;
+        private float syphonCooldown = 5f;
         private float primaryStopwatch = 0f;
         private float secondaryStopwatch = 0f;
+        private float syphonStopwatch = 0f;
         public struct WeaponInputs
         {
             public bool PrimaryPressed;
             public bool SecondaryPressed;
+            public bool SyphonPressed;
         }
         void Start()
         {
@@ -38,12 +42,14 @@ namespace Cadabra.Core
         {
             if (primaryStopwatch > 0) primaryStopwatch -= Time.deltaTime;
             if (secondaryStopwatch > 0) secondaryStopwatch -= Time.deltaTime;
+            if (syphonStopwatch > 0) syphonStopwatch -= Time.deltaTime;
         }
 
         public void SetInputs(ref WeaponInputs inputs)
         {
             if (inputs.PrimaryPressed && primaryStopwatch <= 0) ShootPrimary();
             if (inputs.SecondaryPressed && secondaryStopwatch <= 0) ShootSecondary();
+            if (inputs.SyphonPressed && syphonStopwatch <= 0) ShootSyphon();
         }
 
         private void ShootPrimary()
@@ -81,6 +87,29 @@ namespace Cadabra.Core
             DemoHandler.GetCurrentDemoRound().IncrementManaLost(10f);
 
             
+        }
+
+        private void ShootSyphon()
+        {
+            syphonStopwatch = syphonCooldown;
+
+            BulletAttack syphonAttack = new BulletAttack();
+            syphonAttack.damage = 100f;
+            syphonAttack.force = 0f;
+            syphonAttack.ignoreTeam = true;
+            syphonAttack.maxDistance = 50f;
+            syphonAttack.critsOnWeakPoints = false;
+            syphonAttack.tracerPrefab = syphonTracer;
+            syphonAttack.origin = _cameraController.transform.position;
+            syphonAttack.aimVec = _cameraController.transform.forward;
+            syphonAttack.overrideMuzzle = true;
+            syphonAttack.muzzleOverride = new Vector3(_cameraController.transform.position.x, _cameraController.transform.position.y - 0.8f, _cameraController.transform.position.z);
+            syphonAttack.manaController = body._manaController;
+            syphonAttack.isSyphon = true;
+            syphonAttack.syphonAmount = 50f;
+            syphonAttack.Fire();
+
+            body._syphonController.UseSyphon();
         }
     }
 
