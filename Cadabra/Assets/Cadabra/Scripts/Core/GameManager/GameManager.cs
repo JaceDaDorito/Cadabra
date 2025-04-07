@@ -7,7 +7,7 @@ using Cadabra.Scripts.Core.Demo;
 
 namespace Cadabra.Core
 {
-    public partial class GameManager : MonoBehaviour
+    public class GameManager : MonoBehaviour
     {
         public static GameManager instance;
         public GameObject playerHolder;
@@ -24,22 +24,12 @@ namespace Cadabra.Core
 
         private void Awake()
         {
-            onManagerStart += InitializeFirstCheckpoint;
             onManagerStart += InstantiatePlayerBody;
         }
 
         private void Start()
         {
             if (onManagerStart != null) onManagerStart();
-        }
-
-        private void InitializeFirstCheckpoint()
-        {
-            CheckPoint instance = PlayerSpawnPoint.instance.gameObject.AddComponent<CheckPoint>();
-            instance.checkpointID = 0;
-            instance.checkpointTransform = this.transform;
-            DemoHandler.StartDemoRound();
-            DemoHandler.SetCurrentCheckpoint(instance);
         }
 
         private void InstantiatePlayerBody()

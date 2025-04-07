@@ -14,7 +14,7 @@ namespace Cadabra.PlayerInteractables
         public void Heal(PlayerBody body)
         {
             if (body._healthController.isMaxHealth) return;
-            body._healthController.Heal(healAmount);
+            body?._healthController.Heal(healAmount);
             if (destroyAfterUse) Destroy(this.gameObject);
         }
     }
