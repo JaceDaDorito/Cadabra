@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b203c92ba53eb7341acc0894fbae9e70, type: 3}
+  m_Name: wdRocketLauncher
+  m_EditorClassIdentifier: 
+  weaponName: Staff of Alakazam
+  inventorySlot: 3
+  weaponPrefab: {fileID: 0}
+  primaryCooldown: 1
+  secondaryCooldown: 1
+  providedBulletTracer: {fileID: 0}
+  providedProjectile: {fileID: 7386214173081834882, guid: c36aa71210309f741bca0501939baf4e, type: 3}
+  primaryFire:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6160338407251996794, guid: 92f3ff5924ae9eb47ae9c61e1b556943, type: 3}
+        m_TargetAssemblyTypeName: Cadabra.Core.GameManager, Cadabra
+        m_MethodName: ShootRocket
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  secondaryFire:
+    m_PersistentCalls:
+      m_Calls: []

@@ -12,15 +12,6 @@ namespace Cadabra.Core
     public class PlayerSpawnPoint : MonoBehaviour
     {
         public static PlayerSpawnPoint instance;
-
-        private void Start()
-        {
-            CheckPoint instance = gameObject.AddComponent<CheckPoint>();
-            instance.checkpointID = 0;
-            instance.checkpointTransform = this.transform;
-            DemoHandler.StartDemoRound();
-            DemoHandler.SetCurrentCheckpoint(instance);
-        }
         private void OnEnable()
         {
             if (instance)

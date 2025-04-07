@@ -2,19 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cadabra.Core;
+using Cadabra.ScriptableObjects;
 
 namespace Cadabra.PlayerInteractables
 {
-    public class PickupHeal : MonoBehaviour
+    public class PickupWeapon : MonoBehaviour
     {
         [SerializeField]
-        public float healAmount;
+        public WeaponDef grantedWeapon;
         [SerializeField]
         public bool destroyAfterUse = true;
-        public void Heal(PlayerBody body)
+        public void GrantWeapon(PlayerBody body)
         {
-            if (body._healthController.isMaxHealth) return;
-            body._healthController.Heal(healAmount);
+            body._weaponStateMachine.GrantAndSwapToWeapon(grantedWeapon);
             if (destroyAfterUse) Destroy(this.gameObject);
         }
     }

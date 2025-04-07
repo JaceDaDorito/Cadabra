@@ -10,22 +10,24 @@ using Cadabra.Core;
 namespace Cadabra.ScriptableObjects
 {
     [CreateAssetMenu(menuName = "Cadabra/WeaponDef")]
-    public class WeaponDef : ScriptableObject, ISerializationCallbackReceiver
+    public class WeaponDef : ScriptableObject
     {
         public string weaponName;
         public int inventorySlot;
-        public float fireRate;
         public GameObject weaponPrefab;
+        public float primaryCooldown = .25f;
+        public float secondaryCooldown = 1f;
+        public GameObject providedBulletTracer; //this sucks but we are running out of time
+        public GameObject providedProjectile;
 
         public UnityEvent<PlayerBody, WeaponStateMachine> primaryFire;
         public UnityEvent<PlayerBody, WeaponStateMachine> secondaryFire;
+    }
 
-        public void OnAfterDeserialize()
-        {
-        }
+    public interface IWeaponAction
+    {
+        public void ShootPrimary(PlayerBody playerBody, WeaponStateMachine wsm);
 
-        public void OnBeforeSerialize()
-        {
-        }
+        public void ShootSecondary(PlayerBody playerBody, WeaponStateMachine wsm);
     }
 }
