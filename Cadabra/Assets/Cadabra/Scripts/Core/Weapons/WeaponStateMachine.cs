@@ -4,35 +4,49 @@ using UnityEngine;
 using Cadabra.Attacks;
 using Cadabra.Projectile;
 using Cadabra.Scripts.Core.Demo;
+using Cadabra.ScriptableObjects;
 
 namespace Cadabra.Core
 {
-    //THIS SUCKS AND IS TEMPORARY
     public class WeaponStateMachine : MonoBehaviour
     {
         private static LayerMask hitMask;
 
-        [SerializeField]
-        private CameraController _cameraController;
-        public CharacterBody body;
+        public CameraController _cameraController;
+        public PlayerBody body;
+        public WeaponInventory weaponInventory;
 
-        [SerializeField]
         public LayerMask layerMask;
         public GameObject tracer;
         public GameObject projectile;
         
-        private float primaryCooldown = .25f;
-        private float secondaryCooldown = 1f;
-        private float primaryStopwatch = 0f;
-        private float secondaryStopwatch = 0f;
+        [HideInInspector]
+        public float primaryStopwatch = 0f;
+        [HideInInspector]
+        public float secondaryStopwatch = 0f;
+
+        [SerializeField]
+        private int currentWeaponIndex = -1;
+        public WeaponDef currentWeapon
+        {
+            get
+            {
+                if (WeaponInventory.WeaponIndexInBounds(currentWeaponIndex))
+                    return weaponInventory.inventory[currentWeaponIndex].weaponDef;
+                return null;
+            }
+        }
         public struct WeaponInputs
         {
             public bool PrimaryPressed;
             public bool SecondaryPressed;
+            public bool WeaponKeyPressed;
+            public int WeaponIndexPressed;
         }
         void Start()
         {
             hitMask = LayerMask.GetMask("World") | LayerMask.GetMask("HurtBox");
+            weaponInventory = gameObject.AddComponent<WeaponInventory>();
         }
         void Update()
         {
@@ -42,11 +56,37 @@ namespace Cadabra.Core
 
         public void SetInputs(ref WeaponInputs inputs)
         {
-            if (inputs.PrimaryPressed && primaryStopwatch <= 0) ShootPrimary();
-            if (inputs.SecondaryPressed && secondaryStopwatch <= 0) ShootSecondary();
+            if (inputs.WeaponKeyPressed)
+            {
+                if (weaponInventory.HasWeapon(inputs.WeaponIndexPressed))
+                {
+                    SwapWeapon(inputs.WeaponIndexPressed);
+                }
+            }
+
+            if (!currentWeapon) return;
+
+            if (inputs.PrimaryPressed && primaryStopwatch <= 0) currentWeapon.primaryFire?.Invoke(body, this);
+            if (inputs.SecondaryPressed && secondaryStopwatch <= 0) currentWeapon.secondaryFire?.Invoke(body, this);
         }
 
-        private void ShootPrimary()
+        public void GrantAndSwapToWeapon(WeaponDef weaponDef)
+        {
+            weaponInventory.GrantWeapon(weaponDef);
+            SwapWeapon(weaponDef.inventorySlot);
+        }
+
+        //Probably set a buffer + cache for swapping weapons
+
+        private void SwapWeapon(int weaponIndex)
+        {
+            currentWeaponIndex = weaponIndex;
+            primaryStopwatch = 0f;
+            secondaryStopwatch = -0f;
+        }
+
+
+        /*private void ShootPrimary()
         {
             primaryStopwatch = primaryCooldown;
 
@@ -77,7 +117,7 @@ namespace Cadabra.Core
             body._manaController.UseMana(10f);
 
             
-        }
+        }*/
     }
 
 }

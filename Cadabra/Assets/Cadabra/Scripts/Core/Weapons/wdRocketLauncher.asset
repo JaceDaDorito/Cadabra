@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b203c92ba53eb7341acc0894fbae9e70, type: 3}
+  m_Name: wdRocketLauncher
+  m_EditorClassIdentifier: 
+  weaponName: RocketLauncher
+  inventorySlot: 2
+  weaponPrefab: {fileID: 0}
+  primaryCooldown: 1
+  secondaryCooldown: 1
+  providedBulletTracer: {fileID: 0}
+  providedProjectile: {fileID: 5584997345027304850, guid: d0dbe12f0f89bc745ac675ec4ab6d3a4, type: 3}
+  primaryFire:
+    m_PersistentCalls:
+      m_Calls: []
+  secondaryFire:
+    m_PersistentCalls:
+      m_Calls: []
