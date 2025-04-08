@@ -66,8 +66,16 @@ namespace Cadabra.Core
 
             if (!currentWeapon) return;
 
-            if (inputs.PrimaryPressed && primaryStopwatch <= 0) currentWeapon.primaryFire?.Invoke(body, this);
-            if (inputs.SecondaryPressed && secondaryStopwatch <= 0) currentWeapon.secondaryFire?.Invoke(body, this);
+            if (currentWeapon.hasPrimary && inputs.PrimaryPressed && primaryStopwatch <= 0) {
+                primaryStopwatch = currentWeapon.primaryCooldown;
+                currentWeapon.IShootWandAssociation.ShootPrimary(this);
+            }
+            if (currentWeapon.hasSecondary && inputs.SecondaryPressed && secondaryStopwatch <= 0)
+            {
+                secondaryStopwatch = currentWeapon.secondaryCooldown;
+                currentWeapon.IShootWandAssociation.ShootSecondary(this);
+            }
+
         }
 
         public void GrantAndSwapToWeapon(WeaponDef weaponDef)
@@ -82,42 +90,15 @@ namespace Cadabra.Core
         {
             currentWeaponIndex = weaponIndex;
             primaryStopwatch = 0f;
-            secondaryStopwatch = -0f;
+            secondaryStopwatch = 0f;
         }
-
-
-        /*private void ShootPrimary()
-        {
-            primaryStopwatch = primaryCooldown;
-
-            BulletAttack bulletAttack = new BulletAttack();
-            bulletAttack.damage = 5f;
-            bulletAttack.force = 0f;
-            bulletAttack.ignoreTeam = false;
-            bulletAttack.maxDistance = 50f;
-            bulletAttack.critsOnWeakPoints = true;
-            bulletAttack.tracerPrefab = tracer;
-            bulletAttack.origin = _cameraController.transform.position;
-            bulletAttack.aimVec = _cameraController.transform.forward;
-            bulletAttack.overrideMuzzle = true;
-            bulletAttack.muzzleOverride = new Vector3(_cameraController.transform.position.x, _cameraController.transform.position.y - 0.8f, _cameraController.transform.position.z);
-            bulletAttack.Fire();
-
-            body._manaController.UseMana(5f);
-        }
-
-        private void ShootSecondary()
-        {
-            secondaryStopwatch = secondaryCooldown;
-
-            Vector3 muzzle = new Vector3(_cameraController.transform.position.x, _cameraController.transform.position.y - 0.2f, _cameraController.transform.position.z) + (_cameraController.transform.forward * 1.3f);
-            GameObject instance = GameObject.Instantiate(projectile, muzzle, _cameraController.transform.rotation);
-            instance.GetComponent<GenericProjectile>().aimDir = _cameraController.transform.forward;
-
-            body._manaController.UseMana(10f);
-
-            
-        }*/
     }
 
+    public interface IShootWand
+    {
+        public WeaponDef weaponDef { get; set; }
+        public void ShootPrimary(WeaponStateMachine wsm);
+
+        public void ShootSecondary(WeaponStateMachine wsm);
+    }
 }

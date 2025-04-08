@@ -90,7 +90,7 @@ namespace Cadabra.Core
                 weaponIndexPressed++;
                 if (!Input.GetKeyDown(keyCodes[weaponIndexPressed])) continue;
 
-                if (WeaponInventory.WeaponIndexInBounds(weaponIndexPressed)) continue;
+                if (!WeaponInventory.WeaponIndexInBounds(weaponIndexPressed)) continue;
 
                 return true;
             }

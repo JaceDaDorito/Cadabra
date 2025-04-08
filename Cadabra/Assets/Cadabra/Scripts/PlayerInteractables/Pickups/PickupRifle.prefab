@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -5328868537606121573}
   - component: {fileID: 8450094201992778491}
   m_Layer: 8
-  m_Name: PickupRocketLauncher
+  m_Name: PickupRifle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -65,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a3a0e736625112645a8c55a1f0b30a2b, type: 2}
+  - {fileID: 7728962146020597952, guid: d05fa8828be199048bb709f826cc3c53, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9097e34655dc7d14f84a465dd8b82c34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grantedWeapon: {fileID: 11400000, guid: 068c685f23dcf2d4681354a1050754d8, type: 2}
+  grantedWeapon: {fileID: 11400000, guid: 245e1e69923547a4db5273a183e13ac3, type: 2}
   destroyAfterUse: 1
 --- !u!54 &8450094201992778491
 Rigidbody:

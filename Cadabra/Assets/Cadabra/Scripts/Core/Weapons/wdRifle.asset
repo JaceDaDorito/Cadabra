@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b203c92ba53eb7341acc0894fbae9e70, type: 3}
-  m_Name: wdRocketLauncher
+  m_Name: wdRifle
   m_EditorClassIdentifier: 
   providedObjects:
-  - name: Rocket
-    gameObject: {fileID: 7386214173081834882, guid: c36aa71210309f741bca0501939baf4e, type: 3}
-  weaponName: Wand of Alakazam
-  inventorySlot: 2
+  - name: Tracer
+    gameObject: {fileID: 7102819314444647363, guid: 37c5e421e104fa64a87c13e10c532fee, type: 3}
+  weaponName: Gloves of Hocus
+  inventorySlot: 0
   weaponPrefab: {fileID: 0}
   hasPrimary: 1
   hasSecondary: 0
-  primaryCooldown: 1
+  primaryCooldown: 0.25
   secondaryCooldown: 1

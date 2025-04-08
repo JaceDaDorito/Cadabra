@@ -43,7 +43,7 @@ namespace Cadabra.Core
 
         public static bool WeaponIndexInBounds(int index)
         {
-            return index < 0 && index >= 9;
+            return index >= 0 && index <= 9;
         }
     }
 }
