@@ -53,7 +53,7 @@ namespace Cadabra.Core
             int weaponIndexPressed = -1;
             wInputs.WeaponKeyPressed = GetPressedWeaponKey( out weaponIndexPressed);
             wInputs.WeaponIndexPressed = weaponIndexPressed;
-            
+            wInputs.SyphonPressed = Input.GetKeyDown(KeyCode.E);
             _weaponStateMachine.SetInputs(ref wInputs);
 
 
