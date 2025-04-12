@@ -23,6 +23,6 @@ MonoBehaviour:
   hasPrimary: 1
   hasSecondary: 1
   primaryCooldown: 1
-  secondaryCooldown: 1.7
+  secondaryCooldown: 1.8
   manaCost: 8
   secondaryCost: 12

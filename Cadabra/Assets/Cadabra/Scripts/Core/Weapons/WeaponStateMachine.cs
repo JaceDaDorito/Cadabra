@@ -23,8 +23,6 @@ namespace Cadabra.Core
         
         [HideInInspector]
         public float shotStopwatch = 0f;
-        //[HideInInspector]
-        //public float secondaryStopwatch = 0f;
         [HideInInspector]
         public float swapStopwatch = 0f;
 
@@ -64,7 +62,6 @@ namespace Cadabra.Core
         {
             if (swapStopwatch > 0) swapStopwatch -= Time.deltaTime;
             if (shotStopwatch > 0) shotStopwatch -= Time.deltaTime;
-            //if (secondaryStopwatch > 0) secondaryStopwatch -= Time.deltaTime;
             if (syphonStopwatch > 0) syphonStopwatch -= Time.deltaTime;
         }
 
@@ -108,7 +105,6 @@ namespace Cadabra.Core
                 {
                     secondaryBuffer = false;
                     shotStopwatch = currentWeapon.secondaryCooldown;
-                    //secondaryStopwatch = currentWeapon.secondaryCooldown;
                     currentWeapon.IShootWandAssociation.ShootSecondary(this);
                     body._manaController.UseMana(currentWeapon.secondaryCost);
                 }
