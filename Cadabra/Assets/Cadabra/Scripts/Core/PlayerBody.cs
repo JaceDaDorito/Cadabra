@@ -47,6 +47,7 @@ namespace Cadabra.Core
             WeaponStateMachine.WeaponInputs wInputs = new WeaponStateMachine.WeaponInputs();
             wInputs.PrimaryPressed = Input.GetKey(KeyCode.Mouse0);
             wInputs.SecondaryPressed = Input.GetKeyDown(KeyCode.Mouse1);
+            wInputs.SyphonPressed = Input.GetKeyDown(KeyCode.E);
             _weaponStateMachine.SetInputs(ref wInputs);
 
             bool kill = Input.GetKey(KeyCode.K);

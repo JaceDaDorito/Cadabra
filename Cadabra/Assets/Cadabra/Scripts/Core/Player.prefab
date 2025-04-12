@@ -48,6 +48,7 @@ GameObject:
   - component: {fileID: 1878370971496494545}
   - component: {fileID: 7869486189208595057}
   - component: {fileID: 3799974382546872088}
+  - component: {fileID: 67187650197750859}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -154,6 +155,7 @@ MonoBehaviour:
   _healthController: {fileID: 7460509666470263047}
   _manaController: {fileID: 1878370971496494545}
   _weaponStateMachine: {fileID: 7869486189208595057}
+  _syphonController: {fileID: 67187650197750859}
   _cameraController: {fileID: 0}
   _uiCamera: {fileID: 0}
   _cameraFollowPoint: {fileID: 1878534204087951840}
@@ -234,6 +236,7 @@ MonoBehaviour:
     m_Bits: 128
   tracer: {fileID: 7102819314444647363, guid: 19dbf9cc23064a845b0ba773d51ca853, type: 3}
   projectile: {fileID: 7386214173081834882, guid: c36aa71210309f741bca0501939baf4e, type: 3}
+  syphonTracer: {fileID: 7411067964115573797, guid: d4bc302d10010924d9e660c7547a7746, type: 3}
 --- !u!114 &3799974382546872088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -249,6 +252,20 @@ MonoBehaviour:
   hurtBoxes:
   - {fileID: 3072457618325813349}
   healthController: {fileID: 7460509666470263047}
+--- !u!114 &67187650197750859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2912401958637649485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5258d128a35d254389e3de0f02165c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syphonCooldownAmount: 5
+  timer: 0
 --- !u!1 &3987773504933855601
 GameObject:
   m_ObjectHideFlags: 0

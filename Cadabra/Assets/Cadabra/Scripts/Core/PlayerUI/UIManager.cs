@@ -14,12 +14,17 @@ namespace Cadabra.Core
         private ManaController _manaController;
         [SerializeField]
         private UIManaController _uiManaController;
+        [SerializeField]
+        private SyphonController _syphonController;
+        [SerializeField]
+        private UISyphonController _uiSyphonController;
 
         // Inherited
         private void Start()
         {
             _uiHealthController.UpdateHealth(_healthController.maxHealth, _healthController.maxHealth);
             _uiManaController.UpdateMana(_manaController.maxMana, _manaController.maxMana);
+            _uiSyphonController.UpdateSyphonCooldown(_syphonController.timer, _syphonController.syphonCooldownAmount);
         }
 
         // Inherited
@@ -27,6 +32,7 @@ namespace Cadabra.Core
         {
             _uiHealthController.UpdateHealth(_healthController.currentHealth, _healthController.maxHealth);
             _uiManaController.UpdateMana(_manaController.currentMana, _manaController.maxMana);
+            _uiSyphonController.UpdateSyphonCooldown(_syphonController.timer, _syphonController.syphonCooldownAmount);
         }
     }
 }
