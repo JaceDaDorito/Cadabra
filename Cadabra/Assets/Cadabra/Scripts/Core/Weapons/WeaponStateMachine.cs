@@ -4,85 +4,142 @@ using UnityEngine;
 using Cadabra.Attacks;
 using Cadabra.Projectile;
 using Cadabra.Scripts.Core.Demo;
+using Cadabra.ScriptableObjects;
 
 namespace Cadabra.Core
 {
-    //THIS SUCKS AND IS TEMPORARY
     public class WeaponStateMachine : MonoBehaviour
     {
         private static LayerMask hitMask;
 
-        [SerializeField]
-        private CameraController _cameraController;
-        public CharacterBody body;
+        public CameraController _cameraController;
+        public PlayerBody body;
+        public WeaponInventory weaponInventory;
 
-        [SerializeField]
         public LayerMask layerMask;
         public GameObject tracer;
         public GameObject projectile;
         public GameObject syphonTracer;
         
-        private float primaryCooldown = .25f;
-        private float secondaryCooldown = 1f;
+        [HideInInspector]
+        public float shotStopwatch = 0f;
+        //[HideInInspector]
+        //public float secondaryStopwatch = 0f;
+        [HideInInspector]
+        public float swapStopwatch = 0f;
+
+        private bool primaryBuffer = false;
+        private bool secondaryBuffer = false;
+
+        public const float SWAP_PERIOD = 0.25f;
+
+        [SerializeField]
+        private int currentWeaponIndex = -1;
+        public WeaponDef currentWeapon
+        {
+            get
+            {
+                if (WeaponInventory.WeaponIndexInBounds(currentWeaponIndex))
+                    return weaponInventory.inventory[currentWeaponIndex].weaponDef;
+                return null;
+            }
+        }
         private float syphonCooldown = 5f;
-        private float primaryStopwatch = 0f;
-        private float secondaryStopwatch = 0f;
         private float syphonStopwatch = 0f;
         public struct WeaponInputs
         {
             public bool PrimaryPressed;
             public bool SecondaryPressed;
+            public bool WeaponKeyPressed;
+            public int WeaponIndexPressed;
             public bool SyphonPressed;
         }
         void Start()
         {
             hitMask = LayerMask.GetMask("World") | LayerMask.GetMask("HurtBox");
+            weaponInventory = gameObject.AddComponent<WeaponInventory>();
+            
         }
         void Update()
         {
-            if (primaryStopwatch > 0) primaryStopwatch -= Time.deltaTime;
-            if (secondaryStopwatch > 0) secondaryStopwatch -= Time.deltaTime;
+            if (swapStopwatch > 0) swapStopwatch -= Time.deltaTime;
+            if (shotStopwatch > 0) shotStopwatch -= Time.deltaTime;
+            //if (secondaryStopwatch > 0) secondaryStopwatch -= Time.deltaTime;
             if (syphonStopwatch > 0) syphonStopwatch -= Time.deltaTime;
         }
 
         public void SetInputs(ref WeaponInputs inputs)
         {
-            if (inputs.PrimaryPressed && primaryStopwatch <= 0) ShootPrimary();
-            if (inputs.SecondaryPressed && secondaryStopwatch <= 0) ShootSecondary();
+            if (inputs.WeaponKeyPressed)
+            {
+                if (weaponInventory.HasWeapon(inputs.WeaponIndexPressed))
+                {
+                    SwapWeapon(inputs.WeaponIndexPressed);
+                }
+            }
+
+            if (!currentWeapon) return;
+
+            if (swapStopwatch <= 0)
+            {
+                //If the weapon has a primary attack, your current mana is above the mana cost, and the primary cooldown is over
+                bool canFirePrimary = currentWeapon.hasPrimary &&
+                    body._manaController.currentMana >= currentWeapon.manaCost &&
+                    shotStopwatch <= 0;
+                //If you press the button or buffer an input
+                bool primaryInput = primaryBuffer || inputs.PrimaryPressed;
+
+                //If the weapon has a secondary attack, your current mana is above the mana cost, and the secondary cooldown is over
+                bool canFireSecondary = currentWeapon.hasSecondary &&
+                    body._manaController.currentMana >= currentWeapon.secondaryCost &&
+                    //secondaryStopwatch <= 0 &&
+                    shotStopwatch <= 0;
+                //If you press the button or buffer an input
+                bool secondaryInput = secondaryBuffer || inputs.SecondaryPressed;
+
+                if (primaryInput && canFirePrimary)
+                {
+                    primaryBuffer = false;
+                    shotStopwatch = currentWeapon.primaryCooldown;
+                    currentWeapon.IShootWandAssociation.ShootPrimary(this);
+                    body._manaController.UseMana(currentWeapon.manaCost);
+                }
+                else if (secondaryInput && canFireSecondary)
+                {
+                    secondaryBuffer = false;
+                    shotStopwatch = currentWeapon.secondaryCooldown;
+                    //secondaryStopwatch = currentWeapon.secondaryCooldown;
+                    currentWeapon.IShootWandAssociation.ShootSecondary(this);
+                    body._manaController.UseMana(currentWeapon.secondaryCost);
+                }
+            }
+            else
+            {
+                //Buffer inputs during weapon swap window
+                if(!primaryBuffer && !secondaryBuffer)
+                {
+                    if (inputs.PrimaryPressed) primaryBuffer = true;
+                    else if (inputs.SecondaryPressed) secondaryBuffer = true;
+                }
+            }
             if (inputs.SyphonPressed && syphonStopwatch <= 0) ShootSyphon();
         }
 
-        private void ShootPrimary()
+
+        public void GrantAndSwapToWeapon(WeaponDef weaponDef)
         {
-            primaryStopwatch = primaryCooldown;
-
-            BulletAttack bulletAttack = new BulletAttack();
-            bulletAttack.damage = 5f;
-            bulletAttack.force = 0f;
-            bulletAttack.ignoreTeam = false;
-            bulletAttack.maxDistance = 50f;
-            bulletAttack.critsOnWeakPoints = true;
-            bulletAttack.tracerPrefab = tracer;
-            bulletAttack.origin = _cameraController.transform.position;
-            bulletAttack.aimVec = _cameraController.transform.forward;
-            bulletAttack.overrideMuzzle = true;
-            bulletAttack.muzzleOverride = new Vector3(_cameraController.transform.position.x, _cameraController.transform.position.y - 0.8f, _cameraController.transform.position.z);
-            bulletAttack.Fire();
-
-            body._manaController.UseMana(5f);
+            weaponInventory.GrantWeapon(weaponDef);
+            SwapWeapon(weaponDef.inventorySlot);
         }
 
-        private void ShootSecondary()
+        //Probably set a buffer + cache for swapping weapons
+
+        private void SwapWeapon(int weaponIndex)
         {
-            secondaryStopwatch = secondaryCooldown;
-
-            Vector3 muzzle = new Vector3(_cameraController.transform.position.x, _cameraController.transform.position.y - 0.2f, _cameraController.transform.position.z) + (_cameraController.transform.forward * 1.3f);
-            GameObject instance = GameObject.Instantiate(projectile, muzzle, _cameraController.transform.rotation);
-            instance.GetComponent<GenericProjectile>().aimDir = _cameraController.transform.forward;
-
-            body._manaController.UseMana(10f);
-
-            
+            currentWeaponIndex = weaponIndex;
+            shotStopwatch = 0f;
+            //secondaryStopwatch = 0f;
+            swapStopwatch = SWAP_PERIOD;
         }
 
         private void ShootSyphon()
@@ -109,4 +166,11 @@ namespace Cadabra.Core
         }
     }
 
+    public interface IShootWand
+    {
+        public WeaponDef weaponDef { get; set; }
+        public void ShootPrimary(WeaponStateMachine wsm);
+
+        public void ShootSecondary(WeaponStateMachine wsm);
+    }
 }

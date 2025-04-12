@@ -21,7 +21,7 @@ namespace Cadabra.Core
     public class CharacterMotor : MonoBehaviour, ICharacterController
     {
         [SerializeField]
-        private KinematicCharacterMotor _motor;
+        public KinematicCharacterMotor _motor;
 
         [SerializeField]
         private Vector3 _gravity = new Vector3(0f, -30f, 0f);
