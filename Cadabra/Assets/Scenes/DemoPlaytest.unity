@@ -96,8 +96,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: cb213e419fb37e644bc6f534d16e5df3, type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: d0860501f3cc4ec4bb4653f6e66d8ff0, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2762,7 +2762,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1302018248517910980, guid: c41be18ea0c45134b9ae481936626d06, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.7195303
+      value: 3.97
       objectReference: {fileID: 0}
     - target: {fileID: 1302018248517910980, guid: c41be18ea0c45134b9ae481936626d06, type: 3}
       propertyPath: m_LocalPosition.z
@@ -17153,7 +17153,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1302018248517910980, guid: ffdd18c325c66974a82416e6c576d37d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.36
+      value: 4.07
       objectReference: {fileID: 0}
     - target: {fileID: 1302018248517910980, guid: ffdd18c325c66974a82416e6c576d37d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -32403,6 +32403,7 @@ MonoBehaviour:
   instancedPlayerHolder: {fileID: 0}
   currentCheckpoint: {fileID: 0}
   wdRifle: {fileID: 11400000, guid: 245e1e69923547a4db5273a183e13ac3, type: 2}
+  wdShotgun: {fileID: 11400000, guid: ce1b104db2d370f4084e0651e9afbb3f, type: 2}
   wdRocketLauncher: {fileID: 11400000, guid: 068c685f23dcf2d4681354a1050754d8, type: 2}
 --- !u!4 &1418304489
 Transform:
@@ -34252,6 +34253,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1471588919}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1521988932
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1302018248517910980, guid: d4cb517d9915fc14eb7af97e32b867b5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 133.95087
+      objectReference: {fileID: 0}
+    - target: {fileID: 1302018248517910980, guid: d4cb517d9915fc14eb7af97e32b867b5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 1302018248517910980, guid: d4cb517d9915fc14eb7af97e32b867b5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -65.17951
+      objectReference: {fileID: 0}
+    - target: {fileID: 1302018248517910980, guid: d4cb517d9915fc14eb7af97e32b867b5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1302018248517910980, guid: d4cb517d9915fc14eb7af97e32b867b5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1302018248517910980, guid: d4cb517d9915fc14eb7af97e32b867b5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1302018248517910980, guid: d4cb517d9915fc14eb7af97e32b867b5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1302018248517910980, guid: d4cb517d9915fc14eb7af97e32b867b5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1302018248517910980, guid: d4cb517d9915fc14eb7af97e32b867b5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1302018248517910980, guid: d4cb517d9915fc14eb7af97e32b867b5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7929703428292957587, guid: d4cb517d9915fc14eb7af97e32b867b5, type: 3}
+      propertyPath: m_Name
+      value: PickupShotgun
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d4cb517d9915fc14eb7af97e32b867b5, type: 3}
 --- !u!1001 &1523460614
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48835,3 +48893,4 @@ SceneRoots:
   - {fileID: 362734101}
   - {fileID: 136504551}
   - {fileID: 781884104}
+  - {fileID: 1521988932}

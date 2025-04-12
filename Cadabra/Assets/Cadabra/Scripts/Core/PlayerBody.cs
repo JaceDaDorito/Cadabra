@@ -71,9 +71,9 @@ namespace Cadabra.Core
         //so it is easier to rebind later
         public static KeyCode[] keyCodes =
         {
-            KeyCode.Alpha1,
-            KeyCode.Alpha2,
-            KeyCode.Alpha3,
+            KeyCode.Alpha1, //0 Gloves
+            KeyCode.Alpha2, //1 Runes
+            KeyCode.Alpha3, //2 Staff
             KeyCode.Alpha4,
             KeyCode.Alpha5,
             KeyCode.Alpha6,

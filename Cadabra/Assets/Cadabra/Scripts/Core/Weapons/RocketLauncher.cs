@@ -37,8 +37,6 @@ namespace Cadabra.Core
             Vector3 muzzle = new Vector3(wsm._cameraController.transform.position.x, wsm._cameraController.transform.position.y - 0.2f, wsm._cameraController.transform.position.z) + (wsm._cameraController.transform.forward * 1.3f);
             GameObject instance = GameObject.Instantiate(primaryProjectile, muzzle, wsm._cameraController.transform.rotation);
             instance.GetComponent<GenericProjectile>().aimDir = wsm._cameraController.transform.forward;
-
-            wsm.body._manaController.UseMana(10f);
         }
 
         public void ShootSecondary(WeaponStateMachine wsm)

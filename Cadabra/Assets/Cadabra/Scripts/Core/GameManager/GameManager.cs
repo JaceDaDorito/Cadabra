@@ -24,6 +24,7 @@ namespace Cadabra.Core
         ManagerStart onManagerStart;
 
         public WeaponDef wdRifle;
+        public WeaponDef wdShotgun;
         public WeaponDef wdRocketLauncher;
 
         private void Awake()
@@ -31,6 +32,7 @@ namespace Cadabra.Core
             onManagerStart += InstantiatePlayerBody;
 
             wdRifle.IShootWandAssociation = new Rifle();
+            wdShotgun.IShootWandAssociation = new Shotgun();
             wdRocketLauncher.IShootWandAssociation = new RocketLauncher();
         }
 

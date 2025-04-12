@@ -21,9 +21,16 @@ namespace Cadabra.Core
         public GameObject projectile;
         
         [HideInInspector]
-        public float primaryStopwatch = 0f;
+        public float shotStopwatch = 0f;
+        //[HideInInspector]
+        //public float secondaryStopwatch = 0f;
         [HideInInspector]
-        public float secondaryStopwatch = 0f;
+        public float swapStopwatch = 0f;
+
+        private bool primaryBuffer = false;
+        private bool secondaryBuffer = false;
+
+        public const float SWAP_PERIOD = 0.25f;
 
         [SerializeField]
         private int currentWeaponIndex = -1;
@@ -47,11 +54,13 @@ namespace Cadabra.Core
         {
             hitMask = LayerMask.GetMask("World") | LayerMask.GetMask("HurtBox");
             weaponInventory = gameObject.AddComponent<WeaponInventory>();
+            
         }
         void Update()
         {
-            if (primaryStopwatch > 0) primaryStopwatch -= Time.deltaTime;
-            if (secondaryStopwatch > 0) secondaryStopwatch -= Time.deltaTime;
+            if (swapStopwatch > 0) swapStopwatch -= Time.deltaTime;
+            if (shotStopwatch > 0) shotStopwatch -= Time.deltaTime;
+            //if (secondaryStopwatch > 0) secondaryStopwatch -= Time.deltaTime;
         }
 
         public void SetInputs(ref WeaponInputs inputs)
@@ -66,14 +75,47 @@ namespace Cadabra.Core
 
             if (!currentWeapon) return;
 
-            if (currentWeapon.hasPrimary && inputs.PrimaryPressed && primaryStopwatch <= 0) {
-                primaryStopwatch = currentWeapon.primaryCooldown;
-                currentWeapon.IShootWandAssociation.ShootPrimary(this);
-            }
-            if (currentWeapon.hasSecondary && inputs.SecondaryPressed && secondaryStopwatch <= 0)
+            if (swapStopwatch <= 0)
             {
-                secondaryStopwatch = currentWeapon.secondaryCooldown;
-                currentWeapon.IShootWandAssociation.ShootSecondary(this);
+                //If the weapon has a primary attack, your current mana is above the mana cost, and the primary cooldown is over
+                bool canFirePrimary = currentWeapon.hasPrimary &&
+                    body._manaController.currentMana >= currentWeapon.manaCost &&
+                    shotStopwatch <= 0;
+                //If you press the button or buffer an input
+                bool primaryInput = primaryBuffer || inputs.PrimaryPressed;
+
+                //If the weapon has a secondary attack, your current mana is above the mana cost, and the secondary cooldown is over
+                bool canFireSecondary = currentWeapon.hasSecondary &&
+                    body._manaController.currentMana >= currentWeapon.secondaryCost &&
+                    //secondaryStopwatch <= 0 &&
+                    shotStopwatch <= 0;
+                //If you press the button or buffer an input
+                bool secondaryInput = secondaryBuffer || inputs.SecondaryPressed;
+
+                if (primaryInput && canFirePrimary)
+                {
+                    primaryBuffer = false;
+                    shotStopwatch = currentWeapon.primaryCooldown;
+                    currentWeapon.IShootWandAssociation.ShootPrimary(this);
+                    body._manaController.UseMana(currentWeapon.manaCost);
+                }
+                else if (secondaryInput && canFireSecondary)
+                {
+                    secondaryBuffer = false;
+                    shotStopwatch = currentWeapon.secondaryCooldown;
+                    //secondaryStopwatch = currentWeapon.secondaryCooldown;
+                    currentWeapon.IShootWandAssociation.ShootSecondary(this);
+                    body._manaController.UseMana(currentWeapon.secondaryCost);
+                }
+            }
+            else
+            {
+                //Buffer inputs during weapon swap window
+                if(!primaryBuffer && !secondaryBuffer)
+                {
+                    if (inputs.PrimaryPressed) primaryBuffer = true;
+                    else if (inputs.SecondaryPressed) secondaryBuffer = true;
+                }
             }
 
         }
@@ -89,8 +131,9 @@ namespace Cadabra.Core
         private void SwapWeapon(int weaponIndex)
         {
             currentWeaponIndex = weaponIndex;
-            primaryStopwatch = 0f;
-            secondaryStopwatch = 0f;
+            shotStopwatch = 0f;
+            //secondaryStopwatch = 0f;
+            swapStopwatch = SWAP_PERIOD;
         }
     }
 

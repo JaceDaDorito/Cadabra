@@ -47,8 +47,6 @@ namespace Cadabra.Core
             bulletAttack.overrideMuzzle = true;
             bulletAttack.muzzleOverride = new Vector3(wsm._cameraController.transform.position.x, wsm._cameraController.transform.position.y - 0.8f, wsm._cameraController.transform.position.z);
             bulletAttack.Fire();
-
-            wsm.body._manaController.UseMana(5f);
         }
 
         public void ShootSecondary(WeaponStateMachine wsm)

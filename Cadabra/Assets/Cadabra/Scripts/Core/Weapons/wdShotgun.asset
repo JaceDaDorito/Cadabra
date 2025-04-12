@@ -10,17 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b203c92ba53eb7341acc0894fbae9e70, type: 3}
-  m_Name: wdRocketLauncher
+  m_Name: wdShotgun
   m_EditorClassIdentifier: 
   providedObjects:
-  - name: Rocket
-    gameObject: {fileID: 7386214173081834882, guid: c36aa71210309f741bca0501939baf4e, type: 3}
-  weaponName: Wand of Alakazam
-  inventorySlot: 2
+  - name: Tracer
+    gameObject: {fileID: 7102819314444647363, guid: 0211218cdddb29443a579f07947fe885, type: 3}
+  - name: TracerPower
+    gameObject: {fileID: 7102819314444647363, guid: 21b6b9c07b85e8f4da553d01367b92e7, type: 3}
+  weaponName: Runes of Sesame
+  inventorySlot: 1
   weaponPrefab: {fileID: 0}
   hasPrimary: 1
-  hasSecondary: 0
+  hasSecondary: 1
   primaryCooldown: 1
-  secondaryCooldown: 1
-  manaCost: 10
-  secondaryCost: 1
+  secondaryCooldown: 1.7
+  manaCost: 8
+  secondaryCost: 12

@@ -53,6 +53,8 @@ namespace Cadabra.ScriptableObjects
         public bool hasSecondary = false;
         public float primaryCooldown = .25f;
         public float secondaryCooldown = 1f;
+        public float manaCost = 1f;
+        public float secondaryCost = 1f;
 
         private IShootWand IShootWand;
         public IShootWand IShootWandAssociation
