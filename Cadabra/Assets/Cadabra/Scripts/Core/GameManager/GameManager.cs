@@ -5,6 +5,7 @@ using Cadabra.Util;
 using UnityEngine.SceneManagement;
 using Cadabra.Scripts.Core.Demo;
 using Cadabra.Enemies;
+using Cadabra.ScriptableObjects;
 
 namespace Cadabra.Core
 {
@@ -25,11 +26,18 @@ namespace Cadabra.Core
         public delegate void ManagerStart();
         ManagerStart onManagerStart;
 
+        public WeaponDef wdRifle;
+        public WeaponDef wdShotgun;
+        public WeaponDef wdRocketLauncher;
+
         private void Awake()
         {
             onManagerStart += InstantiatePlayerBody;
             onManagerStart += SpawnAllEnemies;
 
+            wdRifle.IShootWandAssociation = new Rifle();
+            wdShotgun.IShootWandAssociation = new Shotgun();
+            wdRocketLauncher.IShootWandAssociation = new RocketLauncher();
         }
 
         private void Start()
@@ -79,7 +87,7 @@ namespace Cadabra.Core
         {
             if (instance)
             {
-                Destroy(this);
+                Debug.LogError("Only one " + this.GetType() + " can exist at a time");
                 return;
             }
 

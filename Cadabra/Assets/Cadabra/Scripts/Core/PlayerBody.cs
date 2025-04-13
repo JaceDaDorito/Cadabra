@@ -1,18 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 namespace Cadabra.Core
 {
     public class PlayerBody : CharacterBody
     {
+        
+
         [SerializeField]
         private CameraController _cameraController;
         [SerializeField]
         private GameObject _uiCamera;
         [SerializeField]
         private Transform _cameraFollowPoint;
-        
 
         private Vector3 _lookInputVector;
 
@@ -22,6 +24,7 @@ namespace Cadabra.Core
             _cameraController.SetFollowTransform(_cameraFollowPoint);
             
         }
+        //Refactor inputs at some point
         protected virtual void HandleMouseInput()
         {
             float mouseY = Input.GetAxisRaw("Mouse Y");
@@ -47,27 +50,52 @@ namespace Cadabra.Core
             WeaponStateMachine.WeaponInputs wInputs = new WeaponStateMachine.WeaponInputs();
             wInputs.PrimaryPressed = Input.GetKey(KeyCode.Mouse0);
             wInputs.SecondaryPressed = Input.GetKeyDown(KeyCode.Mouse1);
+            int weaponIndexPressed = -1;
+            wInputs.WeaponKeyPressed = GetPressedWeaponKey( out weaponIndexPressed);
+            wInputs.WeaponIndexPressed = weaponIndexPressed;
+            wInputs.SyphonPressed = Input.GetKeyDown(KeyCode.E);
             _weaponStateMachine.SetInputs(ref wInputs);
+
 
             bool kill = Input.GetKey(KeyCode.K);
             if (kill) _healthController.Suicide();
         }
 
+        
+
         private void Update()
         {
             HandleCharacterInputs();
-/*
-            // Temp Damage Trigger
-            if (Input.GetKeyDown(KeyCode.Keypad1)) _healthController.TakeDamage(25f);
+        }
 
-            // Temp Health Trigger
-            if (Input.GetKeyDown(KeyCode.Keypad2)) _healthController.Heal(50f);
+        //so it is easier to rebind later
+        public static KeyCode[] keyCodes =
+        {
+            KeyCode.Alpha1, //0 Gloves
+            KeyCode.Alpha2, //1 Runes
+            KeyCode.Alpha3, //2 Staff
+            KeyCode.Alpha4,
+            KeyCode.Alpha5,
+            KeyCode.Alpha6,
+            KeyCode.Alpha7,
+            KeyCode.Alpha8,
+            KeyCode.Alpha9,
+            KeyCode.Alpha0,
+        };
+        public static bool GetPressedWeaponKey(out int weaponIndexPressed)
+        {
+            weaponIndexPressed = -1;
+            foreach (KeyCode kc in keyCodes)
+            {
+                weaponIndexPressed++;
+                if (!Input.GetKeyDown(keyCodes[weaponIndexPressed])) continue;
 
-            // Temp Mana Loss Trigger
-            if (Input.GetKeyDown(KeyCode.Keypad3)) _manaController.UseMana(25f);
+                if (!WeaponInventory.WeaponIndexInBounds(weaponIndexPressed)) continue;
 
-            // Temp Mana Gain Trigger
-            if (Input.GetKeyDown(KeyCode.Keypad4)) _manaController.Syphon(50f);*/
+                return true;
+            }
+            weaponIndexPressed = -1;
+            return false;
         }
 
         private void LateUpdate()

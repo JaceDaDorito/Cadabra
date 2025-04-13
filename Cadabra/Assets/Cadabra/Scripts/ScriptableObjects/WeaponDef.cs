@@ -6,26 +6,68 @@ using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Events;
 using Cadabra.Core;
+using Cadabra.Util;
 
 namespace Cadabra.ScriptableObjects
 {
     [CreateAssetMenu(menuName = "Cadabra/WeaponDef")]
-    public class WeaponDef : ScriptableObject, ISerializationCallbackReceiver
+    public class WeaponDef : ScriptableObject
     {
-        public string weaponName;
-        public int inventorySlot;
-        public float fireRate;
-        public GameObject weaponPrefab;
+        //Dont really like this very much
 
-        public UnityEvent<PlayerBody, WeaponStateMachine> primaryFire;
-        public UnityEvent<PlayerBody, WeaponStateMachine> secondaryFire;
+        [SerializeField]
+        private NameGameObjectPair[] providedObjects = Array.Empty<NameGameObjectPair>();
 
-        public void OnAfterDeserialize()
+        [Serializable]
+        private struct NameGameObjectPair
         {
+            public string name;
+            public GameObject gameObject;
+        }
+        public int Count
+        {
+            get
+            {
+                return providedObjects.Length;
+            }
         }
 
-        public void OnBeforeSerialize()
+        public GameObject FindGameObject(int index)
         {
+            return providedObjects[index].gameObject;
+        }
+
+        public GameObject FindGameObject(string name)
+        {
+            foreach (NameGameObjectPair ntp in providedObjects)
+            {
+                if (ntp.name.Equals(name)) return ntp.gameObject;
+            }
+            return null;
+        }
+
+        public string weaponName;
+        public int inventorySlot;
+        public GameObject weaponPrefab;
+        public bool hasPrimary = true;
+        public bool hasSecondary = false;
+        public float primaryCooldown = .25f;
+        public float secondaryCooldown = 1f;
+        public float manaCost = 1f;
+        public float secondaryCost = 1f;
+
+        private IShootWand IShootWand;
+        public IShootWand IShootWandAssociation
+        {
+            get
+            {
+                return IShootWand;
+            }
+            set
+            {
+                IShootWand = value;
+                value.weaponDef = this;
+            }
         }
     }
 }

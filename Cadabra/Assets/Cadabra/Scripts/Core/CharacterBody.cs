@@ -23,6 +23,8 @@ namespace Cadabra.Core
         public ManaController _manaController;
         [SerializeField]
         public WeaponStateMachine _weaponStateMachine;
+        [SerializeField]
+        public SyphonController _syphonController;
     }
 }
 

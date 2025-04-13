@@ -30,6 +30,9 @@ namespace Cadabra.Attacks
         public float maxDistance = 500f;
         public GameObject tracerPrefab;
         public GameObject impactVfxPrefab;
+        public ManaController manaController;
+        public bool isSyphon;
+        public float syphonAmount;
 
         private Vector3 forceVector = new Vector3(0, 0, 0);
 
@@ -43,6 +46,8 @@ namespace Cadabra.Attacks
             if (tracerPrefab) CreateAndFireTracer(hitSomething, hit);
 
             if (!hitSomething) return;
+            // change to hit enemy instead of just something in the future
+            else if (isSyphon) manaController.Syphon(syphonAmount);
 
             if (BitwiseUtils.Contains(hurtBoxMask, hit.collider.gameObject.layer))
             {

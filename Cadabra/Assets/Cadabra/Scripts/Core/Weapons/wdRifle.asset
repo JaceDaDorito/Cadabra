@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b203c92ba53eb7341acc0894fbae9e70, type: 3}
+  m_Name: wdRifle
+  m_EditorClassIdentifier: 
+  providedObjects:
+  - name: Tracer
+    gameObject: {fileID: 7102819314444647363, guid: 37c5e421e104fa64a87c13e10c532fee, type: 3}
+  weaponName: Gloves of Hocus
+  inventorySlot: 0
+  weaponPrefab: {fileID: 0}
+  hasPrimary: 1
+  hasSecondary: 0
+  primaryCooldown: 0.25
+  secondaryCooldown: 1
+  manaCost: 4
+  secondaryCost: 1
