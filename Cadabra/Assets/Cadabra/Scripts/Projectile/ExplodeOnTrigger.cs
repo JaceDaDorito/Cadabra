@@ -20,6 +20,7 @@ namespace Cadabra.Projectile
         public void Explode(ImpactInfo impactInfo)
         {
             AOEAttack aoeAttack = new AOEAttack();
+            aoeAttack.owner = impactInfo.owner;
             aoeAttack.damage = damage;
             aoeAttack.crit = crit;
             aoeAttack.force = force;

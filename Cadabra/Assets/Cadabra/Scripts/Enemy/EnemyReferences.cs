@@ -4,10 +4,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace EnemyRef
+namespace Cadabra.Enemies
 {
     [DisallowMultipleComponent]
-    public class EnemyRefrences : MonoBehaviour
+    public class EnemyReferences : MonoBehaviour
     {
         [HideInInspector] public NavMeshAgent navMeshagent;
         [HideInInspector] public Animator animator;

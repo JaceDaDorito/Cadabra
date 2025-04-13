@@ -137,7 +137,7 @@ namespace Cadabra.Core
             //secondaryStopwatch = 0f;
             swapStopwatch = SWAP_PERIOD;
         }
-
+        
         private void ShootSyphon()
         {
             syphonStopwatch = syphonCooldown;

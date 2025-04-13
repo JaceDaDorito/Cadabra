@@ -5,7 +5,7 @@ namespace Cadabra.Projectile
 {
     public class HomingProjectile : GenericProjectile
     {
-        public Transform target;
+        public HurtBox target;
         public float rotationSpeed = 5f;
         
         public override void Start()
@@ -13,10 +13,10 @@ namespace Cadabra.Projectile
             base.Start();
             
             // Find the player by looking for the PlayerBody component
-            PlayerBody playerBody = FindObjectOfType<PlayerBody>();
+            PlayerBody playerBody = GameManager.instance.playerBody;
             if (playerBody != null)
             {
-                target = playerBody.transform;
+                target = playerBody.GetComponent<HurtBoxGroup>().hurtBoxes[0];
             }
             else
             {
@@ -30,7 +30,7 @@ namespace Cadabra.Projectile
             if (target != null)
             {
                 // Calculate direction to target
-                Vector3 directionToTarget = (target.position - transform.position).normalized;
+                Vector3 directionToTarget = (target.transform.position - transform.position).normalized;
                 
                 // Smoothly rotate toward the target
                 Quaternion targetRotation = Quaternion.LookRotation(directionToTarget);

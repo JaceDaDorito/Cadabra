@@ -149,7 +149,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: idle
+      name: idle1
       takeName: metarig|metarig
       internalID: 2047728198440419784
       firstFrame: 42

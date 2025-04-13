@@ -12,8 +12,8 @@ namespace Cadabra.Attacks
 {
     public class BulletAttack
     {
-        private static LayerMask hurtBoxMask = LayerMask.GetMask("HurtBox");
-        private static LayerMask hitMask = LayerMask.GetMask("World") | LayerMask.GetMask("HurtBox");
+        private static LayerMask hurtBoxMask = LayerMask.GetMask("HurtBox") | LayerMask.GetMask("EnemyHurtBox");
+        private static LayerMask hitMask = LayerMask.GetMask("World") | LayerMask.GetMask("HurtBox") | LayerMask.GetMask("EnemyHurtBox");
 
         public CharacterBody owner;
         public float damage = 1f;

@@ -621,8 +621,9 @@ GameObject:
   - component: {fileID: 8378567709529808667}
   - component: {fileID: 5888818208738912748}
   - component: {fileID: 8262892673622563993}
+  - component: {fileID: 4680213422706607241}
   m_Layer: 6
-  m_Name: puppet
+  m_Name: PuppetOld
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -711,7 +712,7 @@ NavMeshAgent:
   m_Acceleration: 15
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 8
+  m_StoppingDistance: 10
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -834,6 +835,21 @@ MonoBehaviour:
     m_Bits: 640
   tracer: {fileID: 7102819314444647363, guid: 37c5e421e104fa64a87c13e10c532fee, type: 3}
   projectile: {fileID: 7386214173081834882, guid: c36aa71210309f741bca0501939baf4e, type: 3}
+--- !u!114 &4680213422706607241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3172096400385400725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41473cebafef7884887196910d1ec497, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pairArray:
+  - name: Muzzle
+    transform: {fileID: 7198920774644809980}
 --- !u!1 &3311920889201733342
 GameObject:
   m_ObjectHideFlags: 0
