@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7969947127778545269}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: GhostPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,11 +41,11 @@ GameObject:
   m_Component:
   - component: {fileID: 844900674140880183}
   - component: {fileID: 2746539165866260501}
+  - component: {fileID: 2845242511490764074}
   - component: {fileID: 710748054418251679}
-  - component: {fileID: 4027952962133399641}
   - component: {fileID: -8704039453396967930}
   m_Layer: 18
-  m_Name: GenericProjectile
+  m_Name: EnemyProjectileHoming
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -94,6 +94,71 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &2845242511490764074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7386214173081834882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c746dcc0ff54193b8fb3c6a304fbe0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectileGhost: {fileID: 5584997345027304850, guid: 66295bf3f66d0074dbbdd55315f88479, type: 3}
+  projectileGhostNest: {fileID: 7969947127778545269}
+  speedCoefficient: 10
+  enabledSpeedOverTime: 0
+  speedOverTime:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  lifetime: 4
+  triggerOnImpact: 1
+  onTrigger:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -8704039453396967930}
+        m_TargetAssemblyTypeName: Cadabra.Projectile.ExplodeOnTrigger, Cadabra
+        m_MethodName: Explode
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  owner: {fileID: 0}
+  aimDir: {x: 0, y: 0, z: 0}
+  time: 0
+  projectileGhostInstance: {fileID: 0}
+  collider: {fileID: 0}
+  rigidbody: {fileID: 0}
+  target: {fileID: 0}
+  rotationSpeed: 5
 --- !u!135 &710748054418251679
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -115,87 +180,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4027952962133399641
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7386214173081834882}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ed47ea6c8c5dea419af3b4d81d495eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectileGhost: {fileID: 5584997345027304850, guid: f8ce4b55c310ccd4cadac8c0bddfada6, type: 3}
-  projectileGhostNest: {fileID: 7969947127778545269}
-  speedCoefficient: 20
-  enabledSpeedOverTime: 1
-  speedOverTime:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0.9974823
-      inSlope: -0.0763125
-      outSlope: -0.0763125
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.3207646
-    - serializedVersion: 3
-      time: 0.030167997
-      value: 1.5305932
-      inSlope: -0.09654493
-      outSlope: -0.09654493
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.73909473
-      value: 0.1576687
-      inSlope: -2.3072805
-      outSlope: -2.3072805
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0.01411438
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  lifetime: 1
-  triggerOnImpact: 1
-  onTrigger:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: -8704039453396967930}
-        m_TargetAssemblyTypeName: Cadabra.Projectile.ExplodeOnTrigger, Cadabra
-        m_MethodName: Explode
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  owner: {fileID: 0}
-  aimDir: {x: 0, y: 0, z: 1}
-  time: 0
-  projectileGhostInstance: {fileID: 0}
-  collider: {fileID: 0}
-  rigidbody: {fileID: 0}
 --- !u!114 &-8704039453396967930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -212,7 +196,7 @@ MonoBehaviour:
   radius: 2.5
   force: 30
   additiveUpwardForce: 20
-  ignoreTeam: 1
+  ignoreTeam: 0
   crit: 0
   checkLOS: 1
   vfx: {fileID: 8300142773006282453, guid: e6544b81c8c19b94b8c223bfb0f7379e, type: 3}

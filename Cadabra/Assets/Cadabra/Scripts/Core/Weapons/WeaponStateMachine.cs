@@ -72,7 +72,9 @@ namespace Cadabra.Core
 
             Vector3 muzzle = new Vector3(_cameraController.transform.position.x, _cameraController.transform.position.y - 0.2f, _cameraController.transform.position.z) + (_cameraController.transform.forward * 1.3f);
             GameObject instance = GameObject.Instantiate(projectile, muzzle, _cameraController.transform.rotation);
-            instance.GetComponent<GenericProjectile>().aimDir = _cameraController.transform.forward;
+            GenericProjectile gpInstance = instance.GetComponent<GenericProjectile>();
+            gpInstance.aimDir = _cameraController.transform.forward;
+            gpInstance.owner = body;
 
             body._manaController.UseMana(10f);
 

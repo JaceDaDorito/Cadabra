@@ -4,6 +4,7 @@ using UnityEngine;
 using Cadabra.Util;
 using UnityEngine.SceneManagement;
 using Cadabra.Scripts.Core.Demo;
+using Cadabra.Enemies;
 
 namespace Cadabra.Core
 {
@@ -17,7 +18,7 @@ namespace Cadabra.Core
         public GameObject instancedPlayerHolder;
         [HideInInspector]
         public CheckPoint currentCheckpoint;
-        public Transform[] enemySpawnPoint;
+        public EnemySpawnPoint[] enemySpawnPoint;
         public GameObject enemyPrefab;
 
 
@@ -27,7 +28,7 @@ namespace Cadabra.Core
         private void Awake()
         {
             onManagerStart += InstantiatePlayerBody;
-            onManagerStart += SpawnNewEnemy;
+            onManagerStart += SpawnAllEnemies;
 
         }
 
@@ -54,9 +55,17 @@ namespace Cadabra.Core
             }
         }
 
-        private void SpawnNewEnemy()
+        private void SpawnAllEnemies()
         {
-            Instantiate(enemyPrefab, enemySpawnPoint[0].transform.position, Quaternion.identity);
+            foreach(EnemySpawnPoint spawn in enemySpawnPoint)
+            {
+                SpawnNewEnemy(spawn.enemyPrefab, spawn.transform.position);
+            }
+        }
+
+        private void SpawnNewEnemy(GameObject enemyPrefab, Vector3 position)
+        {
+            Instantiate(enemyPrefab, position, Quaternion.identity);
         }
 
         private void PlayerDeathSequence(CharacterBody body)
@@ -77,7 +86,6 @@ namespace Cadabra.Core
             GameManager.instance = this;
 
             Debug.Log("Respawning");
-            EnemySimple.OnEnemyKilled += SpawnNewEnemy;
         }
 
         private void OnDisable()

@@ -18,7 +18,7 @@ namespace Cadabra.Attacks
     }
     public class AOEAttack
     {
-        private static LayerMask hitboxMask = LayerMask.GetMask("HurtBox");
+        private static LayerMask hitboxMask = LayerMask.GetMask("HurtBox") | LayerMask.GetMask("EnemyHurtBox");
         private static LayerMask worldMask = LayerMask.GetMask("World");
 
         public CharacterBody owner;
