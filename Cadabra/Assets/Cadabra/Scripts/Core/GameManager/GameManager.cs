@@ -17,6 +17,8 @@ namespace Cadabra.Core
         public GameObject instancedPlayerHolder;
         [HideInInspector]
         public CheckPoint currentCheckpoint;
+        public Transform[] enemySpawnPoint;
+        public GameObject enemyPrefab;
 
 
         public delegate void ManagerStart();
@@ -25,6 +27,8 @@ namespace Cadabra.Core
         private void Awake()
         {
             onManagerStart += InstantiatePlayerBody;
+            onManagerStart += SpawnNewEnemy;
+
         }
 
         private void Start()
@@ -50,6 +54,11 @@ namespace Cadabra.Core
             }
         }
 
+        private void SpawnNewEnemy()
+        {
+            Instantiate(enemyPrefab, enemySpawnPoint[0].transform.position, Quaternion.identity);
+        }
+
         private void PlayerDeathSequence(CharacterBody body)
         {
             SceneManager.LoadScene("DeathScene");
@@ -66,6 +75,9 @@ namespace Cadabra.Core
             }
 
             GameManager.instance = this;
+
+            Debug.Log("Respawning");
+            EnemySimple.OnEnemyKilled += SpawnNewEnemy;
         }
 
         private void OnDisable()
