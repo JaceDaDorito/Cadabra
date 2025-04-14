@@ -15,6 +15,7 @@ namespace Cadabra.Core
     {
         private GameObject tracer;
         private GameObject tracerPower;
+        private AudioSource sound;
         public WeaponDef weaponDef;
 
         static readonly float[] SPREAD_ANGLES = { 14f, 7f, 0f, -7f, -14f };
@@ -35,6 +36,7 @@ namespace Cadabra.Core
         public void ShootBullets(WeaponStateMachine wsm, float[] angles, bool power)
         {
             Vector3 axisOfRotation = Vector3.Cross(wsm._cameraController.transform.forward, wsm._cameraController.transform.right);
+            Vector3 muzzle = new Vector3(wsm._cameraController.transform.position.x, wsm._cameraController.transform.position.y - 0.8f, wsm._cameraController.transform.position.z);
             int index = -1;
             foreach (float angle in angles)
             {
@@ -52,6 +54,8 @@ namespace Cadabra.Core
                 bulletAttack.muzzleOverride = new Vector3(wsm._cameraController.transform.position.x, wsm._cameraController.transform.position.y - 0.8f, wsm._cameraController.transform.position.z);
                 bulletAttack.Fire();
             }
+
+            if(sound) AudioSource.PlayClipAtPoint(sound.clip, muzzle);
         }
 
         public void ShootPrimary(WeaponStateMachine wsm)
@@ -59,6 +63,7 @@ namespace Cadabra.Core
             if (!tracer)
             {
                 tracer = weaponDef.FindGameObject("Tracer");
+                sound = tracer.GetComponent<AudioSource>();
             }
 
             ShootBullets(wsm, SPREAD_ANGLES, false);
@@ -69,6 +74,7 @@ namespace Cadabra.Core
             if (!tracerPower)
             {
                 tracerPower = weaponDef.FindGameObject("TracerPower");
+                sound = tracer.GetComponent<AudioSource>();
             }
 
             ShootBullets(wsm, SPREAD_ANGLES_WIDE, true);

@@ -14,6 +14,7 @@ namespace Cadabra.Core
     public class Rifle : IShootWand
     {
         private GameObject tracer;
+        private AudioSource sound;
         public WeaponDef weaponDef;
 
         WeaponDef IShootWand.weaponDef
@@ -33,6 +34,7 @@ namespace Cadabra.Core
             if (!tracer)
             {
                 tracer = weaponDef.FindGameObject("Tracer");
+                sound = tracer.GetComponent<AudioSource>();
             }
 
             BulletAttack bulletAttack = new BulletAttack();
@@ -47,6 +49,7 @@ namespace Cadabra.Core
             bulletAttack.overrideMuzzle = true;
             bulletAttack.muzzleOverride = new Vector3(wsm._cameraController.transform.position.x, wsm._cameraController.transform.position.y - 0.8f, wsm._cameraController.transform.position.z);
             bulletAttack.Fire();
+            AudioSource.PlayClipAtPoint(sound.clip, bulletAttack.muzzleOverride);
         }
 
         public void ShootSecondary(WeaponStateMachine wsm)

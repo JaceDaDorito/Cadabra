@@ -47,7 +47,10 @@ namespace Cadabra.Attacks
 
             if (!hitSomething) return;
             // change to hit enemy instead of just something in the future
-            else if (isSyphon) manaController.Syphon(syphonAmount);
+            else if (isSyphon){
+                manaController.Syphon(syphonAmount);
+                AudioSource.PlayClipAtPoint(tracerPrefab.GetComponent<AudioSource>().clip, muzzleOverride);
+            }
 
             if (BitwiseUtils.Contains(hurtBoxMask, hit.collider.gameObject.layer))
             {
