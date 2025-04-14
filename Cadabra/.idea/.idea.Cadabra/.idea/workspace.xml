@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b7edaa1-3b01-4906-a551-de9d9b623e0a" name="Changes" comment="" />
+    <list default="true" id="5b7edaa1-3b01-4906-a551-de9d9b623e0a" name="Changes" comment="Add turrets to level">
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DemoPlaytest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DemoPlaytest.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DemoPlaytest/NavMesh-NavMesh Surface.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DemoPlaytest/NavMesh-NavMesh Surface.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,7 +16,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="kit/enemy-ai" />
+        <entry key="$PROJECT_DIR$/.." value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -51,7 +54,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "level",
+    "git-widget-placeholder": "nick/level-updates",
     "last_opened_file_path": "C:/Users/idari/Documents/Unity Projects/Cadabra",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -126,6 +129,7 @@
       <workItem from="1741468426399" duration="165000" />
       <workItem from="1741580288522" duration="7183000" />
       <workItem from="1744602247735" duration="1030000" />
+      <workItem from="1744672089081" duration="807000" />
     </task>
     <task id="LOCAL-00001" summary="Started demo stage work">
       <option name="closed" value="true" />
@@ -207,7 +211,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744602693149</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Add turrets to level">
+      <option name="closed" value="true" />
+      <created>1744673158825</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1744673158825</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,6 +246,7 @@
     <MESSAGE value="Removed most unused assets" />
     <MESSAGE value="level update" />
     <MESSAGE value="Update tp spots" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update tp spots" />
+    <MESSAGE value="Add turrets to level" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add turrets to level" />
   </component>
 </project>
