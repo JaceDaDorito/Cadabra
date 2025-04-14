@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b7edaa1-3b01-4906-a551-de9d9b623e0a" name="Changes" comment="Update tp spots">
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DemoPlaytest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DemoPlaytest.unity" afterDir="false" />
-    </list>
+    <list default="true" id="5b7edaa1-3b01-4906-a551-de9d9b623e0a" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -127,7 +125,7 @@
       <workItem from="1741466975059" duration="206000" />
       <workItem from="1741468426399" duration="165000" />
       <workItem from="1741580288522" duration="7183000" />
-      <workItem from="1744602247735" duration="425000" />
+      <workItem from="1744602247735" duration="1030000" />
     </task>
     <task id="LOCAL-00001" summary="Started demo stage work">
       <option name="closed" value="true" />
@@ -201,7 +199,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744602281310</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Update tp spots">
+      <option name="closed" value="true" />
+      <created>1744602693149</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1744602693149</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
