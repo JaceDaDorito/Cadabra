@@ -13,6 +13,7 @@ namespace Cadabra.Core
     public class RocketLauncher : IShootWand
     {
         private GameObject primaryProjectile;
+        private AudioSource sound;
         public WeaponDef weaponDef;
 
         WeaponDef IShootWand.weaponDef
@@ -32,6 +33,7 @@ namespace Cadabra.Core
             if (!primaryProjectile)
             {
                 primaryProjectile = weaponDef.FindGameObject("Rocket");
+                sound = primaryProjectile.GetComponent<AudioSource>();
             }
 
             Vector3 muzzle = new Vector3(wsm._cameraController.transform.position.x, wsm._cameraController.transform.position.y - 0.2f, wsm._cameraController.transform.position.z) + (wsm._cameraController.transform.forward * 1.3f);
@@ -39,6 +41,7 @@ namespace Cadabra.Core
             GenericProjectile gpInstance = instance.GetComponent<GenericProjectile>();
             gpInstance.aimDir = wsm._cameraController.transform.forward;
             gpInstance.owner = wsm.body;
+            AudioSource.PlayClipAtPoint(sound.clip, muzzle);
         }
 
         public void ShootSecondary(WeaponStateMachine wsm)
