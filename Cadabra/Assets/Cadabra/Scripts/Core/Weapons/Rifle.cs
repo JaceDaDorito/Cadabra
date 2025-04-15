@@ -38,10 +38,11 @@ namespace Cadabra.Core
             }
 
             BulletAttack bulletAttack = new BulletAttack();
-            bulletAttack.damage = 5f;
+            bulletAttack.damage = 7.5f;
             bulletAttack.force = 0f;
             bulletAttack.ignoreTeam = false;
             bulletAttack.maxDistance = 50f;
+            bulletAttack.critDamageMultiplier = 2f;
             bulletAttack.critsOnWeakPoints = true;
             bulletAttack.tracerPrefab = tracer;
             bulletAttack.origin = wsm._cameraController.transform.position;

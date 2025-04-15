@@ -129,7 +129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectileGhost: {fileID: 5584997345027304850, guid: 1c7442191849d464495fa6de89ace077, type: 3}
   projectileGhostNest: {fileID: 7969947127778545269}
-  speedCoefficient: 25
+  speedCoefficient: 20
   enabledSpeedOverTime: 1
   speedOverTime:
     serializedVersion: 2
@@ -208,7 +208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01a711b33e8cd594d80c0b64810cd2ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 40
+  damage: 30
   radius: 2.5
   force: 30
   additiveUpwardForce: 20

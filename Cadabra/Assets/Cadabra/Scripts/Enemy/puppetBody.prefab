@@ -133,7 +133,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 561466f058d64ba4e848f08464de7efe, type: 3}
       propertyPath: m_Name
-      value: puppet
+      value: puppetBody
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 561466f058d64ba4e848f08464de7efe, type: 3}
       propertyPath: m_Layer
@@ -1018,6 +1018,7 @@ MonoBehaviour:
   _healthController: {fileID: 4490718412755774045}
   _manaController: {fileID: 0}
   _weaponStateMachine: {fileID: 0}
+  _syphonController: {fileID: 0}
 --- !u!114 &4490718412755774045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1065,7 +1066,7 @@ MonoBehaviour:
   laserForce: 1
   laserIgnoreTeam: 1
   laserMaxDistance: 500
-  predictionFactor: 0.2
+  predictionFactor: 0.25
   tracer: {fileID: 7102819314444647363, guid: 37c5e421e104fa64a87c13e10c532fee, type: 3}
   projectile: {fileID: 7386214173081834882, guid: 8a2271bfb1ae2ed49bcffbd2e5364106, type: 3}
   target: {fileID: 0}

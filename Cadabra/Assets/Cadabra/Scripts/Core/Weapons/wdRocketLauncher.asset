@@ -22,5 +22,5 @@ MonoBehaviour:
   hasSecondary: 0
   primaryCooldown: 1
   secondaryCooldown: 1
-  manaCost: 10
+  manaCost: 30
   secondaryCost: 1

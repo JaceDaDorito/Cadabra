@@ -18,7 +18,7 @@ namespace Cadabra.Core
         private AudioSource sound;
         public WeaponDef weaponDef;
 
-        static readonly float[] SPREAD_ANGLES = { 14f, 7f, 0f, -7f, -14f };
+        static readonly float[] SPREAD_ANGLES = { 9f, 4.5f, 0f, -4.5f, -9f };
         static readonly float[] SPREAD_ANGLES_WIDE = { 30f, 15f, 0f, -15f, -30f };
 
         WeaponDef IShootWand.weaponDef
@@ -42,7 +42,8 @@ namespace Cadabra.Core
             {
                 index++;
                 BulletAttack bulletAttack = new BulletAttack();
-                bulletAttack.damage = 5f;
+                bulletAttack.damage = 7.5f;
+                bulletAttack.critDamageMultiplier = 2f;
                 bulletAttack.force = 0f;
                 bulletAttack.ignoreTeam = false;
                 bulletAttack.maxDistance = 15f;
