@@ -46,11 +46,6 @@ namespace Cadabra.Attacks
             if (tracerPrefab) CreateAndFireTracer(hitSomething, hit);
 
             if (!hitSomething) return;
-            // change to hit enemy instead of just something in the future
-            else if (isSyphon){
-                manaController.Syphon(syphonAmount);
-                AudioSource.PlayClipAtPoint(tracerPrefab.GetComponent<AudioSource>().clip, muzzleOverride);
-            }
 
             if (BitwiseUtils.Contains(hurtBoxMask, hit.collider.gameObject.layer))
             {
@@ -78,6 +73,13 @@ namespace Cadabra.Attacks
                 damageInfo.ignoreTeam = ignoreTeam;
 
                 hb.healthController.RequestDamage(damageInfo);
+
+                syphonAmount += syphonAmount*2;
+            }
+
+            if (isSyphon) {
+                manaController.Syphon(syphonAmount);
+                AudioSource.PlayClipAtPoint(tracerPrefab.GetComponent<AudioSource>().clip, muzzleOverride);
             }
         }
 

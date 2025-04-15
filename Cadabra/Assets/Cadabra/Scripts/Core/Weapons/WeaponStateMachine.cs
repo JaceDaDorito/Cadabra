@@ -143,7 +143,7 @@ namespace Cadabra.Core
             syphonStopwatch = syphonCooldown;
 
             BulletAttack syphonAttack = new BulletAttack();
-            syphonAttack.damage = 100f;
+            syphonAttack.damage = 40f;
             syphonAttack.force = 0f;
             syphonAttack.ignoreTeam = true;
             syphonAttack.maxDistance = 50f;
@@ -155,7 +155,7 @@ namespace Cadabra.Core
             syphonAttack.muzzleOverride = new Vector3(_cameraController.transform.position.x, _cameraController.transform.position.y - 0.8f, _cameraController.transform.position.z);
             syphonAttack.manaController = body._manaController;
             syphonAttack.isSyphon = true;
-            syphonAttack.syphonAmount = 50f;
+            syphonAttack.syphonAmount = 30f;
             syphonAttack.Fire();
 
             body._syphonController.UseSyphon();
