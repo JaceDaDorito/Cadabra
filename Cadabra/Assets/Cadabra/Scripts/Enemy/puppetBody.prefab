@@ -127,6 +127,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: -1578373571446707184, guid: 561466f058d64ba4e848f08464de7efe, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 983007e3e230f954187baf11f58a929d, type: 2}
     - target: {fileID: 430108200687226393, guid: 561466f058d64ba4e848f08464de7efe, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -979,8 +983,11 @@ MonoBehaviour:
   target: {fileID: 0}
   currentWayPointIndex: 0
   spotRange: 25
+  pathTimer: 0
   isLost: 1
   enemyShoot: {fileID: 7124781901815391562}
+  shootingTimer: 0
+  animationTimer: 0
   isOneArmLaser: 0
   isTwoArmLaser: 0
   isProjectile: 1

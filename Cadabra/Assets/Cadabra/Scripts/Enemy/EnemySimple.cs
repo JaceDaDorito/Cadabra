@@ -20,6 +20,7 @@ namespace Cadabra.Enemies
         private EnemyReferences enemyRefrences;
 
         private float pathUpdateDeadline;
+        public float pathTimer;
 
         private float shootingDistance;
 
@@ -27,14 +28,17 @@ namespace Cadabra.Enemies
 
         public EnemyShoot enemyShoot;
 
-        private float shootingDelay = 3f;
-        private float shootingDeadline;
-        private bool shootingState;
+        public float shootingTimer;
+        private float shootingDelay = 2f;
+        public float animationTimer;
+        private float animationDelay = 1f;
 
         public bool isOneArmLaser = false;
         public bool isTwoArmLaser = false;
         public bool isProjectile = false;
         public bool inRange;
+
+        private bool firstDetect;
 
         //public EnemyDeath enemyDeath;
 
@@ -61,11 +65,27 @@ namespace Cadabra.Enemies
         {
             shootingDistance = enemyRefrences.navMeshagent.stoppingDistance;
             isLost = true;
+            pathTimer = 0;
+            shootingTimer = 0;
+            animationTimer = 0;
+            firstDetect = true;
         }
 
         // Update is called once per frame
         void Update()
         {
+            if (pathTimer > 0)
+            {
+                pathTimer -= Time.deltaTime;
+            }
+            if (shootingTimer > 0)
+            {
+                shootingTimer -= Time.deltaTime;
+            }
+            if (animationTimer > 0)
+            {
+                animationTimer -= Time.deltaTime;
+            }
             if (target != null)
             {
                 enemyRefrences.animator.SetBool("isOneArmLaser", isOneArmLaser);
@@ -76,20 +96,25 @@ namespace Cadabra.Enemies
 
                 inRange = Vector3.Distance(transform.position, target.position) <= shootingDistance;
 
-                if (distance > spotRange && isLost == true)
+                if (distance > spotRange)
                 {
-                    if (Time.time >= pathUpdateDeadline)
+                    if (isLost)
                     {
-                        Patrolling();
-                        enemyRefrences.animator.SetBool("shooting", false);
+                        if (pathTimer <= 0)
+                        {
+                            Patrolling();
+                            enemyRefrences.animator.SetBool("shooting", false);
+                            pathTimer = enemyRefrences.pathUpdateDelay;
+                        }
                     }
-                }
-                if (distance > spotRange && isLost == false)
-                {
-                    if (Time.time >= pathUpdateDeadline)
+                    else
                     {
-                        Searching();
-                        enemyRefrences.animator.SetBool("shooting", false);
+                        if (pathTimer <= 0)
+                        {
+                            Searching();
+                            enemyRefrences.animator.SetBool("shooting", false);
+                            pathTimer = enemyRefrences.pathUpdateDelay;
+                        }
                     }
                 }
                 if (distance < spotRange)
@@ -98,36 +123,36 @@ namespace Cadabra.Enemies
                     if (inRange)
                     {
                         LookAtTarget();
-                        enemyRefrences.animator.SetBool("shooting", true);
                         isLost = false;
                     }
                     else
                     {
                         UpdatePath();
                         isLost = false;
-                        // Toggles on and off shooting after shootingDelay
-                        if (Time.time >= shootingDeadline)
+                    }
+                    if (shootingTimer <= 0)
+                    {
+                        if (firstDetect)
                         {
-                            shootingState = !shootingState;
-                            enemyRefrences.animator.SetBool("shooting", shootingState);
-                            shootingDeadline = Time.time + shootingDelay;
+                            enemyRefrences.animator.SetBool("shooting", true);
+                            shootingTimer = 0.5f;
+                            firstDetect = false;
+                        }
+                        else
+                        {
+                            enemyRefrences.animator.SetBool("shooting", true);
+                            shootingTimer = shootingDelay;
                         }
                     }
-
+                    if (animationTimer <= 0)
+                    {
+                        enemyRefrences.animator.SetBool("shooting", false);
+                        animationTimer = shootingTimer + animationDelay;
+                    }
                 }
             }
             // Get speed for animation
             enemyRefrences.animator.SetFloat("speed", enemyRefrences.navMeshagent.velocity.sqrMagnitude);
-        }
-
-        private void StartShooting()
-        {
-            enemyRefrences.animator.SetBool("shooting", true);
-        }
-
-        private void StopShooting()
-        {
-            enemyRefrences.animator.SetBool("shooting", false);
         }
 
         private void LookAtTarget()
@@ -140,10 +165,10 @@ namespace Cadabra.Enemies
 
         private void UpdatePath()
         {
-            if (Time.time >= pathUpdateDeadline) // Delay for updating path
+            if (pathTimer <= 0) // Delay for updating path
             {
                 Debug.Log("Updating Path");
-                pathUpdateDeadline = Time.time + enemyRefrences.pathUpdateDelay;
+                pathTimer = enemyRefrences.pathUpdateDelay;
                 enemyRefrences.navMeshagent.SetDestination(target.position);
             }
         }
@@ -169,13 +194,14 @@ namespace Cadabra.Enemies
 
             float distanceToWayPoint = Vector3.Distance(wayPoint[currentWayPointIndex].position, transform.position);
 
-            if (Time.time >= pathUpdateDeadline) // Delay for updating path
+            if (pathTimer <= 0) // Delay for updating path
             {
                 if (distanceToWayPoint <= enemyRefrences.navMeshagent.stoppingDistance)
                 {
                     currentWayPointIndex = (currentWayPointIndex + 1) % wayPoint.Length;
                 }
                 enemyRefrences.navMeshagent.SetDestination(wayPoint[currentWayPointIndex].position);
+                pathTimer = enemyRefrences.pathUpdateDelay;
             }
         }
         public void Die()

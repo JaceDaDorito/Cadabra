@@ -137,7 +137,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 561466f058d64ba4e848f08464de7efe, type: 3}
       propertyPath: m_Name
-      value: puppetRed
+      value: puppetBodyRed
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 561466f058d64ba4e848f08464de7efe, type: 3}
       propertyPath: m_Layer
@@ -983,8 +983,10 @@ MonoBehaviour:
   target: {fileID: 0}
   currentWayPointIndex: 0
   spotRange: 25
+  pathTimer: 0
   isLost: 1
   enemyShoot: {fileID: 7124781901815391562}
+  shootingDelay: 3
   isOneArmLaser: 0
   isTwoArmLaser: 0
   isProjectile: 1
@@ -1022,6 +1024,7 @@ MonoBehaviour:
   _healthController: {fileID: 4490718412755774045}
   _manaController: {fileID: 0}
   _weaponStateMachine: {fileID: 0}
+  _syphonController: {fileID: 0}
 --- !u!114 &4490718412755774045
 MonoBehaviour:
   m_ObjectHideFlags: 0
