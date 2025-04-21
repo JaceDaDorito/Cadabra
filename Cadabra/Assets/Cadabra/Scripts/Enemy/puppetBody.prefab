@@ -979,8 +979,12 @@ MonoBehaviour:
   target: {fileID: 0}
   currentWayPointIndex: 0
   spotRange: 25
+  pathTimer: 0
   isLost: 1
   enemyShoot: {fileID: 7124781901815391562}
+  shootingTimer: 0
+  shootingDelay: 2
+  animationTimer: 0
   isOneArmLaser: 0
   isTwoArmLaser: 0
   isProjectile: 1
