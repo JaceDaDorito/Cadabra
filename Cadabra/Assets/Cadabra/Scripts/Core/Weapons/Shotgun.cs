@@ -56,7 +56,7 @@ namespace Cadabra.Core
                 bulletAttack.Fire();
             }
 
-            if(sound) AudioSource.PlayClipAtPoint(sound.clip, muzzle);
+            if(sound) AudioSource.PlayClipAtPoint(sound.clip, muzzle, BulletAttack.soundVolume);
         }
 
         public void ShootPrimary(WeaponStateMachine wsm)

@@ -15,6 +15,8 @@ namespace Cadabra.Attacks
         private static LayerMask hurtBoxMask = LayerMask.GetMask("HurtBox") | LayerMask.GetMask("EnemyHurtBox");
         private static LayerMask hitMask = LayerMask.GetMask("World") | LayerMask.GetMask("HurtBox") | LayerMask.GetMask("EnemyHurtBox");
 
+        public static float soundVolume;
+
         public CharacterBody owner;
         public float damage = 1f;
         public bool critsOnWeakPoints = true; //overrides inputted crit
@@ -79,7 +81,7 @@ namespace Cadabra.Attacks
 
             if (isSyphon) {
                 manaController.Syphon(syphonAmount);
-                AudioSource.PlayClipAtPoint(tracerPrefab.GetComponent<AudioSource>().clip, muzzleOverride);
+                AudioSource.PlayClipAtPoint(tracerPrefab.GetComponent<AudioSource>().clip, muzzleOverride, 0.1f*soundVolume);
             }
         }
 

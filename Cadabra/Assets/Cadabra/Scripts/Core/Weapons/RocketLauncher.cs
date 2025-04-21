@@ -7,6 +7,7 @@ using Cadabra.Core;
 using Cadabra.Projectile;
 using Cadabra.ScriptableObjects;
 using UnityEngine;
+using Cadabra.Attacks;
 
 namespace Cadabra.Core
 {
@@ -41,7 +42,7 @@ namespace Cadabra.Core
             GenericProjectile gpInstance = instance.GetComponent<GenericProjectile>();
             gpInstance.aimDir = wsm._cameraController.transform.forward;
             gpInstance.owner = wsm.body;
-            AudioSource.PlayClipAtPoint(sound.clip, muzzle);
+            AudioSource.PlayClipAtPoint(sound.clip, muzzle, BulletAttack.soundVolume);
         }
 
         public void ShootSecondary(WeaponStateMachine wsm)
