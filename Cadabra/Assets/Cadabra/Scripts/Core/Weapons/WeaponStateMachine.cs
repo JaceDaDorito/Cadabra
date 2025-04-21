@@ -52,6 +52,10 @@ namespace Cadabra.Core
             public int WeaponIndexPressed;
             public bool SyphonPressed;
         }
+
+        [SerializeField]
+        private UIWeaponManager _uiWeaponManager;
+
         void Start()
         {
             hitMask = LayerMask.GetMask("World") | LayerMask.GetMask("HurtBox");
@@ -124,6 +128,7 @@ namespace Cadabra.Core
 
         public void GrantAndSwapToWeapon(WeaponDef weaponDef)
         {
+            _uiWeaponManager.EnableWeaponUI(weaponDef.inventorySlot);
             weaponInventory.GrantWeapon(weaponDef);
             SwapWeapon(weaponDef.inventorySlot);
         }
@@ -132,6 +137,7 @@ namespace Cadabra.Core
 
         private void SwapWeapon(int weaponIndex)
         {
+            _uiWeaponManager.SwitchWeaponUI(weaponIndex);
             currentWeaponIndex = weaponIndex;
             shotStopwatch = 0f;
             //secondaryStopwatch = 0f;
