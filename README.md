@@ -1,6 +1,11 @@
 # Cadabra
 Team 13's Project for CAP4053 Spring 2025
 
+### How to Play:
+
+- Make sure none of the contents in the unzipped folder are moved
+- Run Cadabra.exe
+
 
 ### 3rd-party Items
 
