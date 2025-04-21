@@ -50,7 +50,7 @@ namespace Cadabra.Core
             bulletAttack.overrideMuzzle = true;
             bulletAttack.muzzleOverride = new Vector3(wsm._cameraController.transform.position.x, wsm._cameraController.transform.position.y - 0.8f, wsm._cameraController.transform.position.z);
             bulletAttack.Fire();
-            AudioSource.PlayClipAtPoint(sound.clip, bulletAttack.muzzleOverride);
+            AudioSource.PlayClipAtPoint(sound.clip, bulletAttack.muzzleOverride, BulletAttack.soundVolume);
         }
 
         public void ShootSecondary(WeaponStateMachine wsm)

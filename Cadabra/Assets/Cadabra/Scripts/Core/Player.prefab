@@ -231,12 +231,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _cameraController: {fileID: 0}
   body: {fileID: 7985933788411942203}
+  weaponInventory: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 128
   tracer: {fileID: 7102819314444647363, guid: 19dbf9cc23064a845b0ba773d51ca853, type: 3}
   projectile: {fileID: 7386214173081834882, guid: c36aa71210309f741bca0501939baf4e, type: 3}
   syphonTracer: {fileID: 7411067964115573797, guid: d4bc302d10010924d9e660c7547a7746, type: 3}
+  shotStopwatch: 0
+  swapStopwatch: 0
+  currentWeaponIndex: -1
 --- !u!114 &3799974382546872088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -264,7 +268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5258d128a35d254389e3de0f02165c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syphonCooldownAmount: 5
+  syphonCooldownAmount: 7
   timer: 0
 --- !u!1 &3987773504933855601
 GameObject:
