@@ -15,7 +15,7 @@ namespace Cadabra.Attacks
         private static LayerMask hurtBoxMask = LayerMask.GetMask("HurtBox") | LayerMask.GetMask("EnemyHurtBox");
         private static LayerMask hitMask = LayerMask.GetMask("World") | LayerMask.GetMask("HurtBox") | LayerMask.GetMask("EnemyHurtBox");
 
-        public static float soundVolume;
+        public static float soundVolume = 0.7f;
 
         public CharacterBody owner;
         public float damage = 1f;
