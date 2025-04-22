@@ -12,6 +12,7 @@ public class BootMenuManager : MonoBehaviour
     {
         SceneManager.LoadScene("DemoPlaytest");
         Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void QuitGame()

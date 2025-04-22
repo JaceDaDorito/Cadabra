@@ -40,12 +40,14 @@ namespace Cadabra.Core
                 Time.timeScale = 0;
                 isPaused = true;
                 Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
                 optionsPanel.SetActive(true);
             }
             else if (Input.GetKeyDown(KeyCode.Escape) && isPaused) {
                 Time.timeScale = 1;
                 isPaused = false;
                 Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Locked;
                 optionsPanel.SetActive(false);
             } 
             _uiHealthController.UpdateHealth(_healthController.currentHealth, _healthController.maxHealth);

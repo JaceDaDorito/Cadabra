@@ -12,12 +12,14 @@ public class DeathMenuManager : MonoBehaviour
         DemoHandler.FailDemo();
         SceneManager.LoadScene("DemoPlaytest");
         Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void MainMenu()
     {
         SceneManager.LoadScene("BootScene");
         Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
         GameManager.instance.currentCheckpoint = null;
     }
 
