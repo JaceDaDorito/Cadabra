@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class OptionsManager : MonoBehaviour
 {
-    private static float soundScale = 5.0f;
     private static float sliderAmount = 0.7f;
 
     [SerializeField]
@@ -16,14 +15,14 @@ public class OptionsManager : MonoBehaviour
     void Start()
     {
         slider.value = sliderAmount;
-        BulletAttack.soundVolume = sliderAmount*soundScale;
+        BulletAttack.soundVolume = sliderAmount;
     }
 
     // Update is called once per frame
     void Update()
     {
         sliderAmount = slider.value;
-        BulletAttack.soundVolume = sliderAmount*soundScale;
+        BulletAttack.soundVolume = sliderAmount;
     }
 
     public void QuitButton()
